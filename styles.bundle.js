@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../material/prebuilt-themes/deeppurple-amber.css"), "");
 
 // module
-exports.push([module.i, "\n/* You can add global styles to this file, and also import other style files */\n/*\ndeeppurple-amber.css\nindigo-pink.css\npink-bluegrey.css\npurple-green.css*/", ""]);
+exports.push([module.i, "\r\n/* You can add global styles to this file, and also import other style files */\r\n/*\r\ndeeppurple-amber.css\r\nindigo-pink.css\r\npink-bluegrey.css\r\npurple-green.css*/\r\n\r\nbody{\r\n    margin: 0;\r\n        padding: 0 0 0 0 ;\r\n    -webkit-box-orient:vertical;\r\n    -webkit-box-direction:normal;\r\n        -ms-flex-direction:column;\r\n            flex-direction:column;\r\n\r\n}", ""]);
 
 // exports
 
@@ -393,7 +393,7 @@ function updateLink(linkElement, obj) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("../../../../../src/styles.css");
@@ -401,5 +401,5 @@ module.exports = __webpack_require__("../../../../../src/styles.css");
 
 /***/ })
 
-},[2]);
+},[3]);
 //# sourceMappingURL=styles.bundle.js.map

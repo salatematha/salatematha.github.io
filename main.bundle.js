@@ -21,7 +21,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".example-fill-remaining-space {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 auto;\n          flex: 1 1 auto;\n}\nbody {\n    padding: 0 0 0 0 \n}", ""]);
+exports.push([module.i, ".example-fill-remaining-space {\r\n  -webkit-box-flex: 1;\r\n      -ms-flex: 1 1 auto;\r\n          flex: 1 1 auto;\r\n}\r\nbody {\r\n    padding: 0 0 0 0 ;\r\n    -webkit-box-orient:vertical;\r\n    -webkit-box-direction:normal;\r\n        -ms-flex-direction:column;\r\n            flex-direction:column;\r\n\r\n}\r\nmd-sidenav {\r\n  width: 400px;\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    vertical-align:middle;\r\n    color: white;\r\n}\r\nmd-tab-group {\r\n -webkit-box-flex:1;\r\n     -ms-flex:1;\r\n         flex:1;\r\n    min-height: 87vh;\r\n}\r\n\r\n.bottom {\r\n  -webkit-box-flex: 0;\r\n      -ms-flex: 0 0 auto;\r\n          flex: 0 0 auto;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -34,7 +34,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-toolbar color=\"primary\">\n    <span>StockAid</span>\n\n    <!-- This fills the remaining space of the current row -->\n    <span class=\"example-fill-remaining-space\"></span>\n    <!-- <md-slide-toggle  [(ngModel)]=\"displayChart\">Display Chart</md-slide-toggle>&nbsp;&nbsp; -->\n\n    <span><app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol></span>\n</md-toolbar>\n\n\n\n<md-tab-group>\n    <!-- <md-tab label=\"Table\">\n        <app-bar-table [stsymbol]=\"selectedStock\"></app-bar-table>\n    </md-tab> -->\n    <md-tab *ngFor=\"let inter of chartInterval.reverse()\" label=\"{{inter}}\">\n        <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"inter\"></app-bar-chart>\n    </md-tab>\n    <!-- <md-tab label=\"5Y\">\n        <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"'5y'\"></app-bar-chart>\n    </md-tab>\n    <md-tab label=\"27\">\n        <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"'2y'\"></app-bar-chart>\n    </md-tab>\n    <md-tab label=\"1y\">\n        <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"'1y'\"></app-bar-chart>\n    </md-tab>\n    <md-tab label=\"ytd\">\n        <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"'ytd'\"></app-bar-chart>\n    </md-tab>\n    <md-tab label=\"6m\">\n        <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"'6m'\"></app-bar-chart>\n    </md-tab>\n    <md-tab label=\"3m\">\n        <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"'3m'\"></app-bar-chart>\n    </md-tab> -->\n\n</md-tab-group>"
+module.exports = "<md-toolbar color=\"primary\">\r\n    <button md-button><md-icon>home</md-icon>StockAid</button>\r\n    <button md-button>Dashboard</button>\r\n\r\n    <!-- This fills the remaining space of the current row -->\r\n    <span class=\"example-fill-remaining-space\"></span>\r\n    <!-- <md-slide-toggle  [(ngModel)]=\"displayChart\">Display Chart</md-slide-toggle>&nbsp;&nbsp; -->\r\n\r\n</md-toolbar>\r\n\r\n\r\n\r\n\r\n<!-- <app-live-quote>\r\n</app-live-quote> -->\r\n\r\n\r\n\r\n<md-sidenav-container>\r\n    <md-sidenav mode=\"side\" opened=\"true\">\r\n        <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n        <app-quote [stsymbol]=\"selectedStock\">\r\n        </app-quote>\r\n    </md-sidenav>\r\n    <md-tab-group>\r\n        <md-tab label=\"Table\">\r\n            <app-bar-table [stsymbol]=\"selectedStock\"></app-bar-table>\r\n        </md-tab>\r\n        <md-tab *ngFor=\"let inter of chartInterval.reverse()\" label=\"{{inter}}\">\r\n            <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"inter\"></app-bar-chart>\r\n        </md-tab>\r\n\r\n\r\n    </md-tab-group>\r\n</md-sidenav-container>\r\n\r\n<md-toolbar color=\"primary\" class=\"bottom\">\r\n    <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n</md-toolbar>"
 
 /***/ }),
 
@@ -84,16 +84,20 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_bar_service__ = __webpack_require__("../../../../../src/app/service/bar.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__symbol_symbol_component__ = __webpack_require__("../../../../../src/app/symbol/symbol.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__service_symbol_service__ = __webpack_require__("../../../../../src/app/service/symbol.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__bar_table_bar_table_component__ = __webpack_require__("../../../../../src/app/bar-table/bar-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__bar_chart_bar_chart_component__ = __webpack_require__("../../../../../src/app/bar-chart/bar-chart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_primeng_primeng__ = __webpack_require__("../../../../primeng/primeng.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_primeng_primeng___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_primeng_primeng__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__service_web_sockets_service__ = __webpack_require__("../../../../../src/app/service/web-sockets.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__symbol_symbol_component__ = __webpack_require__("../../../../../src/app/symbol/symbol.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__service_symbol_service__ = __webpack_require__("../../../../../src/app/service/symbol.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__bar_table_bar_table_component__ = __webpack_require__("../../../../../src/app/bar-table/bar-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__bar_chart_bar_chart_component__ = __webpack_require__("../../../../../src/app/bar-chart/bar-chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_primeng_primeng__ = __webpack_require__("../../../../primeng/primeng.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_primeng_primeng___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_primeng_primeng__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__live_quote_live_quote_component__ = __webpack_require__("../../../../../src/app/live-quote/live-quote.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__quote_quote_component__ = __webpack_require__("../../../../../src/app/quote/quote.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__service_quote_service__ = __webpack_require__("../../../../../src/app/service/quote.service.ts");
 /* unused harmony export PrimeModule */
 /* unused harmony export MaterialModule */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
@@ -115,7 +119,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 //for primeng
+
+
+
 
 var PrimeModule = (function () {
     function PrimeModule() {
@@ -125,7 +133,7 @@ var PrimeModule = (function () {
 PrimeModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         exports: [
-            __WEBPACK_IMPORTED_MODULE_12_primeng_primeng__["ChartModule"]
+            __WEBPACK_IMPORTED_MODULE_13_primeng_primeng__["ChartModule"]
         ]
     })
 ], PrimeModule);
@@ -139,37 +147,37 @@ var MaterialModule = (function () {
 MaterialModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         exports: [
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["a" /* MdAutocompleteModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["b" /* MdButtonModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["c" /* MdButtonToggleModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["d" /* MdCardModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["e" /* MdCheckboxModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["f" /* MdChipsModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["g" /* MdCoreModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["h" /* MdDatepickerModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["i" /* MdDialogModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["j" /* MdExpansionModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["k" /* MdGridListModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["l" /* MdIconModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["m" /* MdInputModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["n" /* MdListModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["o" /* MdMenuModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["p" /* MdNativeDateModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["q" /* MdPaginatorModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["r" /* MdProgressBarModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["s" /* MdProgressSpinnerModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["t" /* MdRadioModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["u" /* MdRippleModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["v" /* MdSelectModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["w" /* MdSidenavModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["x" /* MdSliderModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["y" /* MdSlideToggleModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["z" /* MdSnackBarModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["A" /* MdSortModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["B" /* MdTableModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["C" /* MdTabsModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["D" /* MdToolbarModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["E" /* MdTooltipModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["a" /* MdAutocompleteModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["b" /* MdButtonModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["c" /* MdButtonToggleModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["d" /* MdCardModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["e" /* MdCheckboxModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["f" /* MdChipsModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["g" /* MdCoreModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["h" /* MdDatepickerModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["i" /* MdDialogModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["j" /* MdExpansionModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["k" /* MdGridListModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["l" /* MdIconModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["m" /* MdInputModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["n" /* MdListModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["o" /* MdMenuModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["p" /* MdNativeDateModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["q" /* MdPaginatorModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["r" /* MdProgressBarModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["s" /* MdProgressSpinnerModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["t" /* MdRadioModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["u" /* MdRippleModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["v" /* MdSelectModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["w" /* MdSidenavModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["x" /* MdSliderModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["y" /* MdSlideToggleModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["z" /* MdSnackBarModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["A" /* MdSortModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["B" /* MdTableModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["C" /* MdTabsModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["D" /* MdToolbarModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["E" /* MdTooltipModule */],
         ]
     })
 ], MaterialModule);
@@ -184,21 +192,23 @@ AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__symbol_symbol_component__["a" /* SymbolComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__bar_table_bar_table_component__["a" /* BarTableComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__bar_chart_bar_chart_component__["a" /* BarChartComponent */]
+            __WEBPACK_IMPORTED_MODULE_9__symbol_symbol_component__["a" /* SymbolComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__bar_table_bar_table_component__["a" /* BarTableComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__bar_chart_bar_chart_component__["a" /* BarChartComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__live_quote_live_quote_component__["a" /* LiveQuoteComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__quote_quote_component__["a" /* QuoteComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
-            __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormsModule"],
-            __WEBPACK_IMPORTED_MODULE_7__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_forms__["FormsModule"],
+            __WEBPACK_IMPORTED_MODULE_8__angular_http__["a" /* HttpModule */],
             MaterialModule,
-            __WEBPACK_IMPORTED_MODULE_6__angular_material__["p" /* MdNativeDateModule */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_forms__["ReactiveFormsModule"],
+            __WEBPACK_IMPORTED_MODULE_7__angular_material__["p" /* MdNativeDateModule */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_forms__["ReactiveFormsModule"],
             PrimeModule
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__service_bar_service__["a" /* BarService */], __WEBPACK_IMPORTED_MODULE_9__service_symbol_service__["a" /* SymbolService */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_3__service_bar_service__["a" /* BarService */], __WEBPACK_IMPORTED_MODULE_10__service_symbol_service__["a" /* SymbolService */], __WEBPACK_IMPORTED_MODULE_4__service_web_sockets_service__["a" /* WebSocketsService */], __WEBPACK_IMPORTED_MODULE_16__service_quote_service__["a" /* QuoteService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
@@ -215,7 +225,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* Structure */\n.example-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  max-height: 500px;\n  min-width: 300px;\n}\n\n.example-header {\n  min-height: 64px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding-left: 24px;\n  font-size: 20px;\n}\n\n.mat-table {\n  overflow: auto;\n}\n", ""]);
+exports.push([module.i, "/* Structure */\r\n.example-container {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  max-height: 500px;\r\n  min-width: 300px;\r\n}\r\n\r\n.example-header {\r\n  min-height: 64px;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  padding-left: 24px;\r\n  font-size: 20px;\r\n}\r\n\r\n.mat-table {\r\n  overflow: auto;\r\n}\r\n", ""]);
 
 // exports
 
@@ -228,7 +238,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/bar-chart/bar-chart.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"ui-md-10\">\n  <p-chart type=\"line\" #mixedChart [data]=\"hoursData\"></p-chart>\n\n</div>"
+module.exports = "<div class=\"ui-md-10\">\r\n  <p-chart type=\"line\" #mixedChart [data]=\"hoursData\"></p-chart>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -339,7 +349,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* Structure */\n.example-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  max-height: 500px;\n  min-width: 300px;\n}\n\n.example-header {\n  min-height: 64px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  padding-left: 24px;\n  font-size: 20px;\n}\n\n.mat-table {\n  overflow: auto;\n}\n", ""]);
+exports.push([module.i, "/* Structure */\r\n.example-container {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  max-height: 500px;\r\n  min-width: 300px;\r\n}\r\n\r\n.example-header {\r\n  min-height: 64px;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  padding-left: 24px;\r\n  font-size: 20px;\r\n}\r\n\r\n.mat-table {\r\n  overflow: auto;\r\n}\r\n", ""]);
 
 // exports
 
@@ -352,7 +362,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/bar-table/bar-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <md-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\">\n  </md-paginator>\n  <md-table #table [dataSource]=\"dataSource\">\n\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n\n\n    <ng-container mdColumnDef=\"open\">\n      <md-header-cell *mdHeaderCellDef> open </md-header-cell>\n      <md-cell *mdCellDef=\"let row\"> {{row.open}} </md-cell>\n    </ng-container>\n    <ng-container mdColumnDef=\"high\">\n      <md-header-cell *mdHeaderCellDef> high </md-header-cell>\n      <md-cell *mdCellDef=\"let row\"> {{row.high}} </md-cell>\n    </ng-container>\n    <ng-container mdColumnDef=\"low\">\n      <md-header-cell *mdHeaderCellDef> low </md-header-cell>\n      <md-cell *mdCellDef=\"let row\"> {{row.low}} </md-cell>\n    </ng-container>\n    <ng-container mdColumnDef=\"close\">\n      <md-header-cell *mdHeaderCellDef> close </md-header-cell>\n      <md-cell *mdCellDef=\"let row\"> {{row.close}} </md-cell>\n    </ng-container>\n    <ng-container mdColumnDef=\"label\">\n      <md-header-cell *mdHeaderCellDef> label </md-header-cell>\n      <md-cell *mdCellDef=\"let row\"> {{row.label}} </md-cell>\n    </ng-container>\n\n\n\n\n\n    <md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row>\n    <md-row *mdRowDef=\"let row; columns: displayedColumns;\"></md-row>\n  </md-table>\n</div>"
+module.exports = "<div>\r\n  <md-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\">\r\n  </md-paginator>\r\n  <md-table #table [dataSource]=\"dataSource\">\r\n\r\n    <!--- Note that these columns can be defined in any order.\r\n          The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n\r\n    <ng-container mdColumnDef=\"open\">\r\n      <md-header-cell *mdHeaderCellDef> open </md-header-cell>\r\n      <md-cell *mdCellDef=\"let row\"> {{row.open}} </md-cell>\r\n    </ng-container>\r\n    <ng-container mdColumnDef=\"high\">\r\n      <md-header-cell *mdHeaderCellDef> high </md-header-cell>\r\n      <md-cell *mdCellDef=\"let row\"> {{row.high}} </md-cell>\r\n    </ng-container>\r\n    <ng-container mdColumnDef=\"low\">\r\n      <md-header-cell *mdHeaderCellDef> low </md-header-cell>\r\n      <md-cell *mdCellDef=\"let row\"> {{row.low}} </md-cell>\r\n    </ng-container>\r\n    <ng-container mdColumnDef=\"close\">\r\n      <md-header-cell *mdHeaderCellDef> close </md-header-cell>\r\n      <md-cell *mdCellDef=\"let row\"> {{row.close}} </md-cell>\r\n    </ng-container>\r\n    <ng-container mdColumnDef=\"label\">\r\n      <md-header-cell *mdHeaderCellDef> label </md-header-cell>\r\n      <md-cell *mdCellDef=\"let row\"> {{row.label}} </md-cell>\r\n    </ng-container>\r\n\r\n\r\n\r\n\r\n\r\n    <md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row>\r\n    <md-row *mdRowDef=\"let row; columns: displayedColumns;\"></md-row>\r\n  </md-table>\r\n</div>"
 
 /***/ }),
 
@@ -510,6 +520,208 @@ var _a, _b, _c;
 
 /***/ }),
 
+/***/ "../../../../../src/app/live-quote/live-quote.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/live-quote/live-quote.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  live-quote works!\n</p>\n{{messages}}\n\n<md-list>\n  <md-list-item *ngFor='let m of messages'> {{m }}asdf </md-list-item>\n\n</md-list>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/live-quote/live-quote.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_web_sockets_service__ = __webpack_require__("../../../../../src/app/service/web-sockets.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LiveQuoteComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LiveQuoteComponent = (function () {
+    function LiveQuoteComponent(webSocket) {
+        this.webSocket = webSocket;
+        this.symbols = new Array();
+    }
+    LiveQuoteComponent.prototype.sendMessage = function () {
+        this.message = 'aapl,vti,snap;fb;aig+';
+        this.webSocket.sendMessage(this.message);
+        this.message = '';
+    };
+    LiveQuoteComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.connection = this.webSocket.getMessages().subscribe(function (message) {
+            console.log(message);
+            var found = false;
+            _this.messages = message;
+            _this.symbols.forEach(function (element) {
+                if (element.symbol == _this.messages.symbol) {
+                    element.lastSalePrice = _this.messages.lastSalePrice;
+                    found = true;
+                }
+            });
+            if (!found)
+                _this.symbols.push(_this.messages);
+        });
+        this.message = 'aapl,snap;fb;aig+';
+        this.sendMessage();
+    };
+    LiveQuoteComponent.prototype.ngOnDestroy = function () {
+        this.connection.unsubscribe();
+    };
+    return LiveQuoteComponent;
+}());
+LiveQuoteComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-live-quote',
+        template: __webpack_require__("../../../../../src/app/live-quote/live-quote.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/live-quote/live-quote.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_web_sockets_service__["a" /* WebSocketsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_web_sockets_service__["a" /* WebSocketsService */]) === "function" && _a || Object])
+], LiveQuoteComponent);
+
+var _a;
+//# sourceMappingURL=live-quote.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/quote/quote.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "md-grid-tile {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  font-family: Arial;\r\n  font-size: 12px;\r\n\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/quote/quote.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<md-grid-list cols=\"4\" rowHeight=\"58px\">\n  <md-grid-tile>\n    Company Name\n  </md-grid-tile>\n  <md-grid-tile>\n    LatestPrice\n  </md-grid-tile>\n  <md-grid-tile>\n    Previous Close\n  </md-grid-tile>\n  <md-grid-tile>\n    Volume\n  </md-grid-tile>\n</md-grid-list>\n\n<md-grid-list *ngFor='let m of quotes' cols=\"4\" rowHeight=\"58px\">\n  <md-grid-tile> {{m.symbol}}\n  </md-grid-tile>\n  <md-grid-tile>\n    {{m.latestPrice}}\n  </md-grid-tile>\n  <md-grid-tile>\n    {{m.previousClose}}\n  </md-grid-tile>\n  <md-grid-tile>\n    <!-- <md-grid-tile [style.background]=\"'#DDBDF1'\"> -->\n    {{m.avgTotalVolume}}\n  </md-grid-tile>\n</md-grid-list>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/quote/quote.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_startWith__ = __webpack_require__("../../../../rxjs/add/operator/startWith.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_startWith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_startWith__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_merge__ = __webpack_require__("../../../../rxjs/add/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_merge__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__service_quote_service__ = __webpack_require__("../../../../../src/app/service/quote.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuoteComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var QuoteComponent = (function () {
+    function QuoteComponent(quoteService) {
+        this.quoteService = quoteService;
+        this.quotes = Array();
+    }
+    QuoteComponent.prototype.ngOnChanges = function (changes) {
+        var _this = this;
+        if (this.stsymbol)
+            this.quoteService.getQuotes(this.stsymbol).subscribe(function (p) {
+                _this.quotes.push(p);
+                console.log(p);
+            });
+    };
+    QuoteComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.quoteService.getQuotes('aapl').subscribe(function (p) {
+            _this.quotes.push(p);
+        });
+        this.quoteService.getQuotes('goog').subscribe(function (p) {
+            _this.quotes.push(p);
+        });
+        this.quoteService.getQuotes('goog').subscribe(function (p) {
+            _this.quotes.push(p);
+        });
+        this.quoteService.getQuotes('amzn').subscribe(function (p) {
+            _this.quotes.push(p);
+        });
+        this.quoteService.getQuotes('aapl').subscribe(function (p) {
+            _this.quotes.push(p);
+        });
+        this.quoteService.getQuotes('goog').subscribe(function (p) {
+            _this.quotes.push(p);
+        });
+        this.quoteService.getQuotes('goog').subscribe(function (p) {
+            _this.quotes.push(p);
+        });
+        this.quoteService.getQuotes('amzn').subscribe(function (p) {
+            _this.quotes.push(p);
+        });
+    };
+    return QuoteComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", String)
+], QuoteComponent.prototype, "stsymbol", void 0);
+QuoteComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-quote',
+        template: __webpack_require__("../../../../../src/app/quote/quote.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/quote/quote.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__service_quote_service__["a" /* QuoteService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_quote_service__["a" /* QuoteService */]) === "function" && _a || Object])
+], QuoteComponent);
+
+var _a;
+//# sourceMappingURL=quote.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/service/bar.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -552,6 +764,50 @@ BarService = __decorate([
 
 var _a;
 //# sourceMappingURL=bar.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/service/quote.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuoteService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var QuoteService = (function () {
+    function QuoteService(http) {
+        this.http = http;
+        this._quoteUrl = 'https://api.iextrading.com/1.0/stock/aapl/quote';
+    }
+    QuoteService.prototype.getQuotes = function (symbol) {
+        console.log(this._quoteUrl);
+        return this.http.get(this._quoteUrl.replace("aapl", symbol))
+            .map(function (res) { return res.json(); });
+    };
+    QuoteService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        return Promise.reject(error.message || error);
+    };
+    return QuoteService;
+}());
+QuoteService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], QuoteService);
+
+var _a;
+//# sourceMappingURL=quote.service.js.map
 
 /***/ }),
 
@@ -599,6 +855,57 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/service/web-sockets.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_socket_io_client__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WebSocketsService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var WebSocketsService = (function () {
+    function WebSocketsService() {
+        this.url = 'https://ws-api.iextrading.com/1.0/tops';
+    }
+    WebSocketsService.prototype.sendMessage = function (message) {
+        this.socket.emit('subscribe', message);
+        console.log(message);
+    };
+    WebSocketsService.prototype.getMessages = function () {
+        var _this = this;
+        var observable = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"](function (observer) {
+            _this.socket = __WEBPACK_IMPORTED_MODULE_2_socket_io_client__(_this.url);
+            _this.socket.on('message', function (data) {
+                console.log(data);
+                observer.next(data);
+            });
+            return function () {
+                _this.socket.disconnect();
+            };
+        });
+        return observable;
+    };
+    return WebSocketsService;
+}());
+WebSocketsService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
+], WebSocketsService);
+
+//# sourceMappingURL=web-sockets.service.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/symbol/symbol.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -620,7 +927,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/symbol/symbol.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "Symbol\n<md-input-container>\n  <input mdInput placeholder=\"\" [mdAutocomplete]=\"auto\" [formControl]=\"stockCtrl\">\n</md-input-container>\n\n<md-autocomplete #auto=\"mdAutocomplete\">\n  <md-option (onSelectionChange)=\"selected($event, stock)\" *ngFor=\"let stock of filteredstocks | async\" [value]=\"stock\">\n    {{ stock }}\n  </md-option>\n</md-autocomplete>"
+module.exports = "<div id=\"symbolComponent\">\nSymbol\n<md-input-container>\n  <input mdInput placeholder=\"\" [mdAutocomplete]=\"auto\" [formControl]=\"stockCtrl\">\n</md-input-container>\n\n<md-autocomplete #auto=\"mdAutocomplete\">\n  <md-option (onSelectionChange)=\"selected($event, stock)\" *ngFor=\"let stock of filteredstocks | async\" [value]=\"stock\">\n    {{ stock }}\n  </md-option>\n</md-autocomplete>\n</div>"
 
 /***/ }),
 
@@ -737,6 +1044,13 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 /***/ }),
 
 /***/ 0:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("../../../../../src/main.ts");
@@ -744,5 +1058,5 @@ module.exports = __webpack_require__("../../../../../src/main.ts");
 
 /***/ })
 
-},[0]);
+},[1]);
 //# sourceMappingURL=main.bundle.js.map
