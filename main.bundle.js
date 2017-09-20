@@ -19,7 +19,7 @@ webpackEmptyContext.id = "../../../../../src async recursive";
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chart_chart_component__ = __webpack_require__("../../../../../src/app/chart/chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main_router_main_router_component__ = __webpack_require__("../../../../../src/app/main-router/main-router.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -31,9 +31,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'chart' },
-    { path: 'chart', component: __WEBPACK_IMPORTED_MODULE_2__chart_chart_component__["a" /* ChartComponent */] },
-    { path: 'chart/:sym', component: __WEBPACK_IMPORTED_MODULE_2__chart_chart_component__["a" /* ChartComponent */] },
+    { path: '', pathMatch: 'full', redirectTo: 'main' },
+    { path: 'main', component: __WEBPACK_IMPORTED_MODULE_2__main_router_main_router_component__["a" /* MainRouterComponent */] },
+    { path: 'main/:sym', component: __WEBPACK_IMPORTED_MODULE_2__main_router_main_router_component__["a" /* MainRouterComponent */] },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -72,7 +72,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-toolbar color=\"primary\">\r\n    <button md-button><md-icon>home</md-icon>StockAid</button>\r\n    <button md-button>Dashboard</button>\r\n\r\n    <!-- This fills the remaining space of the current row -->\r\n    <span class=\"example-fill-remaining-space\"></span>\r\n    <!-- <md-slide-toggle  [(ngModel)]=\"displayChart\">Display Chart</md-slide-toggle>&nbsp;&nbsp; -->\r\n\r\n</md-toolbar>\r\n\r\n\r\n\r\n\r\n<!-- <app-live-quote>\r\n</app-live-quote> -->\r\n\r\n\r\n\r\n<md-sidenav-container>\r\n    <md-sidenav mode=\"side\" opened=\"true\">\r\n        <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n        <app-quote [stsymbol]=\"selectedStock\">\r\n        </app-quote>\r\n    </md-sidenav>\r\n    <div id=\"outlet\">\r\n        <router-outlet>\r\n\r\n        </router-outlet>\r\n    </div>\r\n\r\n\r\n</md-sidenav-container>\r\n\r\n<md-toolbar color=\"primary\" class=\"bottom\">\r\n    <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n</md-toolbar>"
+module.exports = "<md-toolbar color=\"primary\">\r\n    <button md-button><md-icon>home</md-icon>StockAid</button>\r\n    <button md-button>Dashboard</button>\r\n\r\n\r\n    <span class=\"example-fill-remaining-space\"></span>\r\n\r\n\r\n</md-toolbar>\r\n\r\n<md-sidenav-container>\r\n    <md-sidenav mode=\"side\" opened=\"true\">\r\n        <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n        <app-quote [stsymbol]=\"selectedStock\">\r\n        </app-quote>\r\n    </md-sidenav>\r\n    <div id=\"outlet\">\r\n        <router-outlet>\r\n\r\n        </router-outlet>\r\n    </div>\r\n\r\n\r\n</md-sidenav-container>\r\n\r\n<md-toolbar color=\"primary\" class=\"bottom\">\r\n    <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n</md-toolbar>\r\n<!-- <div id=\"bodyHeight\">\r\n    <header class=\"page-header\">\r\n\r\n        <md-toolbar color=\"primary\">\r\n            <button md-button><md-icon>home</md-icon>StockAid</button>\r\n            <button md-button>Dashboard</button>\r\n        </md-toolbar>\r\n    </header>\r\n\r\n    <main class=\"page-content\">\r\n        <md-sidenav mode=\"side\" opened=\"true\">\r\n            <nav class=\"content-quote\">\r\n                <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n                <app-quote [stsymbol]=\"selectedStock\">\r\n                </app-quote>\r\n            </nav>\r\n        </md-sidenav>\r\n        <article class=\"content-chart\">\r\n            <router-outlet>\r\n\r\n            </router-outlet>\r\n\r\n        </article>\r\n\r\n    </main>\r\n\r\n\r\n    <md-toolbar color=\"primary\" class=\"bottom\">\r\n        <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n    </md-toolbar>\r\n\r\n</div> -->"
 
 /***/ }),
 
@@ -137,7 +137,12 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__live_quote_live_quote_component__ = __webpack_require__("../../../../../src/app/live-quote/live-quote.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__quote_quote_component__ = __webpack_require__("../../../../../src/app/quote/quote.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__service_quote_service__ = __webpack_require__("../../../../../src/app/service/quote.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__chart_chart_component__ = __webpack_require__("../../../../../src/app/chart/chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__service_news_service__ = __webpack_require__("../../../../../src/app/service/news.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__service_stats_service__ = __webpack_require__("../../../../../src/app/service/stats.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__chart_chart_component__ = __webpack_require__("../../../../../src/app/chart/chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__key_statistics_key_statistics_component__ = __webpack_require__("../../../../../src/app/key-statistics/key-statistics.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__news_news_component__ = __webpack_require__("../../../../../src/app/news/news.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__main_router_main_router_component__ = __webpack_require__("../../../../../src/app/main-router/main-router.component.ts");
 /* unused harmony export PrimeModule */
 /* unused harmony export MaterialModule */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
@@ -162,6 +167,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 //for primeng
+
+
+
+
+
 
 
 
@@ -239,7 +249,10 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_13__bar_chart_bar_chart_component__["a" /* BarChartComponent */],
             __WEBPACK_IMPORTED_MODULE_15__live_quote_live_quote_component__["a" /* LiveQuoteComponent */],
             __WEBPACK_IMPORTED_MODULE_16__quote_quote_component__["a" /* QuoteComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__chart_chart_component__["a" /* ChartComponent */]
+            __WEBPACK_IMPORTED_MODULE_20__chart_chart_component__["a" /* ChartComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__key_statistics_key_statistics_component__["a" /* KeyStatisticsComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__news_news_component__["a" /* NewsComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__main_router_main_router_component__["a" /* MainRouterComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
@@ -252,7 +265,7 @@ AppModule = __decorate([
             PrimeModule,
             __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__service_bar_service__["a" /* BarService */], __WEBPACK_IMPORTED_MODULE_11__service_symbol_service__["a" /* SymbolService */], __WEBPACK_IMPORTED_MODULE_4__service_web_sockets_service__["a" /* WebSocketsService */], __WEBPACK_IMPORTED_MODULE_17__service_quote_service__["a" /* QuoteService */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_3__service_bar_service__["a" /* BarService */], __WEBPACK_IMPORTED_MODULE_11__service_symbol_service__["a" /* SymbolService */], __WEBPACK_IMPORTED_MODULE_4__service_web_sockets_service__["a" /* WebSocketsService */], __WEBPACK_IMPORTED_MODULE_17__service_quote_service__["a" /* QuoteService */], __WEBPACK_IMPORTED_MODULE_19__service_stats_service__["a" /* StatsService */], __WEBPACK_IMPORTED_MODULE_18__service_news_service__["a" /* NewsService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
@@ -610,18 +623,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ChartComponent = (function () {
     function ChartComponent(route) {
         this.route = route;
+        this.stsymbol = '';
         this.chartInterval = ['5y', '2y', '1y', 'ytd', '6m', '3m'];
     }
+    ChartComponent.prototype.ngOnChanges = function (changes) {
+        this.selectedStock = this.stsymbol;
+    };
     ChartComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.selectedStock = 'vti';
-        this.sub = this.route.params.subscribe(function (params) {
-            _this.selectedStock = params['sym']; // (+) converts string 'id' to a number
-            // In a real app: dispatch action to load the details here.
-        });
     };
     return ChartComponent;
 }());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", String)
+], ChartComponent.prototype, "stsymbol", void 0);
 ChartComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-chart',
@@ -633,6 +648,81 @@ ChartComponent = __decorate([
 
 var _a;
 //# sourceMappingURL=chart.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/key-statistics/key-statistics.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "md-grid-list {\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 13px;\r\n    vertical-align:middle;\r\n    text-align: left;\r\n    color: white;\r\n\r\n}\r\np{\r\n    padding: 2px;\r\n    width:100%;\r\n    text-align: left;\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/key-statistics/key-statistics.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"stats\">\n  <md-grid-list cols=\"8\" rowHeight=\"5:1\">\n    <md-grid-tile>\n      <p>companyName</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.companyName}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>marketcap</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.marketcap}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>beta</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.beta}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>week52high</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.week52high}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>week52low</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.week52low}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>week52change</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.week52change}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>shortInterest</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.shortInterest}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>shortDate</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.shortDate}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>dividendRate</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.dividendRate}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>dividendYield</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.dividendYield}}</p>\n    </md-grid-tile>\n    <!-- <md-grid-tile>\n      <p>exDividendDate</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.exDividendDate}}</p>\n    </md-grid-tile> -->\n    <md-grid-tile>\n      <p>latestEPS</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.latestEPS}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>latestEPSDate</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.latestEPSDate}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>sharesOutstanding</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.sharesOutstanding}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>float</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.float}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>returnOnEquity</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.returnOnEquity}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>consensusEPS</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.consensusEPS}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>numberOfEstimates</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.numberOfEstimates}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>symbol</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.symbol}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>EBITDA</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.EBITDA}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>revenue</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.revenue}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>grossProfit</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.grossProfit}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>cash</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.cash}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>debt</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.debt}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>ttmEPS</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.ttmEPS}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>revenuePerShare</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.revenuePerShare}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>revenuePerEmployee</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.revenuePerEmployee}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>peRatioHigh</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.peRatioHigh}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>peRatioLow</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.peRatioLow}}</p>\n    </md-grid-tile>\n\n  </md-grid-list>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/key-statistics/key-statistics.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_stats_service__ = __webpack_require__("../../../../../src/app/service/stats.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KeyStatisticsComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var KeyStatisticsComponent = (function () {
+    function KeyStatisticsComponent(statsService) {
+        this.statsService = statsService;
+        this.stsymbol = '';
+    }
+    KeyStatisticsComponent.prototype.ngOnChanges = function (changes) {
+        var _this = this;
+        this.selectedStock = this.stsymbol;
+        this.statsService.getStats(this.stsymbol).subscribe(function (p) { _this.stats = p; });
+    };
+    KeyStatisticsComponent.prototype.ngOnInit = function () {
+    };
+    return KeyStatisticsComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", String)
+], KeyStatisticsComponent.prototype, "stsymbol", void 0);
+KeyStatisticsComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-key-statistics',
+        template: __webpack_require__("../../../../../src/app/key-statistics/key-statistics.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/key-statistics/key-statistics.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_stats_service__["a" /* StatsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_stats_service__["a" /* StatsService */]) === "function" && _a || Object])
+], KeyStatisticsComponent);
+
+var _a;
+//# sourceMappingURL=key-statistics.component.js.map
 
 /***/ }),
 
@@ -726,6 +816,154 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/main-router/main-router.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".flex-container{\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -webkit-box-flex:1;\r\n      -ms-flex:1;\r\n          flex:1;\r\n  -ms-flex-positive: 1;\r\n      flex-grow: 1;\r\n  height:100%;\r\n  width:100%;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n}\r\n.flex-chart{\r\n width:67%;\r\n /* height:67%; */\r\n\r\n}\r\n\r\n.flex-news{\r\n    width:33%;\r\n /* height:67%; */\r\n\r\n}\r\n\r\n.flex-statistics{\r\n    width:100%;\r\n    /* height:33%; */\r\n    \r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/main-router/main-router.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"flex-container\">\n\n  <div class=\"flex-chart\">\n    <app-chart [stsymbol]=\"selectedStock\"></app-chart>\n  </div>\n  <div class=\"flex-\" news>\n\n    <app-news [stsymbol]=\"selectedStock\"></app-news>\n  </div>\n  <div class=\"flex-statistics\">\n    <app-key-statistics [stsymbol]=\"selectedStock\"></app-key-statistics>\n  </div>\n\n\n</div>\n\n<!-- <md-tab-group>\n  <md-tab label=\"Table\">\n    <app-bar-table [stsymbol]=\"selectedStock\"></app-bar-table>\n  </md-tab>\n  <md-tab *ngFor=\"let inter of chartInterval.reverse()\" label=\"{{inter}}\">\n    <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"inter\"></app-bar-chart>\n  </md-tab>\n\n\n</md-tab-group> -->"
+
+/***/ }),
+
+/***/ "../../../../../src/app/main-router/main-router.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainRouterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var MainRouterComponent = (function () {
+    function MainRouterComponent(route) {
+        this.route = route;
+        this.chartInterval = ['5y', '2y', '1y', 'ytd', '6m', '3m'];
+    }
+    MainRouterComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.selectedStock = 'vti';
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.selectedStock = params['sym']; // (+) converts string 'id' to a number
+            // In a real app: dispatch action to load the details here.
+        });
+    };
+    return MainRouterComponent;
+}());
+MainRouterComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-main-router',
+        template: __webpack_require__("../../../../../src/app/main-router/main-router.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/main-router/main-router.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"]) === "function" && _a || Object])
+], MainRouterComponent);
+
+var _a;
+//# sourceMappingURL=main-router.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/news/news.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\r\nmd-sidenav {\r\n    height:67%;\r\n\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 12px;\r\n    vertical-align:middle;\r\n\r\n\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/news/news.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- -->\n\n<md-sidenav mode=\"side\" opened=\"true\">\n\n  <md-expansion-panel *ngFor=\"let n of news\">\n    <md-expansion-panel-header>\n      <md-panel-title>\n        {{n.headline}}\n\n      </md-panel-title>\n      <md-panel-description>\n\n      </md-panel-description>\n    </md-expansion-panel-header>\n\n    <b>{{n.datetime | date:'short'}}</b> - {{n.summary}}\n  </md-expansion-panel>\n</md-sidenav>\n\n<!-- <span mdTooltip=\"{{n.headline}}\" *ngFor=\"let n of news\">I have a tooltip</span>\n<br> -->"
+
+/***/ }),
+
+/***/ "../../../../../src/app/news/news.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_news_service__ = __webpack_require__("../../../../../src/app/service/news.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewsComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NewsComponent = (function () {
+    function NewsComponent(newsService) {
+        this.newsService = newsService;
+        this.news = new Array();
+        this.stsymbol = '';
+    }
+    NewsComponent.prototype.ngOnChanges = function (changes) {
+        var _this = this;
+        this.selectedStock = this.stsymbol;
+        this.newsService.getNews(this.stsymbol).subscribe(function (val) { _this.news = val; });
+    };
+    NewsComponent.prototype.ngOnInit = function () {
+    };
+    return NewsComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", String)
+], NewsComponent.prototype, "stsymbol", void 0);
+NewsComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-news',
+        template: __webpack_require__("../../../../../src/app/news/news.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/news/news.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_news_service__["a" /* NewsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_news_service__["a" /* NewsService */]) === "function" && _a || Object])
+], NewsComponent);
+
+var _a;
+//# sourceMappingURL=news.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/quote/quote.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -747,7 +985,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/quote/quote.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-grid-list cols=\"3\" rowHeight=\"40px\">\n  <md-grid-tile>\n    Symbol\n  </md-grid-tile>\n  <md-grid-tile>\n    Price\n  </md-grid-tile>\n  <md-grid-tile>\n    Change\n  </md-grid-tile>\n  <!-- <md-grid-tile>\n    Volume\n  </md-grid-tile> -->\n</md-grid-list>\n\n<md-grid-list *ngFor='let m of quotes' cols=\"3\" rowHeight=\"40px\" [routerLink]=\"['/chart', m.symbol]\">\n  <md-grid-tile> {{m.symbol}}\n  </md-grid-tile>\n  <md-grid-tile>\n    {{m.latestPrice| number:'.1-2'}}\n  </md-grid-tile>\n  <md-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\n    {{m.changePercent*100 | number:'.1-3'}}%\n  </md-grid-tile>\n  <!-- <md-grid-tile>\n     <md-grid-tile [style.background]=\"'#DDBDF1'\">\n    {{m.avgTotalVolume}}\n  </md-grid-tile> -->\n</md-grid-list>"
+module.exports = "<md-grid-list cols=\"3\" rowHeight=\"40px\">\n  <md-grid-tile>\n    Symbol\n  </md-grid-tile>\n  <md-grid-tile>\n    Price\n  </md-grid-tile>\n  <md-grid-tile>\n    Change\n  </md-grid-tile>\n  <!-- <md-grid-tile>\n    Volume\n  </md-grid-tile> -->\n</md-grid-list>\n\n<md-grid-list *ngFor='let m of quotes' cols=\"3\" rowHeight=\"40px\" [routerLink]=\"['/main', m.symbol]\">\n  <md-grid-tile> {{m.symbol}}\n  </md-grid-tile>\n  <md-grid-tile>\n    {{m.latestPrice| number:'.1-2'}}\n  </md-grid-tile>\n  <md-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\n    {{m.changePercent*100 | number:'.1-3'}}%\n  </md-grid-tile>\n  <!-- <md-grid-tile>\n     <md-grid-tile [style.background]=\"'#DDBDF1'\">\n    {{m.avgTotalVolume}}\n  </md-grid-tile> -->\n</md-grid-list>"
 
 /***/ }),
 
@@ -802,7 +1040,7 @@ var QuoteComponent = (function () {
                 _this.quotes.push(p);
             });
         });
-        this.router.navigate(['/chart', favStock[0].toUpperCase()]);
+        this.router.navigate(['/main', favStock[0].toUpperCase()]);
         this.refreshval();
     };
     QuoteComponent.prototype.refreshval = function () {
@@ -892,6 +1130,50 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/service/news.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewsService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NewsService = (function () {
+    function NewsService(http) {
+        this.http = http;
+        this._newsUrl = 'https://api.iextrading.com/1.0/stock/aapl/news';
+    }
+    NewsService.prototype.getNews = function (symbol) {
+        console.log(this._newsUrl);
+        return this.http.get(this._newsUrl.replace("aapl", symbol))
+            .map(function (res) { return res.json(); });
+    };
+    NewsService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        return Promise.reject(error.message || error);
+    };
+    return NewsService;
+}());
+NewsService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], NewsService);
+
+var _a;
+//# sourceMappingURL=news.service.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/service/quote.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -933,6 +1215,50 @@ QuoteService = __decorate([
 
 var _a;
 //# sourceMappingURL=quote.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/service/stats.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StatsService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var StatsService = (function () {
+    function StatsService(http) {
+        this.http = http;
+        this._statsUrl = 'https://api.iextrading.com/1.0/stock/aapl/stats';
+    }
+    StatsService.prototype.getStats = function (symbol) {
+        console.log(this._statsUrl);
+        return this.http.get(this._statsUrl.replace("aapl", symbol))
+            .map(function (res) { return res.json(); });
+    };
+    StatsService.prototype.handleError = function (error) {
+        console.error('An error occurred', error); // for demo purposes only
+        return Promise.reject(error.message || error);
+    };
+    return StatsService;
+}());
+StatsService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], StatsService);
+
+var _a;
+//# sourceMappingURL=stats.service.js.map
 
 /***/ }),
 
