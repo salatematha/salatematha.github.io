@@ -59,7 +59,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".example-fill-remaining-space {\r\n  -webkit-box-flex: 1;\r\n      -ms-flex: 1 1 auto;\r\n          flex: 1 1 auto;\r\n}\r\nbody {\r\n    padding: 0 0 0 0 ;\r\n    -webkit-box-orient:vertical;\r\n    -webkit-box-direction:normal;\r\n        -ms-flex-direction:column;\r\n            flex-direction:column;\r\n\r\n}\r\nmd-sidenav {\r\n  width: 310px;\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    vertical-align:middle;\r\n    color: white;\r\n\r\n}\r\n#outlet {\r\n -webkit-box-flex:1;\r\n     -ms-flex:1;\r\n         flex:1;\r\n    min-height: 87vh;\r\n}\r\n\r\n.bottom {\r\n  -webkit-box-flex: 0;\r\n      -ms-flex: 0 0 auto;\r\n          flex: 0 0 auto;\r\n}\r\n\r\nmd-icon {\r\n  width : 1.8rem;\r\n  height: 1.8rem;  \r\n}\r\n", ""]);
+exports.push([module.i, ".example-fill-remaining-space {\r\n  -webkit-box-flex: 1;\r\n      -ms-flex: 1 1 auto;\r\n          flex: 1 1 auto;\r\n}\r\nbody {\r\n    padding: 0 0 0 0 ;\r\n    -webkit-box-orient:vertical;\r\n    -webkit-box-direction:normal;\r\n        -ms-flex-direction:column;\r\n            flex-direction:column;\r\n\r\n}\r\nmd-sidenav {\r\n  width: 310px;\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    vertical-align:middle;\r\n    color: white;\r\n\r\n}\r\n#outlet {\r\n\r\n\r\n}\r\n\r\n.bottom {\r\n  -webkit-box-flex: 0;\r\n      -ms-flex: 0 0 auto;\r\n          flex: 0 0 auto;\r\n}\r\n\r\nmd-icon {\r\n  width : 1.8rem;\r\n  height: 1.8rem;  \r\n}\r\n", ""]);
 
 // exports
 
@@ -659,7 +659,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "md-grid-list {\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 13px;\r\n    vertical-align:middle;\r\n    text-align: left;\r\n    color: white;\r\n    width:100%;\r\n    height:100%;\r\n\r\n}\r\np{\r\n    padding: 2px;\r\n    width:100%;\r\n    text-align: left;\r\n}", ""]);
+exports.push([module.i, "md-grid-list {\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 13px;\r\n    vertical-align:middle;\r\n    text-align: left;\r\n    color: white;\r\n\r\n\r\n}\r\np{\r\n    padding: 2px;\r\n    width:100%;\r\n    text-align: left;\r\n}", ""]);
 
 // exports
 
@@ -824,7 +824,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".flex-container{\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -webkit-box-flex:1;\r\n      -ms-flex:1;\r\n          flex:1;\r\n  -ms-flex-positive: 1;\r\n      flex-grow: 1;\r\n  height:100%;\r\n  width:100%;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n}\r\n.flex-chart{\r\n    min-height: 600px;\r\n width:67%;\r\n height:67%;\r\n min-width: 600px;\r\n\r\n}\r\n\r\n.flex-news{\r\n        min-width: 400px;\r\n    width:33%;\r\n\r\n height:67%;\r\n\r\n}\r\n\r\n.flex-statistics{\r\n    width:100%;\r\n    height:20%;\r\n\r\n}", ""]);
+exports.push([module.i, ".flex-container{\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  height:100%;\r\n  width:100%;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n}\r\n.flex-chart{\r\n    min-height: 600px;\r\n width:67%;\r\n height:67%;\r\n min-width: 600px;\r\n\r\n}\r\n\r\n.flex-news{\r\n        min-width: 400px;\r\n    width:33%;\r\n\r\n height:67%;\r\n\r\n}\r\n\r\n.flex-statistics{\r\n    width:100%;\r\n    height:33%;\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n\r\n}", ""]);
 
 // exports
 
