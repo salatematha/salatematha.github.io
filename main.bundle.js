@@ -42,7 +42,7 @@ var AppRoutingModule = (function () {
 }());
 AppRoutingModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["RouterModule"].forRoot(routes)],
+        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["RouterModule"].forRoot(routes, { useHash: true })],
         exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["RouterModule"]]
     })
 ], AppRoutingModule);
@@ -824,7 +824,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".flex-container{\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -webkit-box-flex:1;\r\n      -ms-flex:1;\r\n          flex:1;\r\n  -ms-flex-positive: 1;\r\n      flex-grow: 1;\r\n  height:100%;\r\n  width:100%;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n}\r\n.flex-chart{\r\n width:67%;\r\n /* height:67%; */\r\n\r\n}\r\n\r\n.flex-news{\r\n    width:33%;\r\n /* height:67%; */\r\n\r\n}\r\n\r\n.flex-statistics{\r\n    width:100%;\r\n    /* height:33%; */\r\n    \r\n}", ""]);
+exports.push([module.i, ".flex-container{\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  -webkit-box-flex:1;\r\n      -ms-flex:1;\r\n          flex:1;\r\n  -ms-flex-positive: 1;\r\n      flex-grow: 1;\r\n  height:100%;\r\n  width:100%;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n}\r\n.flex-chart{\r\n    min-height: 600px;\r\n width:67%;\r\n height:67%;\r\n min-width: 600px;\r\n\r\n}\r\n\r\n.flex-news{\r\n    width:33%;\r\n    min-width: 400px;\r\n height:67%;\r\n\r\n}\r\n\r\n.flex-statistics{\r\n    width:100%;\r\n    height:20%;\r\n\r\n}", ""]);
 
 // exports
 
@@ -896,7 +896,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\r\nmd-sidenav {\r\n    height:67%;\r\n\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 12px;\r\n    vertical-align:middle;\r\n\r\n\r\n}", ""]);
+exports.push([module.i, "\r\nmd-sidenav {\r\n    height:67%;\r\n\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 12px;\r\n    vertical-align:middle;\r\n\r\n\r\n}\r\n\r\nmd-panel-title{\r\n    font-size: 13px;\r\n}", ""]);
 
 // exports
 
@@ -909,7 +909,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/news/news.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- -->\n\n<md-sidenav mode=\"side\" opened=\"true\">\n\n  <md-expansion-panel *ngFor=\"let n of news\">\n    <md-expansion-panel-header>\n      <md-panel-title>\n        {{n.headline}}\n\n      </md-panel-title>\n      <md-panel-description>\n\n      </md-panel-description>\n    </md-expansion-panel-header>\n\n    <b>{{n.datetime | date:'short'}}</b> - {{n.summary}}\n  </md-expansion-panel>\n</md-sidenav>\n\n<!-- <span mdTooltip=\"{{n.headline}}\" *ngFor=\"let n of news\">I have a tooltip</span>\n<br> -->"
+module.exports = "<!-- -->\n\n<md-sidenav mode=\"side\" opened=\"true\">\n\n  <md-expansion-panel *ngFor=\"let n of news\">\n    <md-expansion-panel-header>\n      <md-panel-title>\n        {{n.datetime | date:'shortTime'}}-{{n.headline}}\n\n      </md-panel-title>\n      <md-panel-description>\n\n      </md-panel-description>\n    </md-expansion-panel-header>\n\n    <b>{{n.datetime | date:'short'}}</b> - {{n.summary}}\n  </md-expansion-panel>\n</md-sidenav>\n\n<!-- <span mdTooltip=\"{{n.headline}}\" *ngFor=\"let n of news\">I have a tooltip</span>\n<br> -->"
 
 /***/ }),
 
