@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../material/prebuilt-themes/deeppurple-amber.css"), "");
 
 // module
-exports.push([module.i, "\r\n/* You can add global styles to this file, and also import other style files */\r\n/*\r\ndeeppurple-amber.css\r\nindigo-pink.css\r\npink-bluegrey.css\r\npurple-green.css*/\r\n\r\nhtml,\r\nbody {\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n\tfont-family: arial, sans-serif;\r\n}\r\n\r\nbody {\r\n    box-sizing: border-box;\r\n    color: #fff;\r\n    font-size: 80%;\r\n    height: 100vh;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n\r\n}", ""]);
+exports.push([module.i, "\r\n/* You can add global styles to this file, and also import other style files */\r\n/*\r\ndeeppurple-amber.css\r\nindigo-pink.css\r\npink-bluegrey.css\r\npurple-green.css*/\r\n\r\nhtml,\r\nbody {\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n\tfont-family: arial, sans-serif;\r\n}\r\n\r\n", ""]);
 
 // exports
 
