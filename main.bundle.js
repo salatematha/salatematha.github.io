@@ -59,7 +59,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\r\nbody {\r\n    padding: 0 0 0 0 ;\r\n    -webkit-box-orient:vertical;\r\n    -webkit-box-direction:normal;\r\n        -ms-flex-direction:column;\r\n            flex-direction:column;\r\n\r\n\r\n}\r\nmd-sidenav {\r\n  width: 310px;\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    vertical-align:middle;\r\n    color: white;\r\n\r\n}\r\n#outlet {\r\n\r\n\r\n}\r\n\r\narticle{\r\n  height: 88vh;\r\n}\r\n\r\nmd-icon {\r\n  width : 1.8rem;\r\n  height: 1.8rem;  \r\n}\r\n", ""]);
+exports.push([module.i, "main {\r\n\r\n\r\n}\r\n\r\narticle {\r\n\r\n    /* flex:1 */\r\n    /*order: -1;*/\r\n}\r\n\r\nmd-sidenav {\r\n  width: 310px;\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    vertical-align:middle;\r\n    color: white;\r\n\r\n}\r\n\r\n#bodycontent{\r\n  min-height:100vh;\r\n  width:100vw;\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -72,7 +72,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <md-toolbar color=\"primary\">\r\n    <button md-button><md-icon>home</md-icon>StockAid</button>\r\n <button md-button>Dashboard</button> \r\n</md-toolbar>\r\n\r\n<md-sidenav-container>\r\n    <md-sidenav mode=\"side\" opened=\"true\">\r\n        <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n        <app-quote [stsymbol]=\"selectedStock\">\r\n        </app-quote>\r\n    </md-sidenav>\r\n    <div id=\"outlet\">\r\n        <router-outlet>\r\n\r\n        </router-outlet>\r\n    </div>\r\n\r\n\r\n</md-sidenav-container>\r\n\r\n<md-toolbar color=\"primary\" class=\"bottom\">\r\n    <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n</md-toolbar> -->\r\n<div id=\"bodyHeight\">\r\n    <header class=\"page-header\">\r\n\r\n        <md-toolbar color=\"primary\">\r\n            <button md-button><md-icon>home</md-icon>StockAid</button>\r\n            <!-- <button md-button>Dashboard</button> -->\r\n        </md-toolbar>\r\n    </header>\r\n\r\n    <main class=\"page-content\">\r\n        <md-sidenav-container>\r\n            <md-sidenav mode=\"side\" opened=\"true\">\r\n                <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n                <app-quote [stsymbol]=\"selectedStock\">\r\n                </app-quote>\r\n            </md-sidenav>\r\n            <article class=\"content-chart\">\r\n                <router-outlet>\r\n\r\n                </router-outlet>\r\n\r\n            </article>\r\n\r\n\r\n\r\n        </md-sidenav-container>\r\n\r\n    </main>\r\n\r\n\r\n    <md-toolbar color=\"primary\">\r\n        <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n    </md-toolbar>\r\n\r\n</div>"
+module.exports = "<!-- <md-toolbar color=\"primary\">\r\n    <button md-button><md-icon>home</md-icon>StockAid</button>\r\n <button md-button>Dashboard</button> \r\n</md-toolbar>\r\n\r\n<md-sidenav-container>\r\n    <md-sidenav mode=\"side\" opened=\"true\">\r\n        <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n        <app-quote [stsymbol]=\"selectedStock\">\r\n        </app-quote>\r\n    </md-sidenav>\r\n    <div id=\"outlet\">\r\n        <router-outlet>\r\n\r\n        </router-outlet>\r\n    </div>\r\n\r\n\r\n</md-sidenav-container>\r\n\r\n<md-toolbar color=\"primary\" class=\"bottom\">\r\n    <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n</md-toolbar> -->\r\n<div id=\"bodycontent\">\r\n    <header class=\"page-header\">\r\n\r\n        <md-toolbar color=\"primary\">\r\n            <button md-button><md-icon>home</md-icon>StockAid</button>\r\n            <!-- <button md-button>Dashboard</button> -->\r\n        </md-toolbar>\r\n    </header>\r\n\r\n    <main class=\"page-content\">\r\n        <md-sidenav-container>\r\n            <md-sidenav mode=\"side\" opened=\"true\">\r\n                <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n                <app-quote [stsymbol]=\"selectedStock\">\r\n                </app-quote>\r\n            </md-sidenav>\r\n            <article class=\"content-chart\">\r\n                <router-outlet>\r\n\r\n                </router-outlet>\r\n\r\n            </article>\r\n\r\n\r\n\r\n        </md-sidenav-container>\r\n\r\n    </main>\r\n\r\n<footer class=\"page-footer\">\r\n    <md-toolbar color=\"primary\">\r\n        <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n    </md-toolbar>\r\n</footer>\r\n</div>"
 
 /***/ }),
 
@@ -824,7 +824,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".flex-container{\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n\r\n\r\n}\r\n.inner-flex{\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n    height: 88vh;\r\n\r\n}\r\n.flex-chart{\r\n\r\n\r\n}\r\n\r\n.flex-news{\r\n\r\n\r\n}\r\n\r\n.flex-statistics{\r\n\r\n-webkit-box-flex: 1;\r\n\r\n    -ms-flex-positive: 1;\r\n\r\n        flex-grow: 1;\r\n-webkit-box-align: start;\r\n    -ms-flex-align: start;\r\n        align-items: flex-start;\r\n\r\n             background-color:#7e57c2;\r\n}", ""]);
+exports.push([module.i, ".flex-container{\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n\r\n\r\n}\r\n.inner-flex{\r\n\r\n\r\n}\r\n.flex-chart{\r\n\r\n\r\n}\r\n\r\n.flex-news{\r\n\r\n\r\n}\r\n\r\n/* .flex-statistics{\r\n\r\nflex-grow: 1;\r\nalign-items: flex-start;\r\n\r\n             background-color:#7e57c2;\r\n} */", ""]);
 
 // exports
 
@@ -837,7 +837,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/main-router/main-router.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"flex-container\">\n\n  <div class=\"flex-chart\" class=\"inner-flex\">\n    <div>\n      <app-chart [stsymbol]=\"selectedStock\"></app-chart>\n    </div>\n    <div class=\"flex-statistics\">\n      <app-key-statistics [stsymbol]=\"selectedStock\"></app-key-statistics>\n    </div>\n  </div>\n  <div class=\"flex-news\">\n\n    <app-news [stsymbol]=\"selectedStock\"></app-news>\n  </div>\n  <!-- <div class=\"flex-statistics\">\n    <app-key-statistics [stsymbol]=\"selectedStock\"></app-key-statistics>\n  </div> -->\n\n\n</div>\n\n<!-- <md-tab-group>\n  <md-tab label=\"Table\">\n    <app-bar-table [stsymbol]=\"selectedStock\"></app-bar-table>\n  </md-tab>\n  <md-tab *ngFor=\"let inter of chartInterval.reverse()\" label=\"{{inter}}\">\n    <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"inter\"></app-bar-chart>\n  </md-tab>\n\n\n</md-tab-group> -->"
+module.exports = "<div class=\"flex-container\">\n\n  <div class=\"flex-chart\" class=\"inner-flex\">\n    <div>\n      <app-chart [stsymbol]=\"selectedStock\"></app-chart>\n    </div>\n    <div class=\"flex-statistics\">\n      <app-key-statistics [stsymbol]=\"selectedStock\"></app-key-statistics>\n    </div>\n  </div>\n  <div class=\"flex-news\">\n\n    <app-news [stsymbol]=\"selectedStock\"></app-news>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -896,7 +896,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\r\nmd-sidenav {\r\n\r\n\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 12px;\r\n    vertical-align:middle;\r\n\r\n\r\n}\r\n\r\nmd-panel-title{\r\n    font-size: 13px;\r\n    min-width: 390px;\r\n}", ""]);
+exports.push([module.i, "\r\nmd-sidenav {\r\n\r\n\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 12px;\r\n    vertical-align:middle;\r\n\r\n\r\n}\r\n\r\nmd-panel-title{\r\n    font-size: 13px;\r\n    min-width: 310px;\r\n}", ""]);
 
 // exports
 
@@ -972,7 +972,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* md-grid-tile {\r\n  display: flex;\r\n  font-family: Arial;\r\n  font-size: 12px;\r\n\r\n} */\r\n\r\n.positive {\r\n    border-radius: 20%;\r\n    background: #73AD21;\r\n}\r\n.negative {\r\n    border-radius: 20%;\r\n    background: #E94340;\r\n}\r\n\r\nmd-grid-list{\r\n    padding: 2px;\r\n  margin: 4px;\r\n}", ""]);
+exports.push([module.i, "/* md-grid-tile {\r\n  display: flex;\r\n  font-family: Arial;\r\n  font-size: 12px;\r\n\r\n} */\r\n\r\n.positive {\r\n    border-radius: 20%;\r\n    background: #73AD21;\r\n}\r\n.negative {\r\n    border-radius: 20%;\r\n    background: #E94340;\r\n}\r\n\r\nmd-grid-list{\r\n    padding: 2px;\r\n  margin: 4px;\r\n}\r\n\r\n.text-inside-grid {\r\n  position: absolute;\r\n  left: 5px;\r\n}\r\n\r\nmd-icon { font-size: 18px; color:#533E3E;}", ""]);
 
 // exports
 
@@ -985,7 +985,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/quote/quote.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-grid-list cols=\"3\" rowHeight=\"40px\">\n  <md-grid-tile>\n    Symbol\n  </md-grid-tile>\n  <md-grid-tile>\n    Price\n  </md-grid-tile>\n  <md-grid-tile>\n    Change\n  </md-grid-tile>\n  <!-- <md-grid-tile>\n    Volume\n  </md-grid-tile> -->\n</md-grid-list>\n\n<md-grid-list *ngFor='let m of quotes' cols=\"3\" rowHeight=\"40px\" [routerLink]=\"['/main', m.symbol]\">\n  <md-grid-tile> {{m.symbol}}\n  </md-grid-tile>\n  <md-grid-tile>\n    {{m.latestPrice| number:'.1-2'}}\n  </md-grid-tile>\n  <md-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\n    {{m.changePercent*100 | number:'.1-3'}}%\n  </md-grid-tile>\n  <!-- <md-grid-tile>\n     <md-grid-tile [style.background]=\"'#DDBDF1'\">\n    {{m.avgTotalVolume}}\n  </md-grid-tile> -->\n</md-grid-list>"
+module.exports = "<md-grid-list cols=\"3\" rowHeight=\"40px\">\n  <md-grid-tile>\n    Symbol\n  </md-grid-tile>\n  <md-grid-tile>\n    Price\n  </md-grid-tile>\n  <md-grid-tile>\n    Change\n  </md-grid-tile>\n  <!-- <md-grid-tile>\n    Volume\n  </md-grid-tile> -->\n</md-grid-list>\n\n<md-grid-list *ngFor='let m of quotes' cols=\"3\" rowHeight=\"40px\" [routerLink]=\"['/main', m.symbol]\">\n  <md-grid-tile>\n    <div class=\"text-inside-grid\">\n      <md-icon (click)=\"deleteSymbol(m.symbol)\">highlight_off</md-icon>&nbsp;&nbsp;{{m.symbol}}</div>\n  </md-grid-tile>\n  <md-grid-tile>\n    {{m.latestPrice| number:'.1-2'}}\n  </md-grid-tile>\n  <md-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\n    {{m.changePercent*100 | number:'.1-3'}}%\n  </md-grid-tile>\n  <!-- <md-grid-tile>\n     <md-grid-tile [style.background]=\"'#DDBDF1'\">\n    {{m.avgTotalVolume}}\n  </md-grid-tile> -->\n</md-grid-list>"
 
 /***/ }),
 
@@ -1052,6 +1052,14 @@ var QuoteComponent = (function () {
                 _this.updateOrPush(p);
             });
         });
+    };
+    QuoteComponent.prototype.deleteSymbol = function (sym) {
+        for (var i = 0; i < this.quotes.length; i++) {
+            if (this.quotes[i].symbol == sym) {
+                this.quotes.splice(i, 1);
+                break;
+            }
+        }
     };
     QuoteComponent.prototype.updateOrPush = function (p) {
         var found = false;
@@ -1944,7 +1952,7 @@ var SymbolComponent = (function () {
     SymbolComponent.prototype.selected = function (event, stock) {
         if (event.source.selected) {
             this.selectedStock.emit(stock);
-            this.router.navigate(['/chart', stock]);
+            this.router.navigate(['/main', stock]);
         }
     };
     SymbolComponent.prototype.ngOnInit = function () {
