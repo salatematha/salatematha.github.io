@@ -59,7 +59,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "main {\r\n\r\n\r\n}\r\n\r\narticle {\r\n\r\n    /* flex:1 */\r\n    /*order: -1;*/\r\n}\r\n\r\nmd-sidenav {\r\n  width: 310px;\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    vertical-align:middle;\r\n    color: white;\r\n\r\n}\r\n\r\n#bodycontent{\r\n  min-height:100vh;\r\n  width:100vw;\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".HolyGrail {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  min-height: 100vh;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n}\r\n\r\n.HolyGrail-body {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-flex: 1;\r\n      -ms-flex: 1;\r\n          flex: 1;\r\n}\r\n.HolyGrail-content {\r\n  -webkit-box-flex: 1;\r\n      -ms-flex: 1;\r\n          flex: 1;\r\n}\r\n\r\n.HolyGrail-nav, .HolyGrail-ads {\r\n  /* 12em is the width of the columns */\r\n   -webkit-box-flex: 0;\r\n       -ms-flex: 0 0 12em;\r\n           flex: 0 0 12em; \r\n}\r\n\r\n.HolyGrail-nav {\r\n  /* put the nav on the left */\r\n  -webkit-box-ordinal-group: 0;\r\n      -ms-flex-order: -1;\r\n          order: -1;\r\n  min-width: 310px;\r\n}\r\n.HolyGrail,\r\n.HolyGrail-body {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n}\r\n\r\n.HolyGrail-nav {\r\n  -webkit-box-ordinal-group: 0;\r\n      -ms-flex-order: -1;\r\n          order: -1;\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n  .HolyGrail-body {\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1;\r\n            flex: 1;\r\n  }\r\n  .HolyGrail-content {\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1;\r\n            flex: 1;\r\n  }\r\n  .HolyGrail-nav, .HolyGrail-ads {\r\n    /* 12em is the width of the columns */\r\n     -webkit-box-flex: 0;\r\n         -ms-flex: 0 0 12em;\r\n             flex: 0 0 12em; \r\n  }\r\n}\r\n\r\nnav,aside{\r\n    background-color:#7e57c2;\r\n}\r\napp-quote-nav {\r\n  width:100%;\r\n}", ""]);
 
 // exports
 
@@ -72,7 +72,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <md-toolbar color=\"primary\">\r\n    <button md-button><md-icon>home</md-icon>StockAid</button>\r\n <button md-button>Dashboard</button> \r\n</md-toolbar>\r\n\r\n<md-sidenav-container>\r\n    <md-sidenav mode=\"side\" opened=\"true\">\r\n        <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n        <app-quote [stsymbol]=\"selectedStock\">\r\n        </app-quote>\r\n    </md-sidenav>\r\n    <div id=\"outlet\">\r\n        <router-outlet>\r\n\r\n        </router-outlet>\r\n    </div>\r\n\r\n\r\n</md-sidenav-container>\r\n\r\n<md-toolbar color=\"primary\" class=\"bottom\">\r\n    <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n</md-toolbar> -->\r\n<div id=\"bodycontent\">\r\n    <header class=\"page-header\">\r\n\r\n        <md-toolbar color=\"primary\">\r\n            <button md-button><md-icon>home</md-icon>StockAid</button>\r\n            <!-- <button md-button>Dashboard</button> -->\r\n        </md-toolbar>\r\n    </header>\r\n\r\n    <main class=\"page-content\">\r\n        <md-sidenav-container>\r\n            <md-sidenav mode=\"side\" opened=\"true\">\r\n                <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n                <app-quote [stsymbol]=\"selectedStock\">\r\n                </app-quote>\r\n            </md-sidenav>\r\n            <article class=\"content-chart\">\r\n                <router-outlet>\r\n\r\n                </router-outlet>\r\n\r\n            </article>\r\n\r\n\r\n\r\n        </md-sidenav-container>\r\n\r\n    </main>\r\n\r\n<footer class=\"page-footer\">\r\n    <md-toolbar color=\"primary\">\r\n        <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n    </md-toolbar>\r\n</footer>\r\n</div>"
+module.exports = "<!--\r\n<div id=\"bodycontent\">\r\n    <header class=\"page-header\">\r\n\r\n        <md-toolbar color=\"primary\">\r\n            <button md-button><md-icon>home</md-icon>StockAid</button>\r\n\r\n        </md-toolbar>\r\n    </header>\r\n\r\n    <main class=\"page-content\">\r\n        <md-sidenav-container>\r\n            <md-sidenav mode=\"side\" opened=\"true\">\r\n                <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n                <app-quote [stsymbol]=\"selectedStock\">\r\n                </app-quote>\r\n            </md-sidenav>\r\n            <article class=\"content-chart\">\r\n                <router-outlet>\r\n\r\n                </router-outlet>\r\n\r\n            </article>\r\n\r\n\r\n\r\n        </md-sidenav-container>\r\n\r\n    </main>\r\n\r\n<footer class=\"page-footer\">\r\n    <md-toolbar color=\"primary\">\r\n        <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n    </md-toolbar>\r\n</footer>\r\n</div>-->\r\n\r\n<!-- <app-main>\r\n</app-main> -->\r\n\r\n\r\n<div class=\"HolyGrail\">\r\n    <header>\r\n        <md-toolbar color=\"primary\">\r\n            <button md-button><md-icon>home</md-icon>StockAid</button>\r\n        </md-toolbar>\r\n    </header>\r\n    <div class=\"HolyGrail-body\">\r\n        <main class=\"HolyGrail-content\">\r\n            <router-outlet>\r\n\r\n            </router-outlet>\r\n\r\n        </main>\r\n        <nav class=\"HolyGrail-nav\">\r\n            <app-quote-nav></app-quote-nav>\r\n        </nav>\r\n        <!-- <aside class=\"HolyGrail-ads\">Rightside if wanted</aside> -->\r\n    </div>\r\n    <footer>\r\n        <md-toolbar color=\"primary\">\r\n            <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n        </md-toolbar>\r\n    </footer>\r\n</div>"
 
 /***/ }),
 
@@ -81,6 +81,7 @@ module.exports = "<!-- <md-toolbar color=\"primary\">\r\n    <button md-button><
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -88,12 +89,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(db) {
         this.title = 'app';
-        this.chartInterval = ['5y', '2y', '1y', 'ytd', '6m', '3m'];
-        this.displayChart = true;
+        db.object('connected').subscribe(console.log);
     }
     AppComponent.prototype.onSelectedStockChange = function (stock) {
         this.selectedStock = stock.toLocaleUpperCase();
@@ -107,9 +111,11 @@ AppComponent = __decorate([
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
-    })
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */]) === "function" && _a || Object])
 ], AppComponent);
 
+var _a;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
@@ -123,26 +129,31 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_bar_service__ = __webpack_require__("../../../../../src/app/service/bar.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__service_web_sockets_service__ = __webpack_require__("../../../../../src/app/service/web-sockets.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__symbol_symbol_component__ = __webpack_require__("../../../../../src/app/symbol/symbol.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__service_symbol_service__ = __webpack_require__("../../../../../src/app/service/symbol.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__bar_table_bar_table_component__ = __webpack_require__("../../../../../src/app/bar-table/bar-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__bar_chart_bar_chart_component__ = __webpack_require__("../../../../../src/app/bar-chart/bar-chart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_primeng_primeng__ = __webpack_require__("../../../../primeng/primeng.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_primeng_primeng___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_primeng_primeng__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__live_quote_live_quote_component__ = __webpack_require__("../../../../../src/app/live-quote/live-quote.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__quote_quote_component__ = __webpack_require__("../../../../../src/app/quote/quote.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__service_quote_service__ = __webpack_require__("../../../../../src/app/service/quote.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__service_news_service__ = __webpack_require__("../../../../../src/app/service/news.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__service_stats_service__ = __webpack_require__("../../../../../src/app/service/stats.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__chart_chart_component__ = __webpack_require__("../../../../../src/app/chart/chart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__key_statistics_key_statistics_component__ = __webpack_require__("../../../../../src/app/key-statistics/key-statistics.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__news_news_component__ = __webpack_require__("../../../../../src/app/news/news.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__main_router_main_router_component__ = __webpack_require__("../../../../../src/app/main-router/main-router.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__service_fav_stocks_service__ = __webpack_require__("../../../../../src/app/service/fav-stocks.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__symbol_symbol_component__ = __webpack_require__("../../../../../src/app/symbol/symbol.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__service_symbol_service__ = __webpack_require__("../../../../../src/app/service/symbol.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__bar_table_bar_table_component__ = __webpack_require__("../../../../../src/app/bar-table/bar-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__bar_chart_bar_chart_component__ = __webpack_require__("../../../../../src/app/bar-chart/bar-chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_angularfire2__ = __webpack_require__("../../../../angularfire2/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angularfire2_auth__ = __webpack_require__("../../../../angularfire2/auth/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_primeng_primeng__ = __webpack_require__("../../../../primeng/primeng.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_primeng_primeng___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18_primeng_primeng__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__live_quote_live_quote_component__ = __webpack_require__("../../../../../src/app/live-quote/live-quote.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__quote_quote_component__ = __webpack_require__("../../../../../src/app/quote/quote.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__service_quote_service__ = __webpack_require__("../../../../../src/app/service/quote.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__service_news_service__ = __webpack_require__("../../../../../src/app/service/news.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__service_stats_service__ = __webpack_require__("../../../../../src/app/service/stats.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__chart_chart_component__ = __webpack_require__("../../../../../src/app/chart/chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__key_statistics_key_statistics_component__ = __webpack_require__("../../../../../src/app/key-statistics/key-statistics.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__news_news_component__ = __webpack_require__("../../../../../src/app/news/news.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__main_router_main_router_component__ = __webpack_require__("../../../../../src/app/main-router/main-router.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__quote_nav_quote_nav_component__ = __webpack_require__("../../../../../src/app/quote-nav/quote-nav.component.ts");
 /* unused harmony export PrimeModule */
 /* unused harmony export MaterialModule */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
@@ -152,6 +163,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -177,6 +192,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+var firebaseConfig = {
+    apiKey: "AIzaSyCQ_y9gd-0JvsiiTiousdsG0iBtLV9BkKo",
+    authDomain: "stockaid-44945.firebaseapp.com",
+    databaseURL: "https://stockaid-44945.firebaseio.com",
+    projectId: "stockaid-44945",
+    storageBucket: "stockaid-44945.appspot.com",
+    messagingSenderId: "399145751984"
+};
 var PrimeModule = (function () {
     function PrimeModule() {
     }
@@ -185,7 +209,7 @@ var PrimeModule = (function () {
 PrimeModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         exports: [
-            __WEBPACK_IMPORTED_MODULE_14_primeng_primeng__["ChartModule"]
+            __WEBPACK_IMPORTED_MODULE_18_primeng_primeng__["ChartModule"]
         ]
     })
 ], PrimeModule);
@@ -199,37 +223,36 @@ var MaterialModule = (function () {
 MaterialModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         exports: [
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["a" /* MdAutocompleteModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["b" /* MdButtonModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["c" /* MdButtonToggleModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["d" /* MdCardModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["e" /* MdCheckboxModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["f" /* MdChipsModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["g" /* MdCoreModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["h" /* MdDatepickerModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["i" /* MdDialogModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["j" /* MdExpansionModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["k" /* MdGridListModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["l" /* MdIconModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["m" /* MdInputModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["n" /* MdListModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["o" /* MdMenuModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["p" /* MdNativeDateModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["q" /* MdPaginatorModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["r" /* MdProgressBarModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["s" /* MdProgressSpinnerModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["t" /* MdRadioModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["u" /* MdRippleModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["v" /* MdSelectModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["w" /* MdSidenavModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["x" /* MdSliderModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["y" /* MdSlideToggleModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["z" /* MdSnackBarModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["A" /* MdSortModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["B" /* MdTableModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["C" /* MdTabsModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["D" /* MdToolbarModule */],
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["E" /* MdTooltipModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["a" /* MdAutocompleteModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["b" /* MdButtonModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["c" /* MdButtonToggleModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["d" /* MdCardModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["e" /* MdCheckboxModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["f" /* MdChipsModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["g" /* MdDatepickerModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["h" /* MdDialogModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["i" /* MdExpansionModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["j" /* MdGridListModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["k" /* MdIconModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["l" /* MdInputModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["m" /* MdListModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["n" /* MdMenuModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["o" /* MdNativeDateModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["p" /* MdPaginatorModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["q" /* MdProgressBarModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["r" /* MdProgressSpinnerModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["s" /* MdRadioModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["t" /* MdRippleModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["u" /* MdSelectModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["v" /* MdSidenavModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["w" /* MdSliderModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["x" /* MdSlideToggleModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["y" /* MdSnackBarModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["z" /* MdSortModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["A" /* MdTableModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["B" /* MdTabsModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["C" /* MdToolbarModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["D" /* MdTooltipModule */],
         ]
     })
 ], MaterialModule);
@@ -244,28 +267,29 @@ AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__symbol_symbol_component__["a" /* SymbolComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__bar_table_bar_table_component__["a" /* BarTableComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__bar_chart_bar_chart_component__["a" /* BarChartComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__live_quote_live_quote_component__["a" /* LiveQuoteComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__quote_quote_component__["a" /* QuoteComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__chart_chart_component__["a" /* ChartComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__key_statistics_key_statistics_component__["a" /* KeyStatisticsComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__news_news_component__["a" /* NewsComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__main_router_main_router_component__["a" /* MainRouterComponent */]
+            __WEBPACK_IMPORTED_MODULE_11__symbol_symbol_component__["a" /* SymbolComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__bar_table_bar_table_component__["a" /* BarTableComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__bar_chart_bar_chart_component__["a" /* BarChartComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__live_quote_live_quote_component__["a" /* LiveQuoteComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__quote_quote_component__["a" /* QuoteComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__chart_chart_component__["a" /* ChartComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__key_statistics_key_statistics_component__["a" /* KeyStatisticsComponent */],
+            __WEBPACK_IMPORTED_MODULE_26__news_news_component__["a" /* NewsComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__main_router_main_router_component__["a" /* MainRouterComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__quote_nav_quote_nav_component__["a" /* QuoteNavComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
-            __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_forms__["FormsModule"],
-            __WEBPACK_IMPORTED_MODULE_9__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["FormsModule"],
+            __WEBPACK_IMPORTED_MODULE_10__angular_http__["a" /* HttpModule */],
             MaterialModule,
-            __WEBPACK_IMPORTED_MODULE_8__angular_material__["p" /* MdNativeDateModule */],
-            __WEBPACK_IMPORTED_MODULE_6__angular_forms__["ReactiveFormsModule"],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["o" /* MdNativeDateModule */],
+            __WEBPACK_IMPORTED_MODULE_7__angular_forms__["ReactiveFormsModule"],
             PrimeModule,
-            __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */]
+            __WEBPACK_IMPORTED_MODULE_8__app_routing_module__["a" /* AppRoutingModule */], __WEBPACK_IMPORTED_MODULE_15_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig), __WEBPACK_IMPORTED_MODULE_16_angularfire2_database__["a" /* AngularFireDatabaseModule */], __WEBPACK_IMPORTED_MODULE_17_angularfire2_auth__["a" /* AngularFireAuthModule */]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__service_bar_service__["a" /* BarService */], __WEBPACK_IMPORTED_MODULE_11__service_symbol_service__["a" /* SymbolService */], __WEBPACK_IMPORTED_MODULE_4__service_web_sockets_service__["a" /* WebSocketsService */], __WEBPACK_IMPORTED_MODULE_17__service_quote_service__["a" /* QuoteService */], __WEBPACK_IMPORTED_MODULE_19__service_stats_service__["a" /* StatsService */], __WEBPACK_IMPORTED_MODULE_18__service_news_service__["a" /* NewsService */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_3__service_bar_service__["a" /* BarService */], __WEBPACK_IMPORTED_MODULE_12__service_symbol_service__["a" /* SymbolService */], __WEBPACK_IMPORTED_MODULE_4__service_web_sockets_service__["a" /* WebSocketsService */], __WEBPACK_IMPORTED_MODULE_21__service_quote_service__["a" /* QuoteService */], __WEBPACK_IMPORTED_MODULE_23__service_stats_service__["a" /* StatsService */], __WEBPACK_IMPORTED_MODULE_22__service_news_service__["a" /* NewsService */], __WEBPACK_IMPORTED_MODULE_5__service_fav_stocks_service__["a" /* FavStocksService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
@@ -282,7 +306,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* Structure */\r\n/* .example-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  max-height: 500px;\r\n  min-width: 300px;\r\n}\r\n\r\n.example-header {\r\n  min-height: 64px;\r\n  display: flex;\r\n  align-items: center;\r\n  padding-left: 24px;\r\n  font-size: 20px;\r\n} */\r\n\r\n/* .mat-table {\r\n  overflow: auto;\r\n} */\r\n", ""]);
+exports.push([module.i, "/* Structure */\r\n/* .example-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  max-height: 500px;\r\n  min-width: 300px;\r\n}\r\n\r\n.example-header {\r\n  min-height: 64px;\r\n  display: flex;\r\n  align-items: center;\r\n  padding-left: 24px;\r\n  font-size: 20px;\r\n} */\r\n\r\n/* .mat-table {\r\n  overflow: auto;\r\n} */\r\np-chart{\r\n    min-width: 850px;\r\n}", ""]);
 
 // exports
 
@@ -428,8 +452,8 @@ module.exports = "<div>\r\n  <md-paginator #paginator [length]=\"exampleDatabase
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_cdk_table__ = __webpack_require__("../../../cdk/@angular/cdk/table.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_cdk_table__ = __webpack_require__("../../../cdk/esm5/table.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
@@ -493,12 +517,12 @@ __decorate([
     __metadata("design:type", String)
 ], BarTableComponent.prototype, "stsymbol", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["F" /* MdPaginator */]),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["F" /* MdPaginator */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["F" /* MdPaginator */]) === "function" && _a || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MdPaginator */]),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MdPaginator */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MdPaginator */]) === "function" && _a || Object)
 ], BarTableComponent.prototype, "paginator", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["G" /* MdSort */]),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["G" /* MdSort */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["G" /* MdSort */]) === "function" && _b || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["F" /* MdSort */]),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["F" /* MdSort */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["F" /* MdSort */]) === "function" && _b || Object)
 ], BarTableComponent.prototype, "sort", void 0);
 BarTableComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -598,7 +622,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/chart/chart.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-tab-group>\n  <!-- <md-tab label=\"Table\">\n    <app-bar-table [stsymbol]=\"selectedStock\"></app-bar-table>\n  </md-tab> -->\n  <md-tab *ngFor=\"let inter of chartInterval.reverse()\" label=\"{{inter}}\">\n    <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"inter\"></app-bar-chart>\n  </md-tab>\n\n\n</md-tab-group>"
+module.exports = "<md-tab-group>\r\n  <!-- <md-tab label=\"Table\">\r\n    <app-bar-table [stsymbol]=\"selectedStock\"></app-bar-table>\r\n  </md-tab> -->\r\n  <md-tab *ngFor=\"let inter of chartInterval.reverse()\" label=\"{{inter}}\">\r\n    <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"inter\"></app-bar-chart>\r\n  </md-tab>\r\n\r\n\r\n</md-tab-group>"
 
 /***/ }),
 
@@ -659,7 +683,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "md-grid-list {\r\n   \r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 13px;\r\n\r\n    color: white;\r\n\r\n}\r\np{\r\n    padding: 2px;\r\n    width:100%;\r\n    text-align: left;\r\n}\r\n\r\n\r\n#keys{\r\n\r\n    height: 100%;\r\n\r\n\r\n}", ""]);
+exports.push([module.i, "md-grid-list {\r\n\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 13px;\r\n\r\n\r\n}\r\nmd-grid-tile, h3, md-grid-list {\r\n\r\n}\r\np{\r\n    padding: 2px;\r\n    width:100%;\r\n\r\n    text-align: left;\r\n}\r\n\r\n\r\n#keys{\r\n    min-width: 400px;\r\n\r\n\r\n}\r\n\r\nh3{\r\n        width:100%;\r\n\r\n    text-align: left;\r\n}\r\n\r\n.positive {\r\n    border-radius: 13%;\r\n    background: #73AD21;\r\n}\r\n.negative {\r\n    border-radius: 13%;\r\n    background: #E94340;\r\n}\r\n", ""]);
 
 // exports
 
@@ -672,7 +696,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/key-statistics/key-statistics.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"stats\" id=\"keys\">\n  <md-grid-list cols=\"8\" rowHeight=\"5:2\">\n    <md-grid-tile>\n      <p>companyName</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.companyName}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>marketcap</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.marketcap}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>beta</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.beta}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>week52high</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.week52high}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>week52low</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.week52low}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>week52change</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.week52change}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>shortInterest</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.shortInterest}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>shortDate</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.shortDate}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>dividendRate</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.dividendRate}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>dividendYield</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.dividendYield}}</p>\n    </md-grid-tile>\n    <!-- <md-grid-tile>\n      <p>exDividendDate</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.exDividendDate}}</p>\n    </md-grid-tile> -->\n    <md-grid-tile>\n      <p>latestEPS</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.latestEPS}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>latestEPSDate</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.latestEPSDate}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>sharesOutstanding</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.sharesOutstanding}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>float</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.float}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>returnOnEquity</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.returnOnEquity}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>consensusEPS</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.consensusEPS}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>numberOfEstimates</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.numberOfEstimates}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>symbol</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.symbol}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>EBITDA</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.EBITDA}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>revenue</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.revenue}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>grossProfit</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.grossProfit}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>cash</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.cash}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>debt</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.debt}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>ttmEPS</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.ttmEPS}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>revenuePerShare</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.revenuePerShare}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>revenuePerEmployee</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.revenuePerEmployee}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>peRatioHigh</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.peRatioHigh}}</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>peRatioLow</p>\n    </md-grid-tile>\n    <md-grid-tile>\n      <p>{{stats.peRatioLow}}</p>\n    </md-grid-tile>\n\n  </md-grid-list>\n</div>"
+module.exports = "<div *ngIf=\"stats\" id=\"keys\">\r\n\r\n\r\n  <md-grid-list cols=\"{{columnNum}}\" rowHeight=\"40px\">\r\n    <md-grid-tile>\r\n      <h3>Company Name</h3>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <h3>{{stats.companyName}}({{stats.symbol}})</h3>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <h3>Last Price</h3>\r\n    </md-grid-tile>\r\n\r\n    <md-grid-tile>\r\n      <h3>{{quotes.latestPrice}}</h3>\r\n    </md-grid-tile>\r\n    <!-- <h3>{{quotes.latestPrice}}</h3>\r\n    </md-grid-tile> -->\r\n    <md-grid-tile>\r\n      <p>Market Cap</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.marketcap/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile>\r\n\r\n    <md-grid-tile>\r\n      <p>52 Week High</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.week52high | number : '1.2-2'}}</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>52 Week Low</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.week52low}}</p>\r\n    </md-grid-tile>\r\n\r\n\r\n    <md-grid-tile>\r\n      <p>EPS</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.latestEPS}} as of {{stats.latestEPSDate}}</p>\r\n    </md-grid-tile>\r\n\r\n    <md-grid-tile>\r\n      <p>Outstanding Share</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.sharesOutstanding/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile>\r\n\r\n\r\n    <md-grid-tile>\r\n      <p>Revenue</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.revenue/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>Gross Profit</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.grossProfit/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>Cash</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.cash/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile>\r\n    <!-- <md-grid-tile>\r\n      <p>Debt</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.debt/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile> -->\r\n\r\n    <md-grid-tile>\r\n      <p>Revenue Per Share</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.revenuePerShare}}</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>Reveue Per Employee</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.revenuePerEmployee/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile>\r\n\r\n\r\n  </md-grid-list>\r\n</div>"
 
 /***/ }),
 
@@ -682,6 +706,7 @@ module.exports = "<div *ngIf=\"stats\" id=\"keys\">\n  <md-grid-list cols=\"8\" 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_stats_service__ = __webpack_require__("../../../../../src/app/service/stats.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_quote_service__ = __webpack_require__("../../../../../src/app/service/quote.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KeyStatisticsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -694,15 +719,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var KeyStatisticsComponent = (function () {
-    function KeyStatisticsComponent(statsService) {
+    function KeyStatisticsComponent(statsService, quoteService) {
         this.statsService = statsService;
+        this.quoteService = quoteService;
         this.stsymbol = '';
+        this.columnNum = 4;
     }
     KeyStatisticsComponent.prototype.ngOnChanges = function (changes) {
         var _this = this;
         this.selectedStock = this.stsymbol;
         this.statsService.getStats(this.stsymbol).subscribe(function (p) { _this.stats = p; });
+        this.quoteService.getQuotes(this.stsymbol).subscribe(function (p) { return _this.quotes = p; });
     };
     KeyStatisticsComponent.prototype.ngOnInit = function () {
     };
@@ -718,10 +747,10 @@ KeyStatisticsComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/key-statistics/key-statistics.component.html"),
         styles: [__webpack_require__("../../../../../src/app/key-statistics/key-statistics.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_stats_service__["a" /* StatsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_stats_service__["a" /* StatsService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_stats_service__["a" /* StatsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_stats_service__["a" /* StatsService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_quote_service__["a" /* QuoteService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_quote_service__["a" /* QuoteService */]) === "function" && _b || Object])
 ], KeyStatisticsComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=key-statistics.component.js.map
 
 /***/ }),
@@ -747,7 +776,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/live-quote/live-quote.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  live-quote works!\n</p>\n{{messages}}\n\n<md-list>\n  <md-list-item *ngFor='let m of messages'> {{m }}asdf </md-list-item>\n\n</md-list>"
+module.exports = "<p>\r\n  live-quote works!\r\n</p>\r\n{{messages}}\r\n\r\n<md-list>\r\n  <md-list-item *ngFor='let m of messages'> {{m }}asdf </md-list-item>\r\n\r\n</md-list>"
 
 /***/ }),
 
@@ -824,7 +853,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".flex-container{\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n\r\n\r\n}\r\n.inner-flex{\r\n\r\n\r\n}\r\n.flex-chart{\r\n\r\n\r\n}\r\n\r\n.flex-news{\r\n\r\n\r\n}\r\n\r\n/* .flex-statistics{\r\n\r\nflex-grow: 1;\r\nalign-items: flex-start;\r\n\r\n             background-color:#7e57c2;\r\n} */", ""]);
+exports.push([module.i, ".flex-container{\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n\r\n}\r\n.inneritem{\r\n-webkit-box-flex: 1;\r\n    -ms-flex-positive: 1;\r\n        flex-grow: 1;\r\n    -ms-flex-preferred-size: 0;\r\n        flex-basis: 0;\r\n\r\n}\r\n.flex-chart{\r\n\r\n\r\n}\r\n\r\n.flex-news{\r\n\r\n\r\n}\r\n\r\n/* .flex-statistics{\r\n\r\nflex-grow: 1;\r\nalign-items: flex-start;\r\n\r\n             background-color:#7e57c2;\r\n} */", ""]);
 
 // exports
 
@@ -837,7 +866,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/main-router/main-router.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"flex-container\">\n\n  <div class=\"flex-chart\" class=\"inner-flex\">\n    <div>\n      <app-chart [stsymbol]=\"selectedStock\"></app-chart>\n    </div>\n    <div class=\"flex-statistics\">\n      <app-key-statistics [stsymbol]=\"selectedStock\"></app-key-statistics>\n    </div>\n  </div>\n  <div class=\"flex-news\">\n\n    <app-news [stsymbol]=\"selectedStock\"></app-news>\n  </div>\n</div>\n"
+module.exports = "<div class=\"flex-container\" *ngIf=\"selectedStock\">\r\n\r\n\r\n  <div class=\"inneritem\">\r\n    <app-key-statistics [stsymbol]=\"selectedStock\"></app-key-statistics>\r\n  </div>\r\n  <div class=\"inneritem\">\r\n    <app-news [stsymbol]=\"selectedStock\"></app-news>\r\n  </div>\r\n  <div class=\"inneritem\">\r\n    <app-chart [stsymbol]=\"selectedStock\"></app-chart>\r\n  </div>\r\n\r\n\r\n</div>"
 
 /***/ }),
 
@@ -896,7 +925,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\r\nmd-sidenav {\r\n\r\n\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 12px;\r\n    vertical-align:middle;\r\n\r\n\r\n}\r\n\r\nmd-panel-title{\r\n    font-size: 13px;\r\n    min-width: 310px;\r\n}", ""]);
+exports.push([module.i, "\r\nmd-sidenav {\r\n\r\n\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 12px;\r\n    vertical-align:middle;\r\n    min-width: 400px;\r\n\r\n}\r\n\r\nmd-panel-title{\r\n    font-size: 13px;\r\n    min-width: 310px;\r\n}", ""]);
 
 // exports
 
@@ -909,7 +938,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/news/news.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- -->\n\n<md-sidenav mode=\"side\" opened=\"true\">\n\n  <md-expansion-panel *ngFor=\"let n of news\" [expanded]=\"true\">\n    <md-expansion-panel-header>\n      <md-panel-title>\n        <b>{{n.datetime | date:'short'}}</b> -{{n.headline}}\n\n      </md-panel-title>\n      <md-panel-description>\n\n      </md-panel-description>\n    </md-expansion-panel-header>\n\n    {{n.summary}}\n  </md-expansion-panel>\n</md-sidenav>\n\n<!-- <span mdTooltip=\"{{n.headline}}\" *ngFor=\"let n of news\">I have a tooltip</span>\n<br> -->"
+module.exports = "<!-- -->\r\n\r\n<md-sidenav mode=\"side\" opened=\"true\">\r\n\r\n  <md-expansion-panel *ngFor=\"let n of news\" [expanded]=\"true\">\r\n    <md-expansion-panel-header>\r\n      <md-panel-title>\r\n        <b>{{n.datetime | date:'short'}}</b> -{{n.headline}}\r\n\r\n      </md-panel-title>\r\n      <md-panel-description>\r\n\r\n      </md-panel-description>\r\n    </md-expansion-panel-header>\r\n\r\n    {{n.summary}}\r\n  </md-expansion-panel>\r\n</md-sidenav>\r\n\r\n<!-- <span mdTooltip=\"{{n.headline}}\" *ngFor=\"let n of news\">I have a tooltip</span>\r\n<br> -->"
 
 /***/ }),
 
@@ -964,6 +993,74 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/quote-nav/quote-nav.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "md-sidenav {\r\n\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    vertical-align:middle;\r\n    color: white;\r\n    width:100%;\r\n    height:100%;\r\n\r\n}\r\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/quote-nav/quote-nav.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<md-sidenav mode=\"side\" opened=\"true\">\n  <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\n\n  <app-quote [stsymbol]=\"selectedStock\">\n  </app-quote>\n\n</md-sidenav>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/quote-nav/quote-nav.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuoteNavComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var QuoteNavComponent = (function () {
+    function QuoteNavComponent(db) {
+        db.object('connected').subscribe(console.log);
+    }
+    QuoteNavComponent.prototype.onSelectedStockChange = function (stock) {
+        this.selectedStock = stock.toLocaleUpperCase();
+    };
+    QuoteNavComponent.prototype.ngOnInit = function () {
+    };
+    return QuoteNavComponent;
+}());
+QuoteNavComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-quote-nav',
+        template: __webpack_require__("../../../../../src/app/quote-nav/quote-nav.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/quote-nav/quote-nav.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */]) === "function" && _a || Object])
+], QuoteNavComponent);
+
+var _a;
+//# sourceMappingURL=quote-nav.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/quote/quote.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -972,7 +1069,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* md-grid-tile {\r\n  display: flex;\r\n  font-family: Arial;\r\n  font-size: 12px;\r\n\r\n} */\r\n\r\n.positive {\r\n    border-radius: 20%;\r\n    background: #73AD21;\r\n}\r\n.negative {\r\n    border-radius: 20%;\r\n    background: #E94340;\r\n}\r\n\r\nmd-grid-list{\r\n    padding: 2px;\r\n  margin: 4px;\r\n}\r\n\r\n.text-inside-grid {\r\n  position: absolute;\r\n  left: 5px;\r\n}\r\n\r\nmd-icon { font-size: 18px; color:#533E3E;}", ""]);
+exports.push([module.i, "/* md-grid-tile {\r\n  display: flex;\r\n  font-family: Arial;\r\n  font-size: 12px;\r\n\r\n} */\r\n\r\n.positive {\r\n    border-radius: 20%;\r\n    background: #73AD21;\r\n}\r\n.negative {\r\n    border-radius: 20%;\r\n    background: #E94340;\r\n}\r\n\r\nmd-grid-list{\r\n    padding: 2px;\r\n  margin: 4px;\r\n}\r\n\r\n.text-inside-grid {\r\n  position: absolute;\r\n  left: 5px;\r\n}\r\n\r\nmd-icon { font-size: 18px; color:#533E3E;}\r\n\r\n\r\n\r\n.drNav{\r\n    padding:4px;\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    vertical-align:middle;\r\n    color: white;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n}\r\n\r\nbutton{\r\n    width:100%;\r\n    min-width: 310px;\r\n    text-align: left;\r\n}\r\n\r\n.drMain {\r\n    -ms-flex-preferred-size: 0;\r\n        flex-basis: 0;\r\n    /* ... */\r\n}", ""]);
 
 // exports
 
@@ -985,7 +1082,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/quote/quote.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-grid-list cols=\"3\" rowHeight=\"40px\">\n  <md-grid-tile>\n    Symbol\n  </md-grid-tile>\n  <md-grid-tile>\n    Price\n  </md-grid-tile>\n  <md-grid-tile>\n    Change\n  </md-grid-tile>\n  <!-- <md-grid-tile>\n    Volume\n  </md-grid-tile> -->\n</md-grid-list>\n\n<md-grid-list *ngFor='let m of quotes' cols=\"3\" rowHeight=\"40px\" [routerLink]=\"['/main', m.symbol]\">\n  <md-grid-tile>\n    <div class=\"text-inside-grid\">\n      <md-icon (click)=\"deleteSymbol(m.symbol)\">highlight_off</md-icon>&nbsp;&nbsp;{{m.symbol}}</div>\n  </md-grid-tile>\n  <md-grid-tile>\n    {{m.latestPrice| number:'.1-2'}}\n  </md-grid-tile>\n  <md-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\n    {{m.changePercent*100 | number:'.1-3'}}%\n  </md-grid-tile>\n  <!-- <md-grid-tile>\n     <md-grid-tile [style.background]=\"'#DDBDF1'\">\n    {{m.avgTotalVolume}}\n  </md-grid-tile> -->\n</md-grid-list>"
+module.exports = "<!-- <md-grid-list cols=\"3\" rowHeight=\"40px\">\r\n  <md-grid-tile>\r\n    Symbol\r\n  </md-grid-tile>\r\n  <md-grid-tile>\r\n    Price\r\n  </md-grid-tile>\r\n  <md-grid-tile>\r\n    Change\r\n  </md-grid-tile>\r\n</md-grid-list> -->\r\n<!-- <div class=\"QuoteChild\" *ngFor='let m of quotes'>\r\n  <md-grid-list cols=\"3\" rowHeight=\"40px\" [routerLink]=\"['/main', m.symbol]\">\r\n    <md-grid-tile>\r\n      <div class=\"text-inside-grid\">\r\n        <md-icon (click)=\"deleteSymbolServer(m.symbol)\">highlight_off</md-icon>&nbsp;&nbsp;{{m.symbol}}</div>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      {{m.latestPrice| number:'.1-2'}}\r\n    </md-grid-tile>\r\n    <md-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\r\n      {{m.changePercent*100 | number:'.1-3'}}%\r\n    </md-grid-tile>\r\n\r\n  </md-grid-list>\r\n</div> -->\r\n<div class=\"drNav\">\r\n  <div class=\"drMain\" *ngFor=\"let m of quotes;let i=index\"><button md-button [routerLink]=\"['/main', m.symbol]\">\r\n  <md-grid-list cols=\"3\" rowHeight=\"40px\" >\r\n    <md-grid-tile>\r\n      <div class=\"text-inside-grid\">\r\n        <md-icon (click)=\"deleteSymbolServer(m.symbol)\">highlight_off</md-icon>&nbsp;&nbsp;{{m.symbol}}</div>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      {{m.latestPrice| number:'.1-2'}}\r\n    </md-grid-tile>\r\n    <md-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\r\n      {{m.changePercent*100 | number:'.1-3'}}%\r\n    </md-grid-tile>\r\n\r\n  </md-grid-list>\r\n  </button></div>\r\n</div>"
 
 /***/ }),
 
@@ -1002,6 +1099,7 @@ module.exports = "<md-grid-list cols=\"3\" rowHeight=\"40px\">\n  <md-grid-tile>
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__service_quote_service__ = __webpack_require__("../../../../../src/app/service/quote.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__service_fav_stocks_service__ = __webpack_require__("../../../../../src/app/service/fav-stocks.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuoteComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1018,30 +1116,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var QuoteComponent = (function () {
-    function QuoteComponent(quoteService, router) {
+    function QuoteComponent(quoteService, router, favStockService) {
         this.quoteService = quoteService;
         this.router = router;
+        this.favStockService = favStockService;
         this.quotes = Array();
     }
     QuoteComponent.prototype.ngOnChanges = function (changes) {
-        var _this = this;
         if (this.stsymbol)
-            this.quoteService.getQuotes(this.stsymbol).subscribe(function (p) {
-                _this.updateOrPush(p);
-                console.log(p);
-            });
+            this.favStockService.addFavStock(this.stsymbol);
+        // this.quoteService.getQuotes(this.stsymbol).subscribe((p) => {
+        //   this.updateOrPush(p);
+        //   console.log(p);
+        // });
     };
     QuoteComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        var favStock = ['spy', 'vti', 'goog', 'amzn', 'aapl', 'stor', 'gld', 'msft', 'fb', 'dis', 'luv', 'wmt', 'bac', 'syf'];
-        favStock.forEach(function (element) {
-            _this.quoteService.getQuotes(element).subscribe(function (p) {
-                _this.quotes.push(p);
-            });
-        });
-        this.router.navigate(['/main', favStock[0].toUpperCase()]);
+        // let favStock = ['spy', 'vti', 'goog', 'amzn', 'aapl', 'stor', 'gld', 'msft', 'fb', 'dis', 'luv', 'wmt', 'bac', 'syf'];
+        // favStock.forEach(element => {
+        //   this.addOrUpdate(element);
+        // });
+        // this.router.navigate(['/main', favStock[0].toUpperCase()]);
         this.refreshval();
+        this.getFavStocksFromDB();
     };
     QuoteComponent.prototype.refreshval = function () {
         var _this = this;
@@ -1053,6 +1151,9 @@ var QuoteComponent = (function () {
             });
         });
     };
+    QuoteComponent.prototype.deleteSymbolServer = function (sym) {
+        this.favStockService.remFavStock(sym);
+    };
     QuoteComponent.prototype.deleteSymbol = function (sym) {
         for (var i = 0; i < this.quotes.length; i++) {
             if (this.quotes[i].symbol == sym) {
@@ -1061,6 +1162,21 @@ var QuoteComponent = (function () {
             }
         }
     };
+    QuoteComponent.prototype.addOrUpdate = function (sym) {
+        var _this = this;
+        var found = false;
+        for (var i = 0; i < this.quotes.length; i++) {
+            if (this.quotes[i].symbol.toUpperCase() == sym.toUpperCase()) {
+                found = true;
+            }
+        }
+        if (found == false)
+            this.quoteService.getQuotes(sym).subscribe(function (p) {
+                _this.quotes.push(p);
+                if (_this.quotes.length < 3)
+                    _this.router.navigate(['/main', _this.quotes[0].symbol.toUpperCase()]);
+            });
+    };
     QuoteComponent.prototype.updateOrPush = function (p) {
         var found = false;
         for (var i = 0; i < this.quotes.length; i++) {
@@ -1068,10 +1184,31 @@ var QuoteComponent = (function () {
                 this.quotes[i].latestPrice = p.latestPrice;
                 this.quotes[i].changePercent = p.changePercent;
                 found = true;
+                break;
             }
         }
         if (found == false)
             this.quotes.push(p);
+    };
+    QuoteComponent.prototype.getFavStocksFromDB = function () {
+        var _this = this;
+        this.favStocks$ = this.favStockService.getFavStocks();
+        this.favStocks$.subscribe(function (data) {
+            data.forEach(function (element) {
+                console.log(element);
+                _this.addOrUpdate(element.stock);
+            });
+            _this.quotes.forEach(function (q) {
+                var found = false;
+                data.forEach(function (d) {
+                    if (q.symbol.toUpperCase() == d.stock.toUpperCase()) {
+                        found = true;
+                    }
+                });
+                if (found == false)
+                    _this.deleteSymbol(q.symbol);
+            });
+        });
     };
     return QuoteComponent;
 }());
@@ -1085,10 +1222,10 @@ QuoteComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/quote/quote.component.html"),
         styles: [__webpack_require__("../../../../../src/app/quote/quote.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__service_quote_service__["a" /* QuoteService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_quote_service__["a" /* QuoteService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["Router"]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__service_quote_service__["a" /* QuoteService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_quote_service__["a" /* QuoteService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["Router"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__service_fav_stocks_service__["a" /* FavStocksService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__service_fav_stocks_service__["a" /* FavStocksService */]) === "function" && _c || Object])
 ], QuoteComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=quote.component.js.map
 
 /***/ }),
@@ -1135,6 +1272,68 @@ BarService = __decorate([
 
 var _a;
 //# sourceMappingURL=bar.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/service/fav-stocks.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FavStocksService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var FavStocksService = (function () {
+    function FavStocksService(db) {
+        this.db = db;
+        this.favStocks$ = this.db.list('favstocks');
+    }
+    FavStocksService.prototype.getFavStocks = function () {
+        return this.favStocks$;
+    };
+    FavStocksService.prototype.addFavStock = function (sym) {
+        this.favStocks$.push({ stock: sym });
+    };
+    FavStocksService.prototype.remFavStock = function (sym) {
+        // this.db.list('favstocks', {
+        //   query: {
+        //     orderByChild: 'stock',
+        //     equalTo: sym
+        //   }
+        // }).subscribe(d=>{d.forEach(element => {
+        //   this.favStocks$.remove(element.$key);
+        // });})
+        var key = '';
+        //    this.db.database.ref("favstocks").orderByValue().equalTo(sym).once(console.log);
+        this.favStocks$.subscribe(function (data) {
+            data.forEach(function (element) {
+                if (sym == element.stock) {
+                    key = element.$key;
+                }
+            });
+        });
+        if (key)
+            this.favStocks$.remove(key);
+    };
+    return FavStocksService;
+}());
+FavStocksService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */]) === "function" && _a || Object])
+], FavStocksService);
+
+var _a;
+//# sourceMappingURL=fav-stocks.service.js.map
 
 /***/ }),
 
@@ -1902,7 +2101,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/symbol/symbol.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"symbolComponent\">\nSymbol\n<md-input-container>\n  <input mdInput placeholder=\"\" [mdAutocomplete]=\"auto\" [formControl]=\"stockCtrl\">\n</md-input-container>\n\n<md-autocomplete #auto=\"mdAutocomplete\">\n  <md-option (onSelectionChange)=\"selected($event, stock)\" *ngFor=\"let stock of filteredstocks | async\" [value]=\"stock\">\n    {{ stock }}\n  </md-option>\n</md-autocomplete>\n</div>"
+module.exports = "<div id=\"symbolComponent\">\r\nSymbol\r\n<md-input-container>\r\n  <input mdInput placeholder=\"\" [mdAutocomplete]=\"auto\" [formControl]=\"stockCtrl\">\r\n</md-input-container>\r\n\r\n<md-autocomplete #auto=\"mdAutocomplete\">\r\n  <md-option (onSelectionChange)=\"selected($event, stock)\" *ngFor=\"let stock of filteredstocks | async\" [value]=\"stock\">\r\n    {{ stock }}\r\n  </md-option>\r\n</md-autocomplete>\r\n</div>"
 
 /***/ }),
 
