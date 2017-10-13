@@ -337,7 +337,7 @@ var AuthGuard = (function () {
         return this.authService.user$
             .map(function (user) {
             if (user && user.uid) {
-                console.log(user.uid);
+                //console.log(user.uid);
                 return true;
             }
             else {
@@ -565,7 +565,7 @@ var BarTableComponent = (function () {
     BarTableComponent.prototype.ngOnChanges = function (changes) {
         if (changes.stsymbol.currentValue != null)
             this.exampleDatabase.getDataFromService(this.stsymbol);
-        console.log(changes.stsymbol.currentValue);
+        // console.log(changes.stsymbol.currentValue);
     };
     BarTableComponent.prototype.ngOnInit = function () {
         this.dataSource = new ExampleDataSource(this.exampleDatabase, this.paginator);
@@ -596,10 +596,10 @@ BarTableComponent = __decorate([
 /** An example database that the data source uses to retrieve data for the table. */
 var ExampleDatabase = (function () {
     function ExampleDatabase(barService) {
+        //console.log("insideoninit");
         this.barService = barService;
         /** Stream that emits whenever the data has been modified. */
         this.dataChange = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
-        console.log("insideoninit");
     }
     Object.defineProperty(ExampleDatabase.prototype, "data", {
         get: function () { return this.dataChange.value; },
@@ -871,7 +871,7 @@ var LiveQuoteComponent = (function () {
     LiveQuoteComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.connection = this.webSocket.getMessages().subscribe(function (message) {
-            console.log(message);
+            //console.log(message);
             var found = false;
             _this.messages = message;
             _this.symbols.forEach(function (element) {
@@ -1033,10 +1033,10 @@ var NewsComponent = (function () {
     };
     NewsComponent.prototype.deleteUnwantedNews = function () {
         for (var i = 0; i < this.news.length; i++) {
-            console.log(this.news[i].summary.length);
+            //console.log(this.news[i].summary.length);
             if (this.news[i].summary.length < 40) {
                 this.news.splice(i, 1);
-                console.log(this.news[i].summary);
+                //console.log(this.news[i].summary);
             }
         }
     };
@@ -1169,6 +1169,7 @@ module.exports = "<!-- <mat-grid-list cols=\"3\" rowHeight=\"40px\">\r\n  <mat-g
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__service_quote_service__ = __webpack_require__("../../../../../src/app/service/quote.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__service_fav_stocks_service__ = __webpack_require__("../../../../../src/app/service/fav-stocks.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__service_auth_service__ = __webpack_require__("../../../../../src/app/service/auth.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuoteComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1186,33 +1187,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var QuoteComponent = (function () {
-    function QuoteComponent(quoteService, router, favStockService) {
+    function QuoteComponent(quoteService, router, favStockService, authService) {
         this.quoteService = quoteService;
         this.router = router;
         this.favStockService = favStockService;
+        this.authService = authService;
         this.quotes = Array();
     }
     QuoteComponent.prototype.ngOnChanges = function (changes) {
+        var _this = this;
+        var found = false;
         if (this.stsymbol)
-            this.favStockService.addFavStock(this.stsymbol);
-        // this.quoteService.getQuotes(this.stsymbol).subscribe((p) => {
-        //   this.updateOrPush(p);
-        //   console.log(p);
-        // });
+            this.quotes.forEach(function (element) {
+                if (element.symbol == _this.stsymbol)
+                    found = true;
+            });
+        if (this.stsymbol && !found)
+            this.favStockService.addFavStock(this.uid, this.stsymbol);
     };
     QuoteComponent.prototype.ngOnInit = function () {
-        // let favStock = ['spy', 'vti', 'goog', 'amzn', 'aapl', 'stor', 'gld', 'msft', 'fb', 'dis', 'luv', 'wmt', 'bac', 'syf'];
-        // favStock.forEach(element => {
-        //   this.addOrUpdate(element);
-        // });
-        // this.router.navigate(['/main', favStock[0].toUpperCase()]);
+        var _this = this;
         this.refreshval();
-        this.getFavStocksFromDB();
+        this.authService.user$.subscribe(function (user) {
+            if (user)
+                _this.uid = user.uid;
+            else
+                _this.uid = 'default';
+            _this.getFavStocksFromDB();
+        });
     };
     QuoteComponent.prototype.refreshval = function () {
         var _this = this;
-        console.log("refresh called");
+        //console.log("refresh called");
         setTimeout(function () { return _this.refreshval(); }, 10000);
         this.quotes.forEach(function (element) {
             _this.quoteService.getQuotes(element.symbol).subscribe(function (p) {
@@ -1221,8 +1229,8 @@ var QuoteComponent = (function () {
         });
     };
     QuoteComponent.prototype.deleteSymbolServer = function (sym) {
-        console.log("delete clicked");
-        this.favStockService.remFavStock(sym);
+        //console.log("delete clicked");
+        this.favStockService.remFavStock(this.uid, sym);
     };
     QuoteComponent.prototype.deleteSymbol = function (sym) {
         for (var i = 0; i < this.quotes.length; i++) {
@@ -1262,10 +1270,12 @@ var QuoteComponent = (function () {
     };
     QuoteComponent.prototype.getFavStocksFromDB = function () {
         var _this = this;
-        this.favStocks$ = this.favStockService.getFavStocks();
+        this.quotes = Array();
+        this.favStocks$ = this.favStockService.getFavStocks(this.uid);
+        //console.log('inside getfavstockfrom db' + this.favStocks$);
         this.favStocks$.valueChanges().subscribe(function (data) {
             data.forEach(function (element) {
-                console.log(element);
+                // console.log(element);
                 _this.addOrUpdate(element.stock);
             });
             _this.quotes.forEach(function (q) {
@@ -1292,10 +1302,10 @@ QuoteComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/quote/quote.component.html"),
         styles: [__webpack_require__("../../../../../src/app/quote/quote.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__service_quote_service__["a" /* QuoteService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_quote_service__["a" /* QuoteService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["Router"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__service_fav_stocks_service__["a" /* FavStocksService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__service_fav_stocks_service__["a" /* FavStocksService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__service_quote_service__["a" /* QuoteService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_quote_service__["a" /* QuoteService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["Router"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__service_fav_stocks_service__["a" /* FavStocksService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__service_fav_stocks_service__["a" /* FavStocksService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__service_auth_service__["a" /* AuthService */]) === "function" && _d || Object])
 ], QuoteComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=quote.component.js.map
 
 /***/ }),
@@ -1376,7 +1386,7 @@ var BarService = (function () {
         this._barUrl = 'https://api.iextrading.com/1.0/stock/aapl/chart/';
     }
     BarService.prototype.getBars = function (symbol, interval) {
-        console.log(this._barUrl);
+        //console.log(this._barUrl);
         return this.http.get(this._barUrl.replace("aapl", symbol) + interval)
             .map(function (res) { return res.json(); });
     };
@@ -1403,6 +1413,7 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__ = __webpack_require__("../../../../angularfire2/firestore/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service_auth_service__ = __webpack_require__("../../../../../src/app/service/auth.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FavStocksService; });
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -1424,32 +1435,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var FavStocksService = (function () {
-    //favStocks$: AngularFireList<{}>;
-    // favStocks$: FirebaseListObservable<Favstock[]>;
-    function FavStocksService(db, afs) {
+    function FavStocksService(db, afs, authService) {
         this.db = db;
         this.afs = afs;
-        this.favStocks$ = this.db.list('favstocks');
-        this.favStockRef = db.list('favstocks');
-        this.favStocks = this.favStockRef.snapshotChanges().map(function (changes) {
-            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+        this.authService = authService;
+        this.intFavStock();
+        authService.user$.subscribe(function (user) {
+            if (user)
+                console.log('inside constlogin' + user.displayName);
         });
     }
     FavStocksService.prototype.ngOnInit = function () {
     };
-    FavStocksService.prototype.getFavStocks = function () {
-        return this.favStocks$;
+    //favStocks$: AngularFireList<{}>;
+    // favStocks$: FirebaseListObservable<Favstock[]>;
+    FavStocksService.prototype.intFavStock = function () {
+        this.favStocks$ = this.db.list('favstocks');
     };
-    FavStocksService.prototype.addFavStock = function (sym) {
-        this.favStocks$.push({ stock: sym });
+    FavStocksService.prototype.getFavStocks = function (uid) {
+        return this.db.list('favstocks', function (ref) { return ref.orderByChild('user').equalTo(uid); });
     };
-    FavStocksService.prototype.remFavStock = function (sym) {
-        var _this = this;
-        this.favStocks.subscribe(function (e) {
+    FavStocksService.prototype.addFavStock = function (uid, sym) {
+        this.favStocks$.push({ user: uid, stock: sym });
+    };
+    FavStocksService.prototype.remFavStock = function (uid, sym) {
+        var favStockRef = this.db.list('favstocks', function (ref) { return ref.orderByChild('user').equalTo(uid); });
+        var favStocks = favStockRef.snapshotChanges().map(function (changes) {
+            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+        });
+        favStocks.subscribe(function (e) {
             e.forEach(function (element) {
                 if (element.stock == sym)
-                    _this.favStockRef.remove(element.key);
+                    favStockRef.remove(element.key);
             });
         });
     };
@@ -1457,10 +1476,10 @@ var FavStocksService = (function () {
 }());
 FavStocksService = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__["b" /* AngularFirestore */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__["b" /* AngularFirestore */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__["b" /* AngularFirestore */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__["b" /* AngularFirestore */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__service_auth_service__["a" /* AuthService */]) === "function" && _c || Object])
 ], FavStocksService);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=fav-stocks.service.js.map
 
 /***/ }),
@@ -1489,7 +1508,7 @@ var NewsService = (function () {
         this._newsUrl = 'https://api.iextrading.com/1.0/stock/aapl/news';
     }
     NewsService.prototype.getNews = function (symbol) {
-        console.log(this._newsUrl);
+        //console.log(this._newsUrl);
         return this.http.get(this._newsUrl.replace("aapl", symbol))
             .map(function (res) { return res.json(); });
     };
@@ -1533,7 +1552,7 @@ var QuoteService = (function () {
         this._quoteUrl = 'https://api.iextrading.com/1.0/stock/aapl/quote';
     }
     QuoteService.prototype.getQuotes = function (symbol) {
-        console.log(this._quoteUrl);
+        //console.log(this._quoteUrl);
         return this.http.get(this._quoteUrl.replace("aapl", symbol))
             .map(function (res) { return res.json(); });
     };
@@ -1577,7 +1596,7 @@ var StatsService = (function () {
         this._statsUrl = 'https://api.iextrading.com/1.0/stock/aapl/stats';
     }
     StatsService.prototype.getStats = function (symbol) {
-        console.log(this._statsUrl);
+        //console.log(this._statsUrl);
         return this.http.get(this._statsUrl.replace("aapl", symbol))
             .map(function (res) { return res.json(); });
     };
@@ -1619,7 +1638,7 @@ var SymbolService = (function () {
     function SymbolService(http) {
         this.http = http;
         this._symbolUrl = 'http://data.okfn.org/data/core/nyse-other-listings/r/nyse-listed.json';
-        this.stocks = ['MMM', 'QQQ',
+        this.stocks = ['SPY', 'VTI', 'VOO', 'QQQ', 'MMM',
             'ABT',
             'ABBV',
             'ACN',
@@ -2134,7 +2153,7 @@ var SymbolService = (function () {
         ];
     }
     SymbolService.prototype.getSymbols = function () {
-        console.log(this._symbolUrl);
+        //console.log(this._symbolUrl);
         return this.http.get(this._symbolUrl)
             .map(function (res) { return res.json(); });
     };
@@ -2182,7 +2201,7 @@ var WebSocketsService = (function () {
     }
     WebSocketsService.prototype.sendMessage = function (message) {
         this.socket.emit('subscribe', message);
-        console.log(message);
+        //console.log(message);
     };
     WebSocketsService.prototype.getMessages = function () {
         var _this = this;
