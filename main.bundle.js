@@ -72,7 +72,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\r\n<div id=\"bodycontent\">\r\n    <header class=\"page-header\">\r\n\r\n        <md-toolbar color=\"primary\">\r\n            <button md-button><md-icon>home</md-icon>StockAid</button>\r\n\r\n        </md-toolbar>\r\n    </header>\r\n\r\n    <main class=\"page-content\">\r\n        <md-sidenav-container>\r\n            <md-sidenav mode=\"side\" opened=\"true\">\r\n                <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n                <app-quote [stsymbol]=\"selectedStock\">\r\n                </app-quote>\r\n            </md-sidenav>\r\n            <article class=\"content-chart\">\r\n                <router-outlet>\r\n\r\n                </router-outlet>\r\n\r\n            </article>\r\n\r\n\r\n\r\n        </md-sidenav-container>\r\n\r\n    </main>\r\n\r\n<footer class=\"page-footer\">\r\n    <md-toolbar color=\"primary\">\r\n        <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n    </md-toolbar>\r\n</footer>\r\n</div>-->\r\n\r\n<!-- <app-main>\r\n</app-main> -->\r\n\r\n\r\n<div class=\"HolyGrail\">\r\n    <header>\r\n        <md-toolbar color=\"primary\">\r\n            <button md-button><md-icon>home</md-icon>StockAid</button>\r\n        </md-toolbar>\r\n    </header>\r\n    <div class=\"HolyGrail-body\">\r\n        <main class=\"HolyGrail-content\">\r\n            <router-outlet>\r\n\r\n            </router-outlet>\r\n\r\n        </main>\r\n        <nav class=\"HolyGrail-nav\">\r\n            <app-quote-nav></app-quote-nav>\r\n        </nav>\r\n        <!-- <aside class=\"HolyGrail-ads\">Rightside if wanted</aside> -->\r\n    </div>\r\n    <footer>\r\n        <md-toolbar color=\"primary\">\r\n            <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n        </md-toolbar>\r\n    </footer>\r\n</div>"
+module.exports = "<!--\r\n<div id=\"bodycontent\">\r\n    <header class=\"page-header\">\r\n\r\n        <mat-toolbar color=\"primary\">\r\n            <button mat-button><mat-icon>home</mat-icon>StockAid</button>\r\n\r\n        </mat-toolbar>\r\n    </header>\r\n\r\n    <main class=\"page-content\">\r\n        <mat-sidenav-container>\r\n            <mat-sidenav mode=\"side\" opened=\"true\">\r\n                <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n                <app-quote [stsymbol]=\"selectedStock\">\r\n                </app-quote>\r\n            </mat-sidenav>\r\n            <article class=\"content-chart\">\r\n                <router-outlet>\r\n\r\n                </router-outlet>\r\n\r\n            </article>\r\n\r\n\r\n\r\n        </mat-sidenav-container>\r\n\r\n    </main>\r\n\r\n<footer class=\"page-footer\">\r\n    <mat-toolbar color=\"primary\">\r\n        <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n    </mat-toolbar>\r\n</footer>\r\n</div>-->\r\n\r\n<!-- <app-main>\r\n</app-main> -->\r\n\r\n\r\n<div class=\"HolyGrail\">\r\n    <header>\r\n        <mat-toolbar color=\"primary\">\r\n            <button mat-button><mat-icon>home</mat-icon>StockAid</button>\r\n        </mat-toolbar>\r\n    </header>\r\n    <div class=\"HolyGrail-body\">\r\n        <main class=\"HolyGrail-content\">\r\n            <router-outlet>\r\n\r\n            </router-outlet>\r\n\r\n        </main>\r\n        <nav class=\"HolyGrail-nav\">\r\n            <app-quote-nav></app-quote-nav>\r\n        </nav>\r\n        <!-- <aside class=\"HolyGrail-ads\">Rightside if wanted</aside> -->\r\n    </div>\r\n    <footer>\r\n        <mat-toolbar color=\"primary\">\r\n            <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n        </mat-toolbar>\r\n    </footer>\r\n</div>"
 
 /***/ }),
 
@@ -97,7 +97,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AppComponent = (function () {
     function AppComponent(db) {
         this.title = 'app';
-        db.object('connected').subscribe(console.log);
+        //  db.object('connected').(console.log);
     }
     AppComponent.prototype.onSelectedStockChange = function (stock) {
         this.selectedStock = stock.toLocaleUpperCase();
@@ -142,18 +142,19 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_angularfire2__ = __webpack_require__("../../../../angularfire2/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angularfire2_auth__ = __webpack_require__("../../../../angularfire2/auth/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_primeng_primeng__ = __webpack_require__("../../../../primeng/primeng.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_primeng_primeng___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18_primeng_primeng__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__live_quote_live_quote_component__ = __webpack_require__("../../../../../src/app/live-quote/live-quote.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__quote_quote_component__ = __webpack_require__("../../../../../src/app/quote/quote.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__service_quote_service__ = __webpack_require__("../../../../../src/app/service/quote.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__service_news_service__ = __webpack_require__("../../../../../src/app/service/news.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__service_stats_service__ = __webpack_require__("../../../../../src/app/service/stats.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__chart_chart_component__ = __webpack_require__("../../../../../src/app/chart/chart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__key_statistics_key_statistics_component__ = __webpack_require__("../../../../../src/app/key-statistics/key-statistics.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__news_news_component__ = __webpack_require__("../../../../../src/app/news/news.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__main_router_main_router_component__ = __webpack_require__("../../../../../src/app/main-router/main-router.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__quote_nav_quote_nav_component__ = __webpack_require__("../../../../../src/app/quote-nav/quote-nav.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_angularfire2_firestore__ = __webpack_require__("../../../../angularfire2/firestore/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_primeng_primeng__ = __webpack_require__("../../../../primeng/primeng.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_primeng_primeng___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19_primeng_primeng__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__live_quote_live_quote_component__ = __webpack_require__("../../../../../src/app/live-quote/live-quote.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__quote_quote_component__ = __webpack_require__("../../../../../src/app/quote/quote.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__service_quote_service__ = __webpack_require__("../../../../../src/app/service/quote.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__service_news_service__ = __webpack_require__("../../../../../src/app/service/news.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__service_stats_service__ = __webpack_require__("../../../../../src/app/service/stats.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__chart_chart_component__ = __webpack_require__("../../../../../src/app/chart/chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__key_statistics_key_statistics_component__ = __webpack_require__("../../../../../src/app/key-statistics/key-statistics.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__news_news_component__ = __webpack_require__("../../../../../src/app/news/news.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__main_router_main_router_component__ = __webpack_require__("../../../../../src/app/main-router/main-router.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__quote_nav_quote_nav_component__ = __webpack_require__("../../../../../src/app/quote-nav/quote-nav.component.ts");
 /* unused harmony export PrimeModule */
 /* unused harmony export MaterialModule */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
@@ -163,6 +164,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -209,7 +211,7 @@ var PrimeModule = (function () {
 PrimeModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         exports: [
-            __WEBPACK_IMPORTED_MODULE_18_primeng_primeng__["ChartModule"]
+            __WEBPACK_IMPORTED_MODULE_19_primeng_primeng__["ChartModule"]
         ]
     })
 ], PrimeModule);
@@ -223,36 +225,35 @@ var MaterialModule = (function () {
 MaterialModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         exports: [
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["a" /* MdAutocompleteModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["b" /* MdButtonModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["c" /* MdButtonToggleModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["d" /* MdCardModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["e" /* MdCheckboxModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["f" /* MdChipsModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["g" /* MdDatepickerModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["h" /* MdDialogModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["i" /* MdExpansionModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["j" /* MdGridListModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["k" /* MdIconModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["l" /* MdInputModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["m" /* MdListModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["n" /* MdMenuModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["o" /* MdNativeDateModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["p" /* MdPaginatorModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["q" /* MdProgressBarModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["r" /* MdProgressSpinnerModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["s" /* MdRadioModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["t" /* MdRippleModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["u" /* MdSelectModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["v" /* MdSidenavModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["w" /* MdSliderModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["x" /* MdSlideToggleModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["y" /* MdSnackBarModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["z" /* MdSortModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["A" /* MdTableModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["B" /* MdTabsModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["C" /* MdToolbarModule */],
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["D" /* MdTooltipModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["a" /* MatAutocompleteModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["b" /* MatButtonModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["c" /* MatButtonToggleModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["d" /* MatCardModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["e" /* MatCheckboxModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["f" /* MatChipsModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["g" /* MatDialogModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["h" /* MatExpansionModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["i" /* MatGridListModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["j" /* MatIconModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["k" /* MatInputModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["l" /* MatListModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["m" /* MatMenuModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["n" /* MatNativeDateModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["o" /* MatPaginatorModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["p" /* MatProgressBarModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["q" /* MatProgressSpinnerModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["r" /* MatRadioModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["s" /* MatRippleModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["t" /* MatSelectModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["u" /* MatSidenavModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["v" /* MatSliderModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["w" /* MatSlideToggleModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["x" /* MatSnackBarModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["y" /* MatSortModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["z" /* MatTableModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["A" /* MatTabsModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["B" /* MatToolbarModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["C" /* MatTooltipModule */],
         ]
     })
 ], MaterialModule);
@@ -270,13 +271,13 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_11__symbol_symbol_component__["a" /* SymbolComponent */],
             __WEBPACK_IMPORTED_MODULE_13__bar_table_bar_table_component__["a" /* BarTableComponent */],
             __WEBPACK_IMPORTED_MODULE_14__bar_chart_bar_chart_component__["a" /* BarChartComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__live_quote_live_quote_component__["a" /* LiveQuoteComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__quote_quote_component__["a" /* QuoteComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__chart_chart_component__["a" /* ChartComponent */],
-            __WEBPACK_IMPORTED_MODULE_25__key_statistics_key_statistics_component__["a" /* KeyStatisticsComponent */],
-            __WEBPACK_IMPORTED_MODULE_26__news_news_component__["a" /* NewsComponent */],
-            __WEBPACK_IMPORTED_MODULE_27__main_router_main_router_component__["a" /* MainRouterComponent */],
-            __WEBPACK_IMPORTED_MODULE_28__quote_nav_quote_nav_component__["a" /* QuoteNavComponent */]
+            __WEBPACK_IMPORTED_MODULE_20__live_quote_live_quote_component__["a" /* LiveQuoteComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__quote_quote_component__["a" /* QuoteComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__chart_chart_component__["a" /* ChartComponent */],
+            __WEBPACK_IMPORTED_MODULE_26__key_statistics_key_statistics_component__["a" /* KeyStatisticsComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__news_news_component__["a" /* NewsComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__main_router_main_router_component__["a" /* MainRouterComponent */],
+            __WEBPACK_IMPORTED_MODULE_29__quote_nav_quote_nav_component__["a" /* QuoteNavComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
@@ -284,12 +285,12 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__angular_forms__["FormsModule"],
             __WEBPACK_IMPORTED_MODULE_10__angular_http__["a" /* HttpModule */],
             MaterialModule,
-            __WEBPACK_IMPORTED_MODULE_9__angular_material__["o" /* MdNativeDateModule */],
+            __WEBPACK_IMPORTED_MODULE_9__angular_material__["n" /* MatNativeDateModule */],
             __WEBPACK_IMPORTED_MODULE_7__angular_forms__["ReactiveFormsModule"],
             PrimeModule,
-            __WEBPACK_IMPORTED_MODULE_8__app_routing_module__["a" /* AppRoutingModule */], __WEBPACK_IMPORTED_MODULE_15_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig), __WEBPACK_IMPORTED_MODULE_16_angularfire2_database__["a" /* AngularFireDatabaseModule */], __WEBPACK_IMPORTED_MODULE_17_angularfire2_auth__["a" /* AngularFireAuthModule */]
+            __WEBPACK_IMPORTED_MODULE_8__app_routing_module__["a" /* AppRoutingModule */], __WEBPACK_IMPORTED_MODULE_15_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig), __WEBPACK_IMPORTED_MODULE_16_angularfire2_database__["a" /* AngularFireDatabaseModule */], __WEBPACK_IMPORTED_MODULE_17_angularfire2_auth__["a" /* AngularFireAuthModule */], __WEBPACK_IMPORTED_MODULE_18_angularfire2_firestore__["a" /* AngularFirestoreModule */]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__service_bar_service__["a" /* BarService */], __WEBPACK_IMPORTED_MODULE_12__service_symbol_service__["a" /* SymbolService */], __WEBPACK_IMPORTED_MODULE_4__service_web_sockets_service__["a" /* WebSocketsService */], __WEBPACK_IMPORTED_MODULE_21__service_quote_service__["a" /* QuoteService */], __WEBPACK_IMPORTED_MODULE_23__service_stats_service__["a" /* StatsService */], __WEBPACK_IMPORTED_MODULE_22__service_news_service__["a" /* NewsService */], __WEBPACK_IMPORTED_MODULE_5__service_fav_stocks_service__["a" /* FavStocksService */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_3__service_bar_service__["a" /* BarService */], __WEBPACK_IMPORTED_MODULE_12__service_symbol_service__["a" /* SymbolService */], __WEBPACK_IMPORTED_MODULE_4__service_web_sockets_service__["a" /* WebSocketsService */], __WEBPACK_IMPORTED_MODULE_22__service_quote_service__["a" /* QuoteService */], __WEBPACK_IMPORTED_MODULE_24__service_stats_service__["a" /* StatsService */], __WEBPACK_IMPORTED_MODULE_23__service_news_service__["a" /* NewsService */], __WEBPACK_IMPORTED_MODULE_5__service_fav_stocks_service__["a" /* FavStocksService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
@@ -443,7 +444,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/bar-table/bar-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <md-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\">\r\n  </md-paginator>\r\n  <md-table #table [dataSource]=\"dataSource\">\r\n\r\n    <!--- Note that these columns can be defined in any order.\r\n          The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n\r\n    <ng-container mdColumnDef=\"open\">\r\n      <md-header-cell *mdHeaderCellDef> open </md-header-cell>\r\n      <md-cell *mdCellDef=\"let row\"> {{row.open}} </md-cell>\r\n    </ng-container>\r\n    <ng-container mdColumnDef=\"high\">\r\n      <md-header-cell *mdHeaderCellDef> high </md-header-cell>\r\n      <md-cell *mdCellDef=\"let row\"> {{row.high}} </md-cell>\r\n    </ng-container>\r\n    <ng-container mdColumnDef=\"low\">\r\n      <md-header-cell *mdHeaderCellDef> low </md-header-cell>\r\n      <md-cell *mdCellDef=\"let row\"> {{row.low}} </md-cell>\r\n    </ng-container>\r\n    <ng-container mdColumnDef=\"close\">\r\n      <md-header-cell *mdHeaderCellDef> close </md-header-cell>\r\n      <md-cell *mdCellDef=\"let row\"> {{row.close}} </md-cell>\r\n    </ng-container>\r\n    <ng-container mdColumnDef=\"label\">\r\n      <md-header-cell *mdHeaderCellDef> label </md-header-cell>\r\n      <md-cell *mdCellDef=\"let row\"> {{row.label}} </md-cell>\r\n    </ng-container>\r\n\r\n\r\n\r\n\r\n\r\n    <md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row>\r\n    <md-row *mdRowDef=\"let row; columns: displayedColumns;\"></md-row>\r\n  </md-table>\r\n</div>"
+module.exports = "<div>\r\n  <mat-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\">\r\n  </mat-paginator>\r\n  <mat-table #table [dataSource]=\"dataSource\">\r\n\r\n    <!--- Note that these columns can be defined in any order.\r\n          The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n\r\n    <ng-container matColumnDef=\"open\">\r\n      <mat-header-cell *matHeaderCellDef> open </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.open}} </mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"high\">\r\n      <mat-header-cell *matHeaderCellDef> high </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.high}} </mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"low\">\r\n      <mat-header-cell *matHeaderCellDef> low </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.low}} </mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"close\">\r\n      <mat-header-cell *matHeaderCellDef> close </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.close}} </mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"label\">\r\n      <mat-header-cell *matHeaderCellDef> label </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.label}} </mat-cell>\r\n    </ng-container>\r\n\r\n\r\n\r\n\r\n\r\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\r\n  </mat-table>\r\n</div>"
 
 /***/ }),
 
@@ -517,12 +518,12 @@ __decorate([
     __metadata("design:type", String)
 ], BarTableComponent.prototype, "stsymbol", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MdPaginator */]),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MdPaginator */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MdPaginator */]) === "function" && _a || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatPaginator */]),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatPaginator */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatPaginator */]) === "function" && _a || Object)
 ], BarTableComponent.prototype, "paginator", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["F" /* MdSort */]),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["F" /* MdSort */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["F" /* MdSort */]) === "function" && _b || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MatSort */]),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MatSort */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MatSort */]) === "function" && _b || Object)
 ], BarTableComponent.prototype, "sort", void 0);
 BarTableComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -622,7 +623,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/chart/chart.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-tab-group>\r\n  <!-- <md-tab label=\"Table\">\r\n    <app-bar-table [stsymbol]=\"selectedStock\"></app-bar-table>\r\n  </md-tab> -->\r\n  <md-tab *ngFor=\"let inter of chartInterval.reverse()\" label=\"{{inter}}\">\r\n    <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"inter\"></app-bar-chart>\r\n  </md-tab>\r\n\r\n\r\n</md-tab-group>"
+module.exports = "<mat-tab-group>\r\n  <!-- <mat-tab label=\"Table\">\r\n    <app-bar-table [stsymbol]=\"selectedStock\"></app-bar-table>\r\n  </mat-tab> -->\r\n  <mat-tab *ngFor=\"let inter of chartInterval.reverse()\" label=\"{{inter}}\">\r\n    <app-bar-chart [stsymbol]=\"selectedStock\" [chartInterval]=\"inter\"></app-bar-chart>\r\n  </mat-tab>\r\n\r\n\r\n</mat-tab-group>"
 
 /***/ }),
 
@@ -683,7 +684,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "md-grid-list {\r\n\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 13px;\r\n\r\n\r\n}\r\nmd-grid-tile, h3, md-grid-list {\r\n\r\n}\r\np{\r\n    padding: 2px;\r\n    width:100%;\r\n\r\n    text-align: left;\r\n}\r\n\r\n\r\n#keys{\r\n    min-width: 400px;\r\n\r\n\r\n}\r\n\r\nh3{\r\n        width:100%;\r\n\r\n    text-align: left;\r\n}\r\n\r\n.positive {\r\n    border-radius: 13%;\r\n    background: #73AD21;\r\n}\r\n.negative {\r\n    border-radius: 13%;\r\n    background: #E94340;\r\n}\r\n", ""]);
+exports.push([module.i, "mat-grid-list {\r\n\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 13px;\r\n\r\n\r\n}\r\nmat-grid-tile, h3, mat-grid-list {\r\n\r\n}\r\np{\r\n    padding: 2px;\r\n    width:100%;\r\n\r\n    text-align: left;\r\n}\r\n\r\n\r\n#keys{\r\n    min-width: 400px;\r\n\r\n\r\n}\r\n\r\nh3{\r\n        width:100%;\r\n\r\n    text-align: left;\r\n}\r\n\r\n.positive {\r\n    border-radius: 13%;\r\n    background: #73AD21;\r\n}\r\n.negative {\r\n    border-radius: 13%;\r\n    background: #E94340;\r\n}\r\n", ""]);
 
 // exports
 
@@ -696,7 +697,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/key-statistics/key-statistics.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"stats\" id=\"keys\">\r\n\r\n\r\n  <md-grid-list cols=\"{{columnNum}}\" rowHeight=\"31px\">\r\n    <md-grid-tile>\r\n      <h3>Company Name</h3>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <h3>{{stats.companyName}}({{stats.symbol}})</h3>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <h3>Last Price</h3>\r\n    </md-grid-tile>\r\n\r\n    <md-grid-tile>\r\n      <h3>{{quotes.latestPrice}}</h3>\r\n    </md-grid-tile>\r\n    <!-- <h3>{{quotes.latestPrice}}</h3>\r\n    </md-grid-tile> -->\r\n    <md-grid-tile>\r\n      <p>Market Cap</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.marketcap/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile>\r\n\r\n    <md-grid-tile>\r\n      <p>52 Week High</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.week52high | number : '1.2-2'}}</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>52 Week Low</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.week52low}}</p>\r\n    </md-grid-tile>\r\n\r\n\r\n    <md-grid-tile>\r\n      <p>EPS</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.latestEPS}} as of {{stats.latestEPSDate}}</p>\r\n    </md-grid-tile>\r\n\r\n    <md-grid-tile>\r\n      <p>Outstanding Share</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.sharesOutstanding/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile>\r\n\r\n\r\n    <md-grid-tile>\r\n      <p>Revenue</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.revenue/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>Gross Profit</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.grossProfit/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>Cash</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.cash/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile>\r\n    <!-- <md-grid-tile>\r\n      <p>Debt</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.debt/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile> -->\r\n\r\n    <md-grid-tile>\r\n      <p>Revenue Per Share</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.revenuePerShare}}</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>Reveue Per Employee</p>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      <p>{{stats.revenuePerEmployee/1000000 | number : '1.2-2'}} M</p>\r\n    </md-grid-tile>\r\n\r\n\r\n  </md-grid-list>\r\n</div>"
+module.exports = "<div *ngIf=\"stats?.companyName && quotes?.latestPrice\" id=\"keys\">\r\n\r\n\r\n  <mat-grid-list cols=\"{{columnNum}}\" rowHeight=\"31px\">\r\n    <mat-grid-tile>\r\n      <h3>Company Name</h3>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <h3>{{stats.companyName}}({{stats.symbol}})</h3>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <h3>Last Price</h3>\r\n    </mat-grid-tile>\r\n\r\n    <mat-grid-tile>\r\n      <h3>{{quotes.latestPrice}}</h3>\r\n    </mat-grid-tile>\r\n    <!-- <h3>{{quotes.latestPrice}}</h3>\r\n    </mat-grid-tile> -->\r\n    <mat-grid-tile>\r\n      <p>Market Cap</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>{{stats.marketcap/1000000 | number : '1.2-2'}} M</p>\r\n    </mat-grid-tile>\r\n\r\n    <mat-grid-tile>\r\n      <p>52 Week High</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>{{stats.week52high | number : '1.2-2'}}</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>52 Week Low</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>{{stats.week52low}}</p>\r\n    </mat-grid-tile>\r\n\r\n\r\n    <mat-grid-tile>\r\n      <p>EPS</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>{{stats.latestEPS}} as of {{stats.latestEPSDate}}</p>\r\n    </mat-grid-tile>\r\n\r\n    <mat-grid-tile>\r\n      <p>Outstanding Share</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>{{stats.sharesOutstanding/1000000 | number : '1.2-2'}} M</p>\r\n    </mat-grid-tile>\r\n\r\n\r\n    <mat-grid-tile>\r\n      <p>Revenue</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>{{stats.revenue/1000000 | number : '1.2-2'}} M</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>Gross Profit</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>{{stats.grossProfit/1000000 | number : '1.2-2'}} M</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>Cash</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>{{stats.cash/1000000 | number : '1.2-2'}} M</p>\r\n    </mat-grid-tile>\r\n    <!-- <mat-grid-tile>\r\n      <p>Debt</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>{{stats.debt/1000000 | number : '1.2-2'}} M</p>\r\n    </mat-grid-tile> -->\r\n\r\n    <mat-grid-tile>\r\n      <p>Revenue Per Share</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>{{stats.revenuePerShare}}</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>Reveue Per Employee</p>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      <p>{{stats.revenuePerEmployee/1000000 | number : '1.2-2'}} M</p>\r\n    </mat-grid-tile>\r\n\r\n\r\n  </mat-grid-list>\r\n</div>"
 
 /***/ }),
 
@@ -776,7 +777,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/live-quote/live-quote.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  live-quote works!\r\n</p>\r\n{{messages}}\r\n\r\n<md-list>\r\n  <md-list-item *ngFor='let m of messages'> {{m }}asdf </md-list-item>\r\n\r\n</md-list>"
+module.exports = "<p>\r\n  live-quote works!\r\n</p>\r\n{{messages}}\r\n\r\n<mat-list>\r\n  <mat-list-item *ngFor='let m of messages'> {{m }}asdf </mat-list-item>\r\n\r\n</mat-list>"
 
 /***/ }),
 
@@ -853,7 +854,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".flex-container{\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n  -webkit-box-orient: horizontal;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: row;\r\n          flex-direction: row;\r\n  width:100%;\r\n\r\n}\r\n.inneritem{\r\n-webkit-box-flex: 1;\r\n    -ms-flex-positive: 1;\r\n        flex-grow: 1;\r\n    -ms-flex-preferred-size: 0;\r\n        flex-basis: 0;\r\n\r\n}\r\n.flex-chart{\r\n\r\n\r\n}\r\n\r\n.flex-news{\r\n\r\n\r\n}\r\n\r\n/* .flex-statistics{\r\n\r\nflex-grow: 1;\r\nalign-items: flex-start;\r\n\r\n             background-color:#7e57c2;\r\n} */", ""]);
+exports.push([module.i, ".flex-container{\r\n  display:-webkit-box;\r\n  display:-ms-flexbox;\r\n  display:flex;\r\n  -ms-flex-wrap: wrap;\r\n      flex-wrap: wrap;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  width:100%;\r\n\r\n}\r\n.inneritem{\r\n-webkit-box-flex: 1;\r\n    -ms-flex-positive: 1;\r\n        flex-grow: 1;\r\n    -ms-flex-preferred-size: 0;\r\n        flex-basis: 0;\r\n\r\n}\r\n.flex-chart{\r\n\r\n\r\n}\r\n\r\n.flex-news{\r\n\r\n\r\n}\r\n\r\n/* .flex-statistics{\r\n\r\nflex-grow: 1;\r\nalign-items: flex-start;\r\n\r\n             background-color:#7e57c2;\r\n} */", ""]);
 
 // exports
 
@@ -866,7 +867,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/main-router/main-router.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"flex-container\" *ngIf=\"selectedStock\">\r\n\r\n\r\n\r\n  <div class=\"inneritem\">\r\n    <app-chart [stsymbol]=\"selectedStock\"></app-chart>\r\n  </div>\r\n  <div class=\"inneritem\">\r\n    <app-news [stsymbol]=\"selectedStock\"></app-news>\r\n  </div>\r\n\r\n  <div class=\"inneritem\">\r\n    <app-key-statistics [stsymbol]=\"selectedStock\"></app-key-statistics>\r\n  </div>\r\n\r\n</div>"
+module.exports = "<div class=\"flex-container\" *ngIf=\"selectedStock\">\r\n\r\n  <div class=\"inneritem\">\r\n    <app-key-statistics [stsymbol]=\"selectedStock\"></app-key-statistics>\r\n  </div>\r\n  <div class=\"inneritem\">\r\n    <app-news [stsymbol]=\"selectedStock\"></app-news>\r\n  </div>\r\n  <div class=\"inneritem\">\r\n    <app-chart [stsymbol]=\"selectedStock\"></app-chart>\r\n  </div>\r\n\r\n\r\n\r\n\r\n</div>"
 
 /***/ }),
 
@@ -925,7 +926,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\r\nmd-sidenav {\r\n\r\n\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 12px;\r\n    vertical-align:middle;\r\n    min-width: 400px;\r\n\r\n}\r\n\r\nmd-panel-title{\r\n    font-size: 13px;\r\n    min-width: 310px;\r\n}", ""]);
+exports.push([module.i, "/*\r\nmat-sidenav {\r\n\r\n\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 12px;\r\n    vertical-align:middle;\r\n    min-width: 400px;\r\n\r\n}\r\n\r\nmat-panel-title{\r\n    font-size: 13px;\r\n    min-width: 310px;\r\n}*/\r\n\r\n.body{\r\n    font-family: 'Droid Serif', serif;\r\n    font-size: 14px;\r\n    color: #2f2f2f;\r\n    background-color: #f9f7f1;\r\n}\r\nheader{\r\n    font-family: 'Playfair Display', serif;\r\n    font-weight: 900;\r\n    font-size: 80px;\r\n    text-transform: uppercase;\r\n    display: inline-block;\r\n    line-height: 72px;\r\n    margin-bottom: 20px;\r\n\r\n}\r\np{\r\n    margin-top: 0;\r\n    margin-bottom: 20px;\r\n}\r\n.head{\r\n    text-align: center;\r\n    position: relative;\r\n\r\n\r\n}\r\n\r\n.headerobjectswrapper{\r\n}\r\n\r\n.subhead{\r\n    text-transform: uppercase;\r\n    border-bottom: 2px solid #2f2f2f;\r\n    border-top: 2px solid #2f2f2f;\r\n    padding: 12px 0 12px 0;\r\n\r\n}\r\n.weatherforcastbox{\r\n    position: relative;\r\n    width: 12%;\r\n    left: 10px;\r\n    border: 3px double #2f2f2f;\r\n    padding: 10px 15px 10px 15px;\r\n    line-height: 20px;\r\n    display: inline-block;\r\n    margin: 0 50px 20px -360px;\r\n}\r\n.content{\r\n    font-size: 0;\r\n    line-height: 0;\r\n    word-spacing: -.31em;\r\n    display: inline-block;\r\n    margin: 30px 2% 0 2%;\r\n\r\n\r\n}\r\n.collumns{\r\n\r\n}\r\n\r\n.collumn{\r\n    font-size: 14px;\r\n    line-height: 20px;\r\n    width: 17.5%;\r\n    display: inline-block;\r\n    padding: 0 1% 0 1%;\r\n    vertical-align: top;\r\n    margin-bottom: 50px;\r\n    transition: all .7s;\r\n}\r\n.collumn + .collumn { \r\n  border-left: 1px solid #2f2f2f;\r\n}\r\n.collumn .headline{\r\n    text-align: center;\r\n    line-height: normal;\r\n    font-family: 'Playfair Display', serif;\r\n    display: block;\r\n    margin: 0 auto;\r\n\r\n\r\n}\r\n.collumn .headline.hl1{\r\n    font-weight: 700;\r\n    font-size: 30px;\r\n    text-transform: uppercase;\r\n    padding: 10px 0 10px 0;\r\n\r\n}\r\n\r\n.collumn .headline.hl2{\r\n    font-weight: 400;\r\n    font-style: italic;\r\n    font-size: 24px;\r\n    box-sizing: border-box;\r\n    padding: 10px 0 10px 0;\r\n}\r\n\r\n.collumn .headline.hl2:before{\r\n    border-top: 1px solid #2f2f2f;\r\n    content: '';\r\n    width: 100px;\r\n    height: 7px;\r\n    display: block;\r\n    margin: 0 auto;\r\n}\r\n.collumn .headline.hl2:after{\r\n    border-bottom: 1px solid #2f2f2f;\r\n    content: '';\r\n    width: 100px;\r\n    height: 13px;\r\n    display: block;\r\n    margin: 0 auto;\r\n\r\n}\r\n\r\n.collumn .headline.hl3{\r\n    font-weight: 400;\r\n    font-style: italic;\r\n    font-size: 36px;\r\n    box-sizing: border-box;\r\n    padding: 10px 0 10px 0;\r\n}\r\n\r\n.collumn .headline.h85{\r\n    font-weight: 700;\r\n    font-size: 16px;\r\n    box-sizing: border-box;\r\n    padding: 10px 0 10px 0;\r\n}\r\n\r\n.collumn .headline.hl4{\r\n    font-weight: 700;\r\n    font-size: 12px;\r\n    box-sizing: border-box;\r\n    padding: 10px 0 10px 0;\r\n}\r\n.collumn .headline.hl4:before{\r\n    border-top: 1px solid #2f2f2f;\r\n    content: '';\r\n    width: 100px;\r\n    height: 7px;\r\n    display: block;\r\n    margin: 0 auto;\r\n}\r\n.collumn .headline.hl4:after{\r\n    border-bottom: 1px solid #2f2f2f;\r\n    content: '';\r\n    width: 100px;\r\n    height: 10px;\r\n    display: block;\r\n    margin: 0 auto;\r\n\r\n}\r\n\r\n.collumn .headline.hl5{\r\n    font-weight: 400;\r\n    font-size: 42px;\r\n    text-transform: uppercase;\r\n    font-style: italic;\r\n    box-sizing: border-box;\r\n    padding: 10px 0 10px 0;\r\n}\r\n.collumn .headline.hl6{\r\n    font-weight: 400;\r\n    font-size: 18px;\r\n    box-sizing: border-box;\r\n    padding: 10px 0 10px 0;\r\n}\r\n.collumn .headline.hl6:before{\r\n    border-top: 1px solid #2f2f2f;\r\n    content: '';\r\n    width: 100px;\r\n    height: 7px;\r\n    display: block;\r\n    margin: 0 auto;\r\n}\r\n.collumn .headline.hl6:after{\r\n    border-bottom: 1px solid #2f2f2f;\r\n    content: '';\r\n    width: 100px;\r\n    height: 10px;\r\n    display: block;\r\n    margin: 0 auto;\r\n\r\n}\r\n.collumn .headline.hl7{\r\n    font-weight: 700;\r\n    font-size: 12px;\r\n    box-sizing: border-box;\r\n    display: block;\r\n    padding: 10px 0 10px 0;\r\n}\r\n.collumn .headline.hl8{\r\n    font-weight: 700;\r\n    font-size: 12px;\r\n    box-sizing: border-box;\r\n    padding: 10px 0 10px 0;\r\n}\r\n.collumn .headline.hl9{\r\n    font-weight: 700;\r\n    font-size: 12px;\r\n    box-sizing: border-box;\r\n    padding: 10px 0 10px 0;\r\n}\r\n.collumn .headline.hl10{\r\n    font-weight: 700;\r\n    font-size: 12px;\r\n    box-sizing: border-box;\r\n    padding: 10px 0 10px 0;\r\n}\r\n.collumn .citation{\r\n    font-family: 'Playfair Display', serif;\r\n    font-size: 36px;\r\n    line-height: 44px;\r\n    /*font-style: italic;*/\r\n    text-align: center;\r\n    font-weight: 400;\r\n    display: block;\r\n    margin: 40px 0 40px 0;\r\n    -webkit-font-feature-settings: \"liga\", \"dlig\";\r\n            font-feature-settings: \"liga\", \"dlig\";\r\n\r\n}\r\n.collumn .citation:before{\r\n    border-top: 1px solid #2f2f2f;\r\n    content: '';\r\n    width: 100px;\r\n    height: 16px;\r\n    display: block;\r\n    margin: 0 auto;\r\n}\r\n.collumn .citation:after{\r\n    border-bottom: 1px solid #2f2f2f;\r\n    content: '';\r\n    width: 100px;\r\n    height: 16px;\r\n    display: block;\r\n    margin: 0 auto;\r\n}\r\n.collumn .figure {\r\n\t  margin: 0 0 20px;\r\n}\r\n.collumn .figcaption{\r\n\tfont-style: italic;\r\n\tfont-size: 12px;\r\n}\r\n.media {\r\n    -webkit-filter: sepia(80%) contrast(1) opacity(0.8);\r\n    filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);\r\n    mix-blend-mode: multiply;\r\n    width: 100%;\r\n}\r\n/*________________________________________________________________________________________________________________________________*/\r\n/*MEDIAQUERIES*/\r\n@media only all and (max-width: 1300px) {\r\n    .weatherforcastbox{\r\n        display: none;\r\n    }\r\n\r\n}\r\n@media only all and (max-width: 1200px) {\r\n    .collumn{\r\n        width: 31%;\r\n    }\r\n\r\n}\r\n    @media only all and (max-width: 900px) {\r\n    .collumn{\r\n        width: 47%;\r\n    }\r\n\r\n}\r\n@media only all and (max-width: 600px) {\r\n    .collumn{\r\n        width: 100%;\r\n    }\r\n\t.collumn + .collumn {\r\n\t\t\t\tborder-left: none;\r\n      \tborder-bottom: 1px solid #2f2f2f;\r\n\t}\r\n    header{\r\n        max-width: 320px;\r\n        font-size: 60px;\r\n        line-height: 54px;\r\n        overflow: hidden;\r\n    }\r\n\r\n}", ""]);
 
 // exports
 
@@ -938,7 +939,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/news/news.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- -->\r\n\r\n\r\n<md-accordion>\r\n  <md-expansion-panel *ngFor=\"let n of news\">\r\n    <md-expansion-panel-header>\r\n      <md-panel-title>\r\n        <b>{{n.datetime | date:'short'}}</b> -{{n.headline}}\r\n\r\n      </md-panel-title>\r\n      <md-panel-description>\r\n\r\n      </md-panel-description>\r\n    </md-expansion-panel-header>\r\n\r\n    <div>{{n.summary}}</div>\r\n  </md-expansion-panel>\r\n</md-accordion>\r\n\r\n\r\n<!-- <span mdTooltip=\"{{n.headline}}\" *ngFor=\"let n of news\">I have a tooltip</span>\r\n<br> -->"
+module.exports = "<!-- <mat-accordion>\r\n  <mat-expansion-panel *ngFor=\"let n of news\">\r\n    <mat-expansion-panel-header>\r\n      <mat-panel-title>\r\n        <b>{{n.datetime | date:'short'}}</b> -{{n.headline}}\r\n\r\n      </mat-panel-title>\r\n      <mat-panel-description>\r\n\r\n      </mat-panel-description>\r\n    </mat-expansion-panel-header>\r\n\r\n    <div>{{n.summary}}</div>\r\n  </mat-expansion-panel>\r\n</mat-accordion> -->\r\n\r\n\r\n\r\n\r\n\r\n\r\n<div class=\"content\">\r\n  <div class=\"collumns\">\r\n    <div class=\"collumn\" *ngFor=\"let n of news\">\r\n      <div class=\"head\">\r\n        <p>\r\n          <span class=\"headline h85\">\r\n            {{n.datetime | date:'short'}} -{{n.headline}}</span>\r\n        </p>\r\n      </div>\r\n      <p>{{n.summary}}</p>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -969,7 +970,16 @@ var NewsComponent = (function () {
     NewsComponent.prototype.ngOnChanges = function (changes) {
         var _this = this;
         this.selectedStock = this.stsymbol;
-        this.newsService.getNews(this.stsymbol).subscribe(function (val) { _this.news = val; });
+        this.newsService.getNews(this.stsymbol).subscribe(function (val) { _this.news = val; _this.deleteUnwantedNews(); });
+    };
+    NewsComponent.prototype.deleteUnwantedNews = function () {
+        for (var i = 0; i < this.news.length; i++) {
+            console.log(this.news[i].summary.length);
+            if (this.news[i].summary.length < 40) {
+                this.news.splice(i, 1);
+                console.log(this.news[i].summary);
+            }
+        }
     };
     NewsComponent.prototype.ngOnInit = function () {
     };
@@ -1001,7 +1011,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "md-sidenav {\r\n\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    vertical-align:middle;\r\n    color: white;\r\n    width:100%;\r\n    height:100%;\r\n\r\n}\r\n", ""]);
+exports.push([module.i, "mat-sidenav {\r\n\r\n    background-color:#7e57c2; /* #935CFA;*/\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    vertical-align:middle;\r\n    color: white;\r\n    width:100%;\r\n    height:100%;\r\n\r\n}\r\n", ""]);
 
 // exports
 
@@ -1014,7 +1024,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/quote-nav/quote-nav.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<md-sidenav mode=\"side\" opened=\"true\">\n  <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\n\n  <app-quote [stsymbol]=\"selectedStock\">\n  </app-quote>\n\n</md-sidenav>"
+module.exports = "<mat-sidenav mode=\"side\" opened=\"true\">\n  <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\n\n  <app-quote [stsymbol]=\"selectedStock\">\n  </app-quote>\n\n</mat-sidenav>"
 
 /***/ }),
 
@@ -1038,7 +1048,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var QuoteNavComponent = (function () {
     function QuoteNavComponent(db) {
-        db.object('connected').subscribe(console.log);
+        // db.object('connected').subscribe(console.log);
     }
     QuoteNavComponent.prototype.onSelectedStockChange = function (stock) {
         this.selectedStock = stock.toLocaleUpperCase();
@@ -1069,7 +1079,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* md-grid-tile {\r\n  display: flex;\r\n  font-family: Arial;\r\n  font-size: 12px;\r\n\r\n} */\r\n\r\n.positive {\r\n    border-radius: 20%;\r\n    background: #73AD21;\r\n}\r\n.negative {\r\n    border-radius: 20%;\r\n    background: #E94340;\r\n}\r\n\r\nmd-grid-list{\r\n    padding: 2px;\r\n  margin: 4px;\r\n}\r\n\r\n.text-inside-grid {\r\n  position: absolute;\r\n  left: 5px;\r\n}\r\n\r\nmd-icon { font-size: 18px; color:#533E3E;}\r\n\r\n\r\n\r\n.drNav{\r\n    padding:4px;\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    vertical-align:middle;\r\n    color: white;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n}\r\n\r\nbutton{\r\n    width:100%;\r\n    min-width: 310px;\r\n    text-align: left;\r\n}\r\n\r\n.drMain {\r\n    -ms-flex-preferred-size: 0;\r\n        flex-basis: 0;\r\n    /* ... */\r\n}", ""]);
+exports.push([module.i, "/* mat-grid-tile {\r\n  display: flex;\r\n  font-family: Arial;\r\n  font-size: 12px;\r\n\r\n} */\r\n\r\n.positive {\r\n    border-radius: 20%;\r\n    background: #73AD21;\r\n}\r\n.negative {\r\n    border-radius: 20%;\r\n    background: #E94340;\r\n}\r\n\r\nmat-grid-list{\r\n    padding: 2px;\r\n  margin: 2px;\r\n}\r\n\r\n.text-inside-grid {\r\n  position: absolute;\r\n  left: 5px;\r\n}\r\n\r\nmat-icon { font-size: 18px; color:#533E3E;}\r\n\r\n\r\n\r\n.drNav{\r\n    padding:4px;\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    vertical-align:middle;\r\n    color: white;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n}\r\n\r\nbutton{\r\n    width:100%;\r\n    min-width: 310px;\r\n    text-align: left;\r\n}\r\n\r\n.drMain {\r\n    -ms-flex-preferred-size: 0;\r\n        flex-basis: 0;\r\n    /* ... */\r\n}", ""]);
 
 // exports
 
@@ -1082,7 +1092,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/quote/quote.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <md-grid-list cols=\"3\" rowHeight=\"40px\">\r\n  <md-grid-tile>\r\n    Symbol\r\n  </md-grid-tile>\r\n  <md-grid-tile>\r\n    Price\r\n  </md-grid-tile>\r\n  <md-grid-tile>\r\n    Change\r\n  </md-grid-tile>\r\n</md-grid-list> -->\r\n<!-- <div class=\"QuoteChild\" *ngFor='let m of quotes'>\r\n  <md-grid-list cols=\"3\" rowHeight=\"40px\" [routerLink]=\"['/main', m.symbol]\">\r\n    <md-grid-tile>\r\n      <div class=\"text-inside-grid\">\r\n        <md-icon (click)=\"deleteSymbolServer(m.symbol)\">highlight_off</md-icon>&nbsp;&nbsp;{{m.symbol}}</div>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      {{m.latestPrice| number:'.1-2'}}\r\n    </md-grid-tile>\r\n    <md-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\r\n      {{m.changePercent*100 | number:'.1-3'}}%\r\n    </md-grid-tile>\r\n\r\n  </md-grid-list>\r\n</div> -->\r\n<div class=\"drNav\">\r\n  <div class=\"drMain\" *ngFor=\"let m of quotes;let i=index\"><button md-button [routerLink]=\"['/main', m.symbol]\">\r\n  <md-grid-list cols=\"3\" rowHeight=\"40px\" >\r\n    <md-grid-tile>\r\n      <div class=\"text-inside-grid\">\r\n        <md-icon (click)=\"deleteSymbolServer(m.symbol)\">highlight_off</md-icon>&nbsp;&nbsp;{{m.symbol}}</div>\r\n    </md-grid-tile>\r\n    <md-grid-tile>\r\n      {{m.latestPrice| number:'.1-2'}}\r\n    </md-grid-tile>\r\n    <md-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\r\n      {{m.changePercent*100 | number:'.1-3'}}%\r\n    </md-grid-tile>\r\n\r\n  </md-grid-list>\r\n  </button></div>\r\n</div>"
+module.exports = "<!-- <mat-grid-list cols=\"3\" rowHeight=\"40px\">\r\n  <mat-grid-tile>\r\n    Symbol\r\n  </mat-grid-tile>\r\n  <mat-grid-tile>\r\n    Price\r\n  </mat-grid-tile>\r\n  <mat-grid-tile>\r\n    Change\r\n  </mat-grid-tile>\r\n</mat-grid-list> -->\r\n<!-- <div class=\"QuoteChild\" *ngFor='let m of quotes'>\r\n  <mat-grid-list cols=\"3\" rowHeight=\"40px\" [routerLink]=\"['/main', m.symbol]\">\r\n    <mat-grid-tile>\r\n      <div class=\"text-inside-grid\">\r\n        <mat-icon (click)=\"deleteSymbolServer(m.symbol)\">highlight_off</mat-icon>&nbsp;&nbsp;{{m.symbol}}</div>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      {{m.latestPrice| number:'.1-2'}}\r\n    </mat-grid-tile>\r\n    <mat-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\r\n      {{m.changePercent*100 | number:'.1-3'}}%\r\n    </mat-grid-tile>\r\n\r\n  </mat-grid-list>\r\n</div> -->\r\n<div class=\"drNav\">\r\n  <div class=\"drMain\" *ngFor=\"let m of quotes;let i=index\"><button mat-button [routerLink]=\"['/main', m.symbol]\">\r\n  <mat-grid-list cols=\"3\" rowHeight=\"40px\" >\r\n    <mat-grid-tile>\r\n      <div class=\"text-inside-grid\">\r\n        <mat-icon (click)=\"deleteSymbolServer(m.symbol)\">highlight_off</mat-icon>&nbsp;&nbsp;{{m.symbol}}</div>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      {{m.latestPrice| number:'.1-2'}}\r\n    </mat-grid-tile>\r\n    <mat-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\r\n      {{m.changePercent*100 | number:'.1-3'}}%\r\n    </mat-grid-tile>\r\n\r\n  </mat-grid-list>\r\n  </button></div>\r\n</div>"
 
 /***/ }),
 
@@ -1152,6 +1162,7 @@ var QuoteComponent = (function () {
         });
     };
     QuoteComponent.prototype.deleteSymbolServer = function (sym) {
+        console.log("delete clicked");
         this.favStockService.remFavStock(sym);
     };
     QuoteComponent.prototype.deleteSymbol = function (sym) {
@@ -1164,18 +1175,18 @@ var QuoteComponent = (function () {
     };
     QuoteComponent.prototype.addOrUpdate = function (sym) {
         var _this = this;
-        var found = false;
-        for (var i = 0; i < this.quotes.length; i++) {
-            if (this.quotes[i].symbol.toUpperCase() == sym.toUpperCase()) {
-                found = true;
+        this.quoteService.getQuotes(sym).subscribe(function (p) {
+            var found = false;
+            for (var i = 0; i < _this.quotes.length; i++) {
+                if (_this.quotes[i].symbol.toUpperCase() == sym.toUpperCase()) {
+                    found = true;
+                }
             }
-        }
-        if (found == false)
-            this.quoteService.getQuotes(sym).subscribe(function (p) {
+            if (found == false)
                 _this.quotes.push(p);
-                if (_this.quotes.length < 3)
-                    _this.router.navigate(['/main', _this.quotes[0].symbol.toUpperCase()]);
-            });
+            if (_this.quotes.length < 3)
+                _this.router.navigate(['/main', _this.quotes[0].symbol.toUpperCase()]);
+        });
     };
     QuoteComponent.prototype.updateOrPush = function (p) {
         var found = false;
@@ -1193,7 +1204,7 @@ var QuoteComponent = (function () {
     QuoteComponent.prototype.getFavStocksFromDB = function () {
         var _this = this;
         this.favStocks$ = this.favStockService.getFavStocks();
-        this.favStocks$.subscribe(function (data) {
+        this.favStocks$.valueChanges().subscribe(function (data) {
             data.forEach(function (element) {
                 console.log(element);
                 _this.addOrUpdate(element.stock);
@@ -1205,7 +1216,7 @@ var QuoteComponent = (function () {
                         found = true;
                     }
                 });
-                if (found == false)
+                if (!found)
                     _this.deleteSymbol(q.symbol);
             });
         });
@@ -1281,7 +1292,16 @@ var _a;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__ = __webpack_require__("../../../../angularfire2/firestore/index.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FavStocksService; });
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1293,11 +1313,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var FavStocksService = (function () {
-    function FavStocksService(db) {
+    //favStocks$: AngularFireList<{}>;
+    // favStocks$: FirebaseListObservable<Favstock[]>;
+    function FavStocksService(db, afs) {
         this.db = db;
+        this.afs = afs;
         this.favStocks$ = this.db.list('favstocks');
+        this.favStockRef = db.list('favstocks');
+        this.favStocks = this.favStockRef.snapshotChanges().map(function (changes) {
+            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+        });
     }
+    FavStocksService.prototype.ngOnInit = function () {
+        this.favStocks = this.favStockRef.snapshotChanges().map(function (changes) {
+            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+        });
+    };
     FavStocksService.prototype.getFavStocks = function () {
         return this.favStocks$;
     };
@@ -1305,34 +1338,22 @@ var FavStocksService = (function () {
         this.favStocks$.push({ stock: sym });
     };
     FavStocksService.prototype.remFavStock = function (sym) {
-        // this.db.list('favstocks', {
-        //   query: {
-        //     orderByChild: 'stock',
-        //     equalTo: sym
-        //   }
-        // }).subscribe(d=>{d.forEach(element => {
-        //   this.favStocks$.remove(element.$key);
-        // });})
-        var key = '';
-        //    this.db.database.ref("favstocks").orderByValue().equalTo(sym).once(console.log);
-        this.favStocks$.subscribe(function (data) {
-            data.forEach(function (element) {
-                if (sym == element.stock) {
-                    key = element.$key;
-                }
+        var _this = this;
+        this.favStocks.subscribe(function (e) {
+            e.forEach(function (element) {
+                if (element.stock == sym)
+                    _this.favStockRef.remove(element.key);
             });
         });
-        if (key)
-            this.favStocks$.remove(key);
     };
     return FavStocksService;
 }());
 FavStocksService = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__["b" /* AngularFirestore */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_firestore__["b" /* AngularFirestore */]) === "function" && _b || Object])
 ], FavStocksService);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=fav-stocks.service.js.map
 
 /***/ }),
@@ -2101,7 +2122,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/symbol/symbol.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"symbolComponent\">\r\nSymbol\r\n<md-input-container>\r\n  <input mdInput placeholder=\"\" [mdAutocomplete]=\"auto\" [formControl]=\"stockCtrl\">\r\n</md-input-container>\r\n\r\n<md-autocomplete #auto=\"mdAutocomplete\">\r\n  <md-option (onSelectionChange)=\"selected($event, stock)\" *ngFor=\"let stock of filteredstocks | async\" [value]=\"stock\">\r\n    {{ stock }}\r\n  </md-option>\r\n</md-autocomplete>\r\n</div>"
+module.exports = "<div id=\"symbolComponent\">\r\nSymbol\r\n<mat-input-container>\r\n  <input matInput placeholder=\"\" [matAutocomplete]=\"auto\" [formControl]=\"stockCtrl\">\r\n</mat-input-container>\r\n\r\n<mat-autocomplete #auto=\"matAutocomplete\">\r\n  <mat-option (onSelectionChange)=\"selected($event, stock)\" *ngFor=\"let stock of filteredstocks | async\" [value]=\"stock\">\r\n    {{ stock }}\r\n  </mat-option>\r\n</mat-autocomplete>\r\n</div>"
 
 /***/ }),
 
