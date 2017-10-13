@@ -59,7 +59,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".HolyGrail {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  min-height: 100vh;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n}\r\n\r\n.HolyGrail-body {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-flex: 1;\r\n      -ms-flex: 1;\r\n          flex: 1;\r\n}\r\n.HolyGrail-content {\r\n  -webkit-box-flex: 1;\r\n      -ms-flex: 1;\r\n          flex: 1;\r\n}\r\n\r\n.HolyGrail-nav, .HolyGrail-ads {\r\n  /* 12em is the width of the columns */\r\n   -webkit-box-flex: 0;\r\n       -ms-flex: 0 0 12em;\r\n           flex: 0 0 12em; \r\n}\r\n\r\n.HolyGrail-nav {\r\n  /* put the nav on the left */\r\n  -webkit-box-ordinal-group: 0;\r\n      -ms-flex-order: -1;\r\n          order: -1;\r\n  min-width: 310px;\r\n}\r\n.HolyGrail,\r\n.HolyGrail-body {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n}\r\n\r\n.HolyGrail-nav {\r\n  -webkit-box-ordinal-group: 0;\r\n      -ms-flex-order: -1;\r\n          order: -1;\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n  .HolyGrail-body {\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1;\r\n            flex: 1;\r\n  }\r\n  .HolyGrail-content {\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1;\r\n            flex: 1;\r\n  }\r\n  .HolyGrail-nav, .HolyGrail-ads {\r\n    /* 12em is the width of the columns */\r\n     -webkit-box-flex: 0;\r\n         -ms-flex: 0 0 12em;\r\n             flex: 0 0 12em; \r\n  }\r\n}\r\n\r\nnav,aside{\r\n    background-color:#7e57c2;\r\n}\r\napp-quote-nav {\r\n  width:100%;\r\n}", ""]);
+exports.push([module.i, ".HolyGrail {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  min-height: 100vh;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n}\r\n\r\n.HolyGrail-body {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-flex: 1;\r\n      -ms-flex: 1;\r\n          flex: 1;\r\n}\r\n.HolyGrail-content {\r\n  -webkit-box-flex: 1;\r\n      -ms-flex: 1;\r\n          flex: 1;\r\n}\r\n\r\n.HolyGrail-nav, .HolyGrail-ads {\r\n  /* 12em is the width of the columns */\r\n   -webkit-box-flex: 0;\r\n       -ms-flex: 0 0 12em;\r\n           flex: 0 0 12em; \r\n}\r\n\r\n.HolyGrail-nav {\r\n  /* put the nav on the left */\r\n  -webkit-box-ordinal-group: 0;\r\n      -ms-flex-order: -1;\r\n          order: -1;\r\n  min-width: 310px;\r\n}\r\n.HolyGrail,\r\n.HolyGrail-body {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n}\r\n\r\n.HolyGrail-nav {\r\n  -webkit-box-ordinal-group: 0;\r\n      -ms-flex-order: -1;\r\n          order: -1;\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n  .HolyGrail-body {\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1;\r\n            flex: 1;\r\n  }\r\n  .HolyGrail-content {\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1;\r\n            flex: 1;\r\n  }\r\n  .HolyGrail-nav, .HolyGrail-ads {\r\n    /* 12em is the width of the columns */\r\n     -webkit-box-flex: 0;\r\n         -ms-flex: 0 0 12em;\r\n             flex: 0 0 12em; \r\n  }\r\n}\r\n\r\nnav,aside{\r\n    background-color:#7e57c2;\r\n}\r\napp-quote-nav {\r\n  width:100%;\r\n}\r\n.example-spacer {\r\n  -webkit-box-flex: 1;\r\n      -ms-flex: 1 1 auto;\r\n          flex: 1 1 auto;\r\n\r\n}", ""]);
 
 // exports
 
@@ -72,7 +72,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\r\n<div id=\"bodycontent\">\r\n    <header class=\"page-header\">\r\n\r\n        <mat-toolbar color=\"primary\">\r\n            <button mat-button><mat-icon>home</mat-icon>StockAid</button>\r\n\r\n        </mat-toolbar>\r\n    </header>\r\n\r\n    <main class=\"page-content\">\r\n        <mat-sidenav-container>\r\n            <mat-sidenav mode=\"side\" opened=\"true\">\r\n                <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n                <app-quote [stsymbol]=\"selectedStock\">\r\n                </app-quote>\r\n            </mat-sidenav>\r\n            <article class=\"content-chart\">\r\n                <router-outlet>\r\n\r\n                </router-outlet>\r\n\r\n            </article>\r\n\r\n\r\n\r\n        </mat-sidenav-container>\r\n\r\n    </main>\r\n\r\n<footer class=\"page-footer\">\r\n    <mat-toolbar color=\"primary\">\r\n        <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n    </mat-toolbar>\r\n</footer>\r\n</div>-->\r\n\r\n<!-- <app-main>\r\n</app-main> -->\r\n\r\n\r\n<div class=\"HolyGrail\">\r\n    <header>\r\n        <mat-toolbar color=\"primary\">\r\n            <button mat-button><mat-icon>home</mat-icon>StockAid</button>\r\n        </mat-toolbar>\r\n    </header>\r\n    <div class=\"HolyGrail-body\">\r\n        <main class=\"HolyGrail-content\">\r\n            <router-outlet>\r\n\r\n            </router-outlet>\r\n\r\n        </main>\r\n        <nav class=\"HolyGrail-nav\">\r\n            <app-quote-nav></app-quote-nav>\r\n        </nav>\r\n        <!-- <aside class=\"HolyGrail-ads\">Rightside if wanted</aside> -->\r\n    </div>\r\n    <footer>\r\n        <mat-toolbar color=\"primary\">\r\n            <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n        </mat-toolbar>\r\n    </footer>\r\n</div>"
+module.exports = "<!--\r\n<div id=\"bodycontent\">\r\n    <header class=\"page-header\">\r\n\r\n        <mat-toolbar color=\"primary\">\r\n            <button mat-button><mat-icon>home</mat-icon>StockAid</button>\r\n\r\n        </mat-toolbar>\r\n    </header>\r\n\r\n    <main class=\"page-content\">\r\n        <mat-sidenav-container>\r\n            <mat-sidenav mode=\"side\" opened=\"true\">\r\n                <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n                <app-quote [stsymbol]=\"selectedStock\">\r\n                </app-quote>\r\n            </mat-sidenav>\r\n            <article class=\"content-chart\">\r\n                <router-outlet>\r\n\r\n                </router-outlet>\r\n\r\n            </article>\r\n\r\n\r\n\r\n        </mat-sidenav-container>\r\n\r\n    </main>\r\n\r\n<footer class=\"page-footer\">\r\n    <mat-toolbar color=\"primary\">\r\n        <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n    </mat-toolbar>\r\n</footer>\r\n</div>-->\r\n\r\n<!-- <app-main>\r\n</app-main> -->\r\n\r\n\r\n<div class=\"HolyGrail\">\r\n    <header>\r\n        <mat-toolbar color=\"primary\">\r\n\r\n            <button mat-button>\r\n                <mat-icon>home</mat-icon>StockAid</button>\r\n            <span class=\"example-spacer\"></span>\r\n\r\n            <div *ngIf=\"!(authService.user$ | async)?.uid\">\r\n                <button class=\"login\" mat-button (click)=\"authService.login()\">Login</button>\r\n            </div>\r\n            <div *ngIf=\"(authService.user$ | async)?.uid\">\r\n                <button mat-button [routerLink]=\"['/company-list']\">My Portfolio</button>\r\n                <button class=\"logout\" mat-button (click)=\"authService.logout()\">Logout {{(authService.user$ | async)?.displayName}}</button>\r\n            </div>\r\n\r\n        </mat-toolbar>\r\n    </header>\r\n    <div class=\"HolyGrail-body\">\r\n        <main class=\"HolyGrail-content\">\r\n            <router-outlet>\r\n\r\n            </router-outlet>\r\n\r\n        </main>\r\n        <nav class=\"HolyGrail-nav\">\r\n            <app-quote-nav></app-quote-nav>\r\n        </nav>\r\n        <!-- <aside class=\"HolyGrail-ads\">Rightside if wanted</aside> -->\r\n    </div>\r\n    <footer>\r\n        <mat-toolbar color=\"primary\">\r\n            <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n        </mat-toolbar>\r\n    </footer>\r\n</div>"
 
 /***/ }),
 
@@ -82,6 +82,7 @@ module.exports = "<!--\r\n<div id=\"bodycontent\">\r\n    <header class=\"page-h
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_auth_service__ = __webpack_require__("../../../../../src/app/service/auth.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -94,8 +95,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var AppComponent = (function () {
-    function AppComponent(db) {
+    function AppComponent(db, authService) {
+        this.db = db;
+        this.authService = authService;
         this.title = 'app';
         //  db.object('connected').(console.log);
     }
@@ -112,10 +116,10 @@ AppComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_auth_service__["a" /* AuthService */]) === "function" && _b || Object])
 ], AppComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
@@ -155,6 +159,8 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__news_news_component__ = __webpack_require__("../../../../../src/app/news/news.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__main_router_main_router_component__ = __webpack_require__("../../../../../src/app/main-router/main-router.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__quote_nav_quote_nav_component__ = __webpack_require__("../../../../../src/app/quote-nav/quote-nav.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__service_auth_service__ = __webpack_require__("../../../../../src/app/service/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__auth_auth_guard__ = __webpack_require__("../../../../../src/app/auth/auth.guard.ts");
 /* unused harmony export PrimeModule */
 /* unused harmony export MaterialModule */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
@@ -184,6 +190,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 //for primeng
+
+
 
 
 
@@ -290,12 +298,63 @@ AppModule = __decorate([
             PrimeModule,
             __WEBPACK_IMPORTED_MODULE_8__app_routing_module__["a" /* AppRoutingModule */], __WEBPACK_IMPORTED_MODULE_15_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig), __WEBPACK_IMPORTED_MODULE_16_angularfire2_database__["a" /* AngularFireDatabaseModule */], __WEBPACK_IMPORTED_MODULE_17_angularfire2_auth__["a" /* AngularFireAuthModule */], __WEBPACK_IMPORTED_MODULE_18_angularfire2_firestore__["a" /* AngularFirestoreModule */]
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__service_bar_service__["a" /* BarService */], __WEBPACK_IMPORTED_MODULE_12__service_symbol_service__["a" /* SymbolService */], __WEBPACK_IMPORTED_MODULE_4__service_web_sockets_service__["a" /* WebSocketsService */], __WEBPACK_IMPORTED_MODULE_22__service_quote_service__["a" /* QuoteService */], __WEBPACK_IMPORTED_MODULE_24__service_stats_service__["a" /* StatsService */], __WEBPACK_IMPORTED_MODULE_23__service_news_service__["a" /* NewsService */], __WEBPACK_IMPORTED_MODULE_5__service_fav_stocks_service__["a" /* FavStocksService */]],
+        providers: [__WEBPACK_IMPORTED_MODULE_3__service_bar_service__["a" /* BarService */], __WEBPACK_IMPORTED_MODULE_12__service_symbol_service__["a" /* SymbolService */], __WEBPACK_IMPORTED_MODULE_4__service_web_sockets_service__["a" /* WebSocketsService */], __WEBPACK_IMPORTED_MODULE_22__service_quote_service__["a" /* QuoteService */], __WEBPACK_IMPORTED_MODULE_24__service_stats_service__["a" /* StatsService */], __WEBPACK_IMPORTED_MODULE_23__service_news_service__["a" /* NewsService */], __WEBPACK_IMPORTED_MODULE_5__service_fav_stocks_service__["a" /* FavStocksService */], __WEBPACK_IMPORTED_MODULE_30__service_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_31__auth_auth_guard__["a" /* AuthGuard */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
 //# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/auth/auth.guard.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_auth_service__ = __webpack_require__("../../../../../src/app/service/auth.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuard; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AuthGuard = (function () {
+    function AuthGuard(router, authService) {
+        this.router = router;
+        this.authService = authService;
+    }
+    AuthGuard.prototype.canActivate = function () {
+        var _this = this;
+        return this.authService.user$
+            .map(function (user) {
+            if (user && user.uid) {
+                console.log(user.uid);
+                return true;
+            }
+            else {
+                _this.router.navigate(["/main"]);
+                return false;
+            }
+        });
+    };
+    return AuthGuard;
+}());
+AuthGuard = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["Router"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_auth_service__["a" /* AuthService */]) === "function" && _b || Object])
+], AuthGuard);
+
+var _a, _b;
+//# sourceMappingURL=auth.guard.js.map
 
 /***/ }),
 
@@ -939,7 +998,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/news/news.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <mat-accordion>\r\n  <mat-expansion-panel *ngFor=\"let n of news\">\r\n    <mat-expansion-panel-header>\r\n      <mat-panel-title>\r\n        <b>{{n.datetime | date:'short'}}</b> -{{n.headline}}\r\n\r\n      </mat-panel-title>\r\n      <mat-panel-description>\r\n\r\n      </mat-panel-description>\r\n    </mat-expansion-panel-header>\r\n\r\n    <div>{{n.summary}}</div>\r\n  </mat-expansion-panel>\r\n</mat-accordion> -->\r\n\r\n\r\n\r\n\r\n\r\n\r\n<div class=\"content\">\r\n  <div class=\"collumns\">\r\n    <div class=\"collumn\" *ngFor=\"let n of news\">\r\n      <div class=\"head\">\r\n        <p>\r\n          <span class=\"headline h85\">\r\n            {{n.datetime | date:'short'}} -{{n.headline}}</span>\r\n        </p>\r\n      </div>\r\n      <p>{{n.summary}}</p>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<!-- <mat-accordion>\r\n  <mat-expansion-panel *ngFor=\"let n of news\">\r\n    <mat-expansion-panel-header>\r\n      <mat-panel-title>\r\n        <b>{{n.datetime | date:'short'}}</b> -{{n.headline}}\r\n\r\n      </mat-panel-title>\r\n      <mat-panel-description>\r\n\r\n      </mat-panel-description>\r\n    </mat-expansion-panel-header>\r\n\r\n    <div>{{n.summary}}</div>\r\n  </mat-expansion-panel>\r\n</mat-accordion> -->\r\n\r\n\r\n\r\n\r\n\r\n\r\n<div class=\"content\">\r\n  <div class=\"collumns\">\r\n    <div class=\"collumn\" *ngFor=\"let n of news\">\r\n      <div class=\"head\">\r\n        <p>\r\n          <span class=\"headline h85\">\r\n            {{n.datetime | date:'short'}} -{{n.headline}}</span>\r\n        </p>\r\n      </div>\r\n      <p *ngIf=\"n.summary!='No summary available.'\">{{n.summary}}</p>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -1241,6 +1300,57 @@ var _a, _b, _c;
 
 /***/ }),
 
+/***/ "../../../../../src/app/service/auth.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase_app__ = __webpack_require__("../../../../firebase/app.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_firebase_app__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__ = __webpack_require__("../../../../angularfire2/auth/index.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var AuthService = (function () {
+    function AuthService(router, afAuth) {
+        this.router = router;
+        this.afAuth = afAuth;
+        this.user$ = this.afAuth.authState;
+    }
+    AuthService.prototype.login = function () {
+        var _this = this;
+        this.afAuth.auth.signInWithPopup(new __WEBPACK_IMPORTED_MODULE_0_firebase_app__["auth"].GoogleAuthProvider())
+            .then(function (_) { return _this.router.navigate(["/main"]); })
+            .catch(function (error) { return console.log('auth error', error); });
+    };
+    AuthService.prototype.logout = function () {
+        this.afAuth.auth.signOut();
+        this.router.navigate(["/main"]);
+    };
+    return AuthService;
+}());
+AuthService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["Router"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__["b" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__["b" /* AngularFireAuth */]) === "function" && _b || Object])
+], AuthService);
+
+var _a, _b;
+//# sourceMappingURL=auth.service.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/service/bar.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1327,9 +1437,6 @@ var FavStocksService = (function () {
         });
     }
     FavStocksService.prototype.ngOnInit = function () {
-        this.favStocks = this.favStockRef.snapshotChanges().map(function (changes) {
-            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
-        });
     };
     FavStocksService.prototype.getFavStocks = function () {
         return this.favStocks$;
@@ -1512,7 +1619,7 @@ var SymbolService = (function () {
     function SymbolService(http) {
         this.http = http;
         this._symbolUrl = 'http://data.okfn.org/data/core/nyse-other-listings/r/nyse-listed.json';
-        this.stocks = ['MMM',
+        this.stocks = ['MMM', 'QQQ',
             'ABT',
             'ABBV',
             'ACN',
