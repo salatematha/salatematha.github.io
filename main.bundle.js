@@ -20,6 +20,7 @@ webpackEmptyContext.id = "../../../../../src async recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__main_router_main_router_component__ = __webpack_require__("../../../../../src/app/main-router/main-router.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__portfolio_portfolio_component__ = __webpack_require__("../../../../../src/app/portfolio/portfolio.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -30,10 +31,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     { path: '', pathMatch: 'full', redirectTo: 'main' },
     { path: 'main', component: __WEBPACK_IMPORTED_MODULE_2__main_router_main_router_component__["a" /* MainRouterComponent */] },
     { path: 'main/:sym', component: __WEBPACK_IMPORTED_MODULE_2__main_router_main_router_component__["a" /* MainRouterComponent */] },
+    { path: 'Portfolio', component: __WEBPACK_IMPORTED_MODULE_3__portfolio_portfolio_component__["b" /* PortfolioComponent */] },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -72,7 +75,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--\r\n<div id=\"bodycontent\">\r\n    <header class=\"page-header\">\r\n\r\n        <mat-toolbar color=\"primary\">\r\n            <button mat-button><mat-icon>home</mat-icon>StockAid</button>\r\n\r\n        </mat-toolbar>\r\n    </header>\r\n\r\n    <main class=\"page-content\">\r\n        <mat-sidenav-container>\r\n            <mat-sidenav mode=\"side\" opened=\"true\">\r\n                <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n                <app-quote [stsymbol]=\"selectedStock\">\r\n                </app-quote>\r\n            </mat-sidenav>\r\n            <article class=\"content-chart\">\r\n                <router-outlet>\r\n\r\n                </router-outlet>\r\n\r\n            </article>\r\n\r\n\r\n\r\n        </mat-sidenav-container>\r\n\r\n    </main>\r\n\r\n<footer class=\"page-footer\">\r\n    <mat-toolbar color=\"primary\">\r\n        <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n    </mat-toolbar>\r\n</footer>\r\n</div>-->\r\n\r\n<!-- <app-main>\r\n</app-main> -->\r\n\r\n\r\n<div class=\"HolyGrail\">\r\n    <header>\r\n        <mat-toolbar color=\"primary\">\r\n\r\n            <button mat-button>\r\n                <mat-icon>home</mat-icon>StockAid</button>\r\n            <span class=\"example-spacer\"></span>\r\n\r\n            <div *ngIf=\"!(authService.user$ | async)?.uid\">\r\n                <button class=\"login\" mat-button (click)=\"authService.login()\">Login</button>\r\n            </div>\r\n            <div *ngIf=\"(authService.user$ | async)?.uid\">\r\n                <button mat-button [routerLink]=\"['/company-list']\">My Portfolio</button>\r\n                <button class=\"logout\" mat-button (click)=\"authService.logout()\">Logout {{(authService.user$ | async)?.displayName}}</button>\r\n            </div>\r\n\r\n        </mat-toolbar>\r\n    </header>\r\n    <div class=\"HolyGrail-body\">\r\n        <main class=\"HolyGrail-content\">\r\n            <router-outlet>\r\n\r\n            </router-outlet>\r\n\r\n        </main>\r\n        <nav class=\"HolyGrail-nav\">\r\n            <app-quote-nav></app-quote-nav>\r\n        </nav>\r\n        <!-- <aside class=\"HolyGrail-ads\">Rightside if wanted</aside> -->\r\n    </div>\r\n    <footer>\r\n        <mat-toolbar color=\"primary\">\r\n            <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n        </mat-toolbar>\r\n    </footer>\r\n</div>"
+module.exports = "<!--\r\n<div id=\"bodycontent\">\r\n    <header class=\"page-header\">\r\n\r\n        <mat-toolbar color=\"primary\">\r\n            <button mat-button><mat-icon>home</mat-icon>StockAid</button>\r\n\r\n        </mat-toolbar>\r\n    </header>\r\n\r\n    <main class=\"page-content\">\r\n        <mat-sidenav-container>\r\n            <mat-sidenav mode=\"side\" opened=\"true\">\r\n                <app-symbol (selectedStock)=\"onSelectedStockChange($event)\">></app-symbol>\r\n                <app-quote [stsymbol]=\"selectedStock\">\r\n                </app-quote>\r\n            </mat-sidenav>\r\n            <article class=\"content-chart\">\r\n                <router-outlet>\r\n\r\n                </router-outlet>\r\n\r\n            </article>\r\n\r\n\r\n\r\n        </mat-sidenav-container>\r\n\r\n    </main>\r\n\r\n<footer class=\"page-footer\">\r\n    <mat-toolbar color=\"primary\">\r\n        <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n\r\n\r\n    </mat-toolbar>\r\n</footer>\r\n</div>-->\r\n\r\n<!-- <app-main>\r\n</app-main> -->\r\n\r\n\r\n<div class=\"HolyGrail\">\r\n    <header>\r\n        <mat-toolbar color=\"primary\">\r\n\r\n            <button mat-button [routerLink]=\"['/Portfolio']\">\r\n                <mat-icon>home</mat-icon>StockAid</button>\r\n            <span class=\"example-spacer\"></span>\r\n\r\n            <div *ngIf=\"!(authService.user$ | async)?.uid\">\r\n                <button class=\"login\" mat-button (click)=\"authService.login()\">Login</button>\r\n            </div>\r\n            <div *ngIf=\"(authService.user$ | async)?.uid\">\r\n                <button mat-button [routerLink]=\"['/Portfolio']\">My Portfolio</button>\r\n                <button class=\"logout\" mat-button (click)=\"authService.logout()\">Logout {{(authService.user$ | async)?.displayName}}</button>\r\n            </div>\r\n\r\n        </mat-toolbar>\r\n    </header>\r\n    <div class=\"HolyGrail-body\">\r\n        <main class=\"HolyGrail-content\">\r\n            <router-outlet>\r\n\r\n            </router-outlet>\r\n\r\n        </main>\r\n        <nav class=\"HolyGrail-nav\">\r\n            <app-quote-nav></app-quote-nav>\r\n        </nav>\r\n        <!-- <aside class=\"HolyGrail-ads\">Rightside if wanted</aside> -->\r\n    </div>\r\n    <footer>\r\n        <mat-toolbar color=\"primary\">\r\n            <span style=\"font-size: 13px\">https://iextrading.com/api-exhibit-a</span>\r\n        </mat-toolbar>\r\n    </footer>\r\n</div>"
 
 /***/ }),
 
@@ -161,6 +164,7 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__quote_nav_quote_nav_component__ = __webpack_require__("../../../../../src/app/quote-nav/quote-nav.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__service_auth_service__ = __webpack_require__("../../../../../src/app/service/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__auth_auth_guard__ = __webpack_require__("../../../../../src/app/auth/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__portfolio_portfolio_component__ = __webpack_require__("../../../../../src/app/portfolio/portfolio.component.ts");
 /* unused harmony export PrimeModule */
 /* unused harmony export MaterialModule */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
@@ -190,6 +194,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 //for primeng
+
 
 
 
@@ -285,8 +290,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_26__key_statistics_key_statistics_component__["a" /* KeyStatisticsComponent */],
             __WEBPACK_IMPORTED_MODULE_27__news_news_component__["a" /* NewsComponent */],
             __WEBPACK_IMPORTED_MODULE_28__main_router_main_router_component__["a" /* MainRouterComponent */],
-            __WEBPACK_IMPORTED_MODULE_29__quote_nav_quote_nav_component__["a" /* QuoteNavComponent */]
+            __WEBPACK_IMPORTED_MODULE_29__quote_nav_quote_nav_component__["a" /* QuoteNavComponent */],
+            __WEBPACK_IMPORTED_MODULE_32__portfolio_portfolio_component__["a" /* DialogChangeValue */],
+            __WEBPACK_IMPORTED_MODULE_32__portfolio_portfolio_component__["b" /* PortfolioComponent */]
         ],
+        entryComponents: [__WEBPACK_IMPORTED_MODULE_32__portfolio_portfolio_component__["a" /* DialogChangeValue */]],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
             __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
@@ -503,7 +511,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/bar-table/bar-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <mat-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\">\r\n  </mat-paginator>\r\n  <mat-table #table [dataSource]=\"dataSource\">\r\n\r\n    <!--- Note that these columns can be defined in any order.\r\n          The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n\r\n    <ng-container matColumnDef=\"open\">\r\n      <mat-header-cell *matHeaderCellDef> open </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.open}} </mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"high\">\r\n      <mat-header-cell *matHeaderCellDef> high </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.high}} </mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"low\">\r\n      <mat-header-cell *matHeaderCellDef> low </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.low}} </mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"close\">\r\n      <mat-header-cell *matHeaderCellDef> close </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.close}} </mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"label\">\r\n      <mat-header-cell *matHeaderCellDef> label </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.label}} </mat-cell>\r\n    </ng-container>\r\n\r\n\r\n\r\n\r\n\r\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\r\n  </mat-table>\r\n</div>"
+module.exports = "<div>\r\n  <mat-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\">\r\n  </mat-paginator>\r\n  <mat-table #table [dataSource]=\"dataSource\">\r\n\r\n    <!--- Note that these columns can be defined in any order.\r\n          The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n\r\n    <ng-container matColumnDef=\"open\">\r\n      <mat-header-cell *matHeaderCellDef> open </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.open}} </mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"high\">\r\n      <mat-header-cell *matHeaderCellDef> high </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.high}} </mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"low\">\r\n      <mat-header-cell *matHeaderCellDef> low </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.low}} </mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"close\">\r\n      <mat-header-cell *matHeaderCellDef> close </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.close}} </mat-cell>\r\n    </ng-container>\r\n    <ng-container matColumnDef=\"label\">\r\n      <mat-header-cell *matHeaderCellDef> label </mat-header-cell>\r\n      <mat-cell *matCellDef=\"let row\"> {{row.label}} </mat-cell>\r\n    </ng-container>\r\n\r\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\r\n  </mat-table>\r\n</div>"
 
 /***/ }),
 
@@ -577,12 +585,12 @@ __decorate([
     __metadata("design:type", String)
 ], BarTableComponent.prototype, "stsymbol", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatPaginator */]),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatPaginator */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatPaginator */]) === "function" && _a || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MatPaginator */]),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MatPaginator */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MatPaginator */]) === "function" && _a || Object)
 ], BarTableComponent.prototype, "paginator", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MatSort */]),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MatSort */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["E" /* MatSort */]) === "function" && _b || Object)
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatSort */]),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatSort */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatSort */]) === "function" && _b || Object)
 ], BarTableComponent.prototype, "sort", void 0);
 BarTableComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -654,7 +662,7 @@ var ExampleDataSource = (function (_super) {
     };
     ExampleDataSource.prototype.disconnect = function () { };
     return ExampleDataSource;
-}(__WEBPACK_IMPORTED_MODULE_1__angular_cdk_table__["a" /* DataSource */]));
+}(__WEBPACK_IMPORTED_MODULE_1__angular_cdk_table__["n" /* DataSource */]));
 
 var _a, _b, _c;
 //# sourceMappingURL=bar-table.component.js.map
@@ -926,7 +934,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/main-router/main-router.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"flex-container\" *ngIf=\"selectedStock\">\r\n\r\n  <div class=\"inneritem\">\r\n    <app-key-statistics [stsymbol]=\"selectedStock\"></app-key-statistics>\r\n  </div>\r\n  <div class=\"inneritem\">\r\n    <app-news [stsymbol]=\"selectedStock\"></app-news>\r\n  </div>\r\n  <div class=\"inneritem\">\r\n    <app-chart [stsymbol]=\"selectedStock\"></app-chart>\r\n  </div>\r\n\r\n\r\n\r\n\r\n</div>"
+module.exports = "<div class=\"flex-container\" *ngIf=\"selectedStock\">\r\n\r\n  <div class=\"inneritem\">\r\n    <app-key-statistics [stsymbol]=\"selectedStock\"></app-key-statistics>\r\n  </div>\r\n  <div class=\"inneritem\">\r\n    <app-news [stsymbol]=\"selectedStock\"></app-news>\r\n  </div>\r\n  <div class=\"inneritem\">\r\n    <app-chart [stsymbol]=\"selectedStock\"></app-chart>\r\n  </div>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -1062,6 +1070,327 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/portfolio/dialog-component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h1 mat-dialog-title>Add / Update Portfolio</h1>\r\n<div mat-dialog-content>\r\n    <!-- <p>New Value for {{data.id}}</p> -->\r\n\r\n    <app-symbol *ngIf=\"data.stock.length<2\" (selectedStock)=\"data.stock=$event\">></app-symbol>\r\n    <div>\r\n        <mat-form-field *ngIf=\"data.stock.length>1\">\r\n            <input matInput tabindex=\"1\" type=\"string\" [disabled]=\"true\" placeholder=\"Stock\" [(ngModel)]=\"data.stock\">\r\n        </mat-form-field>\r\n    </div>\r\n\r\n    <mat-form-field>\r\n        <input matInput tabindex=\"2\" type=\"number\" min=\"1\" placeholder=\"Unit Price\" [(ngModel)]=\"data.price\">\r\n    </mat-form-field>\r\n\r\n    <mat-form-field>\r\n        <input matInput tabindex=\"3\" min=\"1\" type=\"number\" placeholder=\"Quantity\" [(ngModel)]=\"data.quantity\">\r\n    </mat-form-field>\r\n\r\n\r\n    <div>\r\n        <mat-hint *ngIf=\"getErrorText(data)\" [ngStyle]=\"{'color': 'red'}\" align=\"start\">{{getErrorText(data)}}</mat-hint>\r\n    </div>\r\n\r\n\r\n\r\n</div>\r\n<div mat-dialog-actions>\r\n    <button mat-button [disabled]=\"getErrorText(data)!=''\" [mat-dialog-close]=\"data\" tabindex=\"2\">Save</button>\r\n    <button mat-button (click)=\"onNoClick()\" tabindex=\"-1\">Cancel</button>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/portfolio/portfolio.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* Structure */\r\n.example-container {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  min-width: 300px;\r\n}\r\n\r\n.example-header {\r\n  min-height: 64px;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  padding-left: 24px;\r\n  font-size: 20px;\r\n}\r\n\r\n.mat-table {\r\n  overflow: auto;\r\n  height: 100%;\r\n}\r\n\r\n.mat-header-cell .mat-sort-header-sorted {\r\n  color: black;\r\n}\r\n.example-header {\r\n  min-height: 64px;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  padding-left: 24px;\r\n  font-size: 20px;\r\n}\r\n.mat-form-field {\r\n  font-size: 14px;\r\n  -webkit-box-flex: 1;\r\n      -ms-flex-positive: 1;\r\n          flex-grow: 1;\r\n  margin-left: 32px;\r\n}\r\n\r\nbutton[mat-fab] {\r\n    position: fixed;\r\n    bottom: 25x;\r\n    right: 25px;\r\n}\r\n\r\n.editicon,.deleteicon{\r\n font-size: 20px;\r\n  padding: 4px;\r\n}\r\n\r\n\r\n.deleteicon{\r\n  color:rgb(182, 54, 54);\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/portfolio/portfolio.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"example-container mat-elevation-z8\">\n  <div class=\"example-header\">\n    <mat-form-field floatPlaceholder=\"never\">\n      <input matInput #filter placeholder=\"Filter\">\n    </mat-form-field>\n\n  </div>\n  <mat-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\">\n\n  </mat-paginator>\n\n  <mat-table #table [dataSource]=\"dataSource\" matSort>\n\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n\n    <!-- ID Column -->\n    <ng-container matColumnDef=\"stock\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Stock </mat-header-cell>\n\n      <mat-cell *matCellDef=\"let row;let i = index; \">\n        {{row.stock}}\n\n      </mat-cell>\n    </ng-container>\n\n    <!-- Progress Column -->\n    <ng-container matColumnDef=\"price\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Price </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.price| number:'.1-2'}} </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"quantity\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Quantity </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.quantity}} </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"lastPrice\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Last Price </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.lastPrice | number:'.1-2'}} </mat-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"pq\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Spend </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.price*row.quantity | number:'.1-2'}} </mat-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"current\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> current </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.lastPrice*row.quantity | number:'.1-2'}} </mat-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"profit\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> profit </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{(row.lastPrice-row.price)*row.quantity | number:'.1-2'}} </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"key\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">\n        <button mat-button (click)=\"openDialog(row)\">\n          <mat-icon class=\"editicon\" color=\"primary\">edit</mat-icon>\n        </button>\n        <button mat-button (click)=\"favStockService.remPortfolio(uid, row.key)\">\n          <mat-icon class=\"deleteicon\">delete</mat-icon>\n        </button>\n      </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n  </mat-table>\n\n</div>\n<button (click)=\"openAddDialog()\" mat-fab>\n  <mat-icon>add</mat-icon>\n</button>\n<br>\n<div>\n  Total Profit or Loss: {{profit| number:'.1-2'}}\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/portfolio/portfolio.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_cdk_collections__ = __webpack_require__("../../../cdk/esm5/collections.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_of__ = __webpack_require__("../../../../rxjs/add/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_BehaviorSubject__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_startWith__ = __webpack_require__("../../../../rxjs/add/operator/startWith.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_startWith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_startWith__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_merge__ = __webpack_require__("../../../../rxjs/add/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_merge__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_add_operator_debounceTime__ = __webpack_require__("../../../../rxjs/add/operator/debounceTime.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_rxjs_add_operator_debounceTime__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__("../../../../rxjs/add/operator/distinctUntilChanged.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_rxjs_add_operator_distinctUntilChanged__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_add_observable_fromEvent__ = __webpack_require__("../../../../rxjs/add/observable/fromEvent.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_add_observable_fromEvent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_rxjs_add_observable_fromEvent__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__service_fav_stocks_service__ = __webpack_require__("../../../../../src/app/service/fav-stocks.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__service_auth_service__ = __webpack_require__("../../../../../src/app/service/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__service_quote_service__ = __webpack_require__("../../../../../src/app/service/quote.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PortfolioComponent; });
+/* unused harmony export ExampleDatabase */
+/* unused harmony export ExampleDataSource */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogChangeValue; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var PortfolioComponent = (function () {
+    function PortfolioComponent(quoteService, favStockService, authService, route, dialog) {
+        this.quoteService = quoteService;
+        this.favStockService = favStockService;
+        this.authService = authService;
+        this.route = route;
+        this.dialog = dialog;
+        this.displayedColumns = ['stock', 'price', 'quantity', 'lastPrice', 'pq', 'current', 'profit', 'key'];
+        this.exampleDatabase = new ExampleDatabase();
+    }
+    PortfolioComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.dataSource = new ExampleDataSource(this.exampleDatabase, this.sort, this.paginator);
+        __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].fromEvent(this.filter.nativeElement, 'keyup')
+            .debounceTime(150)
+            .distinctUntilChanged()
+            .subscribe(function () {
+            if (!_this.dataSource) {
+                return;
+            }
+            _this.dataSource.filter = _this.filter.nativeElement.value;
+        });
+        this.authService.user$.subscribe(function (user) {
+            if (user) {
+                _this.uid = user.uid;
+                var portfolio$ = _this.favStockService.getPortfolio(_this.uid);
+                portfolio$.subscribe(function (eArray) {
+                    if (eArray) {
+                        _this.exampleDatabase.dataChange.next(eArray);
+                        _this.refreshval(false);
+                    }
+                });
+            }
+        });
+        this.refreshval(true);
+    };
+    PortfolioComponent.prototype.refreshval = function (refresh) {
+        var _this = this;
+        this.profit = 0;
+        //console.log("refresh called");
+        if (refresh)
+            setTimeout(function () { return _this.refreshval(true); }, 30000);
+        this.exampleDatabase.data.forEach(function (element) {
+            _this.quoteService.getQuotes(element.stock).subscribe(function (p) {
+                element.lastPrice = p.latestPrice;
+                _this.profit += (element.lastPrice - element.price) * element.quantity;
+                //this.updateOrPush(p);
+            });
+        });
+    };
+    PortfolioComponent.prototype.addorUpdateRecord = function (temp) {
+        var copiedData = this.exampleDatabase.data.slice();
+        copiedData.push(temp);
+        this.exampleDatabase.dataChange.next(copiedData);
+    };
+    PortfolioComponent.prototype.openDialog = function (v) {
+        var _this = this;
+        var dialogRef = this.dialog.open(DialogChangeValue, {
+            data: { data: v, alldata: this.exampleDatabase.data }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log(result);
+            if (result)
+                _this.favStockService.updatePortfolio(_this.uid, result);
+        });
+    };
+    PortfolioComponent.prototype.openAddDialog = function () {
+        var v = { stock: "", price: 0, quantity: 0, lastPrice: 0, key: "" };
+        this.openDialog(v);
+    };
+    return PortfolioComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4__angular_material__["D" /* MatSort */]),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["D" /* MatSort */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["D" /* MatSort */]) === "function" && _a || Object)
+], PortfolioComponent.prototype, "sort", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('filter'),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _b || Object)
+], PortfolioComponent.prototype, "filter", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4__angular_material__["E" /* MatPaginator */]),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["E" /* MatPaginator */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["E" /* MatPaginator */]) === "function" && _c || Object)
+], PortfolioComponent.prototype, "paginator", void 0);
+PortfolioComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-portfolio',
+        template: __webpack_require__("../../../../../src/app/portfolio/portfolio.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/portfolio/portfolio.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_15__service_quote_service__["a" /* QuoteService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_15__service_quote_service__["a" /* QuoteService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_12__service_fav_stocks_service__["a" /* FavStocksService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_12__service_fav_stocks_service__["a" /* FavStocksService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_13__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_13__service_auth_service__["a" /* AuthService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_14__angular_router__["ActivatedRoute"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_14__angular_router__["ActivatedRoute"]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["F" /* MatDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["F" /* MatDialog */]) === "function" && _h || Object])
+], PortfolioComponent);
+
+/** An example database that the data source uses to retrieve data for the table. */
+var ExampleDatabase = (function () {
+    function ExampleDatabase() {
+        /** Stream that emits whenever the data has been modified. */
+        this.dataChange = new __WEBPACK_IMPORTED_MODULE_5_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
+    }
+    Object.defineProperty(ExampleDatabase.prototype, "data", {
+        get: function () { return this.dataChange.value; },
+        enumerable: true,
+        configurable: true
+    });
+    return ExampleDatabase;
+}());
+
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+var ExampleDataSource = (function (_super) {
+    __extends(ExampleDataSource, _super);
+    function ExampleDataSource(_exampleDatabase, _sort, _paginator) {
+        var _this = _super.call(this) || this;
+        _this._exampleDatabase = _exampleDatabase;
+        _this._sort = _sort;
+        _this._paginator = _paginator;
+        _this._filterChange = new __WEBPACK_IMPORTED_MODULE_5_rxjs_BehaviorSubject__["BehaviorSubject"]('');
+        return _this;
+    }
+    Object.defineProperty(ExampleDataSource.prototype, "filter", {
+        get: function () { return this._filterChange.value; },
+        set: function (filter) { this._filterChange.next(filter); },
+        enumerable: true,
+        configurable: true
+    });
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
+    ExampleDataSource.prototype.connect = function () {
+        var _this = this;
+        var displayDataChanges = [
+            this._exampleDatabase.dataChange,
+            this._sort.sortChange, this._filterChange,
+            this._paginator.page,
+        ];
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].merge.apply(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"], displayDataChanges).map(function () {
+            var startIndex = _this._paginator.pageIndex * _this._paginator.pageSize;
+            return _this.getSortedData().slice().filter(function (item) {
+                var searchStr = (item.stock).toLowerCase();
+                return searchStr.indexOf(_this.filter.toLowerCase()) != -1;
+            }).splice(startIndex, _this._paginator.pageSize);
+        });
+    };
+    ExampleDataSource.prototype.disconnect = function () { };
+    /** Returns a sorted copy of the database data. */
+    ExampleDataSource.prototype.getSortedData = function () {
+        var _this = this;
+        var data = this._exampleDatabase.data.slice();
+        if (!this._sort.active || this._sort.direction == '') {
+            return data;
+        }
+        return data.sort(function (a, b) {
+            var propertyA = '';
+            var propertyB = '';
+            switch (_this._sort.active) {
+                case 'userId':
+                    _a = [a.stock, b.stock], propertyA = _a[0], propertyB = _a[1];
+                    break;
+            }
+            var valueA = isNaN(+propertyA) ? propertyA : +propertyA;
+            var valueB = isNaN(+propertyB) ? propertyB : +propertyB;
+            return (valueA < valueB ? -1 : 1) * (_this._sort.direction == 'asc' ? 1 : -1);
+            var _a;
+        });
+    };
+    return ExampleDataSource;
+}(__WEBPACK_IMPORTED_MODULE_1__angular_cdk_collections__["a" /* DataSource */]));
+
+////////////////
+var DialogChangeValue = (function () {
+    function DialogChangeValue(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data.data;
+        this.alldata = data.alldata;
+    }
+    DialogChangeValue.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    DialogChangeValue.prototype.getErrorText = function (v) {
+        var found = false;
+        if (v.stock.length < 1)
+            return "Select Symbol";
+        this.alldata.forEach(function (element) {
+            if (v.stock == element.stock && v.key.length < 2) {
+                found = true;
+            }
+        });
+        if (found)
+            return "Symbol Already exist in Portfolio";
+        if (v.price < 1)
+            return "Enter Price";
+        if (v.quantity < 1)
+            return "Enter Quantity";
+        // if (v.value == v.setValue) return '  ';
+        // if (v.maxValue == v.minValue) return '';
+        // if (v.setValue < v.minValue) return 'Min value is ' + v.minValue;
+        // if (v.setValue > v.maxValue) return 'Max value is ' + v.maxValue;
+        return '';
+    };
+    return DialogChangeValue;
+}());
+DialogChangeValue = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'dialog-overview-example-dialog',
+        template: __webpack_require__("../../../../../src/app/portfolio/dialog-component.html"),
+    }),
+    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_4__angular_material__["G" /* MAT_DIALOG_DATA */])),
+    __metadata("design:paramtypes", [typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["H" /* MatDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["H" /* MatDialogRef */]) === "function" && _j || Object, Object])
+], DialogChangeValue);
+
+var _a, _b, _c, _d, _e, _f, _g, _h, _j;
+//# sourceMappingURL=portfolio.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/quote-nav/quote-nav.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1151,7 +1480,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/quote/quote.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <mat-grid-list cols=\"3\" rowHeight=\"40px\">\r\n  <mat-grid-tile>\r\n    Symbol\r\n  </mat-grid-tile>\r\n  <mat-grid-tile>\r\n    Price\r\n  </mat-grid-tile>\r\n  <mat-grid-tile>\r\n    Change\r\n  </mat-grid-tile>\r\n</mat-grid-list> -->\r\n<!-- <div class=\"QuoteChild\" *ngFor='let m of quotes'>\r\n  <mat-grid-list cols=\"3\" rowHeight=\"40px\" [routerLink]=\"['/main', m.symbol]\">\r\n    <mat-grid-tile>\r\n      <div class=\"text-inside-grid\">\r\n        <mat-icon (click)=\"deleteSymbolServer(m.symbol)\">highlight_off</mat-icon>&nbsp;&nbsp;{{m.symbol}}</div>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      {{m.latestPrice| number:'.1-2'}}\r\n    </mat-grid-tile>\r\n    <mat-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\r\n      {{m.changePercent*100 | number:'.1-3'}}%\r\n    </mat-grid-tile>\r\n\r\n  </mat-grid-list>\r\n</div> -->\r\n<div class=\"drNav\">\r\n  <div class=\"drMain\" *ngFor=\"let m of quotes;let i=index\"><button mat-button [routerLink]=\"['/main', m.symbol]\">\r\n  <mat-grid-list cols=\"3\" rowHeight=\"40px\" >\r\n    <mat-grid-tile>\r\n      <div class=\"text-inside-grid\">\r\n        <mat-icon (click)=\"deleteSymbolServer(m.symbol)\">highlight_off</mat-icon>&nbsp;&nbsp;{{m.symbol}}</div>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      {{m.latestPrice| number:'.1-2'}}\r\n    </mat-grid-tile>\r\n    <mat-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\r\n      {{m.changePercent*100 | number:'.1-3'}}%\r\n    </mat-grid-tile>\r\n\r\n  </mat-grid-list>\r\n  </button></div>\r\n</div>"
+module.exports = "<!-- <mat-grid-list cols=\"3\" rowHeight=\"40px\">\r\n  <mat-grid-tile>\r\n    Symbol\r\n  </mat-grid-tile>\r\n  <mat-grid-tile>\r\n    Price\r\n  </mat-grid-tile>\r\n  <mat-grid-tile>\r\n    Change\r\n  </mat-grid-tile>\r\n</mat-grid-list> -->\r\n<!-- <div class=\"QuoteChild\" *ngFor='let m of quotes'>\r\n  <mat-grid-list cols=\"3\" rowHeight=\"40px\" [routerLink]=\"['/main', m.symbol]\">\r\n    <mat-grid-tile>\r\n      <div class=\"text-inside-grid\">\r\n        <mat-icon (click)=\"deleteSymbolServer(m.symbol)\">highlight_off</mat-icon>&nbsp;&nbsp;{{m.symbol}}</div>\r\n    </mat-grid-tile>\r\n    <mat-grid-tile>\r\n      {{m.latestPrice| number:'.1-2'}}\r\n    </mat-grid-tile>\r\n    <mat-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\r\n      {{m.changePercent*100 | number:'.1-3'}}%\r\n    </mat-grid-tile>\r\n\r\n  </mat-grid-list>\r\n</div> -->\r\n<div class=\"drNav\">\r\n  <div class=\"drMain\" *ngFor=\"let m of quotes;let i=index\">\r\n    <button mat-button [routerLink]=\"['/main', m.symbol]\">\r\n      <mat-grid-list cols=\"3\" rowHeight=\"40px\">\r\n        <mat-grid-tile>\r\n          <div class=\"text-inside-grid\">\r\n            <mat-icon (click)=\"deleteSymbolServer(m.symbol)\">highlight_off</mat-icon>&nbsp;&nbsp;{{m.symbol}}</div>\r\n        </mat-grid-tile>\r\n        <mat-grid-tile>\r\n          {{m.latestPrice| number:'.1-2'}}\r\n        </mat-grid-tile>\r\n        <mat-grid-tile [ngClass]=\"{'positive': m.changePercent>0, 'negative': m.changePercent<0}\">\r\n          {{m.changePercent*100 | number:'.1-3'}}%\r\n        </mat-grid-tile>\r\n\r\n      </mat-grid-list>\r\n    </button>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -1195,6 +1524,7 @@ var QuoteComponent = (function () {
         this.favStockService = favStockService;
         this.authService = authService;
         this.quotes = Array();
+        this.mapKeySymbol = new Map();
     }
     QuoteComponent.prototype.ngOnChanges = function (changes) {
         var _this = this;
@@ -1230,7 +1560,7 @@ var QuoteComponent = (function () {
     };
     QuoteComponent.prototype.deleteSymbolServer = function (sym) {
         //console.log("delete clicked");
-        this.favStockService.remFavStock(this.uid, sym);
+        this.favStockService.remFavStock(this.uid, this.mapKeySymbol[sym]);
     };
     QuoteComponent.prototype.deleteSymbol = function (sym) {
         for (var i = 0; i < this.quotes.length; i++) {
@@ -1251,8 +1581,8 @@ var QuoteComponent = (function () {
             }
             if (found == false)
                 _this.quotes.push(p);
-            if (_this.quotes.length < 3)
-                _this.router.navigate(['/main', _this.quotes[0].symbol.toUpperCase()]);
+            // if (this.quotes.length < 3)
+            //   this.router.navigate(['/main', this.quotes[0].symbol.toUpperCase()]);
         });
     };
     QuoteComponent.prototype.updateOrPush = function (p) {
@@ -1271,11 +1601,13 @@ var QuoteComponent = (function () {
     QuoteComponent.prototype.getFavStocksFromDB = function () {
         var _this = this;
         this.quotes = Array();
-        this.favStocks$ = this.favStockService.getFavStocks(this.uid);
+        var favStocks$ = this.favStockService.getFavStocks(this.uid);
         //console.log('inside getfavstockfrom db' + this.favStocks$);
-        this.favStocks$.valueChanges().subscribe(function (data) {
+        favStocks$.subscribe(function (data) {
             data.forEach(function (element) {
-                // console.log(element);
+                _this.mapKeySymbol[element.stock] = element.key;
+                //console.log(element);
+                //console.log(element);
                 _this.addOrUpdate(element.stock);
             });
             _this.quotes.forEach(function (q) {
@@ -1453,24 +1785,54 @@ var FavStocksService = (function () {
     // favStocks$: FirebaseListObservable<Favstock[]>;
     FavStocksService.prototype.intFavStock = function () {
         this.favStocks$ = this.db.list('favstocks');
+        this.portfolio$ = this.db.list('portfolio');
     };
     FavStocksService.prototype.getFavStocks = function (uid) {
-        return this.db.list('favstocks', function (ref) { return ref.orderByChild('user').equalTo(uid); });
-    };
-    FavStocksService.prototype.addFavStock = function (uid, sym) {
-        this.favStocks$.push({ user: uid, stock: sym });
-    };
-    FavStocksService.prototype.remFavStock = function (uid, sym) {
+        //return this.db.list<any>('favstocks', ref => ref.orderByChild('user').equalTo(uid));
         var favStockRef = this.db.list('favstocks', function (ref) { return ref.orderByChild('user').equalTo(uid); });
         var favStocks = favStockRef.snapshotChanges().map(function (changes) {
             return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
         });
-        favStocks.subscribe(function (e) {
-            e.forEach(function (element) {
-                if (element.stock == sym)
-                    favStockRef.remove(element.key);
-            });
+        return favStocks;
+    };
+    FavStocksService.prototype.addFavStock = function (uid, sym) {
+        this.favStocks$.push({ user: uid, stock: sym });
+    };
+    FavStocksService.prototype.getPortfolio = function (uid) {
+        //return this.db.list<any>('portfolio', ref => ref.orderByChild('user').equalTo(uid));
+        var portfolioRef = this.db.list('portfolio', function (ref) { return ref.orderByChild('user').equalTo(uid); });
+        var portfolios = portfolioRef.snapshotChanges().map(function (changes) {
+            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
         });
+        return portfolios;
+    };
+    FavStocksService.prototype.addPortfolio = function (uid, sym, p, qty) {
+        this.portfolio$.push({ user: uid, stock: sym, price: p, quantity: qty });
+    };
+    FavStocksService.prototype.updatePortfolio = function (uid, portfolio) {
+        var portfolioRef = this.db.list('portfolio', function (ref) { return ref.orderByChild('user').equalTo(uid); });
+        if (portfolio.key.length > 2) {
+            portfolioRef.update(portfolio.key.toString(), { user: uid, stock: portfolio.stock, price: portfolio.price, quantity: portfolio.quantity });
+        }
+        else {
+            portfolioRef.push({ user: uid, stock: portfolio.stock, price: portfolio.price, quantity: portfolio.quantity });
+        }
+    };
+    FavStocksService.prototype.remPortfolio = function (uid, key) {
+        var portfolioRef = this.db.list('portfolio', function (ref) { return ref.orderByChild('user').equalTo(uid); });
+        portfolioRef.remove(key);
+    };
+    FavStocksService.prototype.remFavStock = function (uid, sym) {
+        var favStockRef = this.db.list('favstocks', function (ref) { return ref.orderByChild('user').equalTo(uid); });
+        favStockRef.remove(sym);
+    };
+    FavStocksService.prototype.getKeyPortfolio = function (uid, sym) {
+        var key;
+        var portfolioRef = this.db.list('portfolio', function (ref) { return ref.orderByChild('user').equalTo(uid); });
+        var portfolios = portfolioRef.snapshotChanges().map(function (changes) {
+            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+        });
+        return portfolios;
     };
     return FavStocksService;
 }());
@@ -2298,7 +2660,7 @@ var SymbolComponent = (function () {
     SymbolComponent.prototype.selected = function (event, stock) {
         if (event.source.selected) {
             this.selectedStock.emit(stock);
-            this.router.navigate(['/main', stock]);
+            //this.router.navigate(['/main', stock]);
         }
     };
     SymbolComponent.prototype.ngOnInit = function () {
