@@ -1085,7 +1085,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* Structure */\r\n.example-container {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  min-width: 300px;\r\n}\r\n\r\n.example-header {\r\n  min-height: 64px;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  padding-left: 24px;\r\n  font-size: 20px;\r\n}\r\n\r\n.mat-table {\r\n  overflow: auto;\r\n  height: 100%;\r\n}\r\n\r\n.mat-header-cell .mat-sort-header-sorted {\r\n  color: black;\r\n}\r\n.example-header {\r\n  min-height: 64px;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  padding-left: 24px;\r\n  font-size: 20px;\r\n}\r\n.mat-form-field {\r\n  font-size: 14px;\r\n  -webkit-box-flex: 1;\r\n      -ms-flex-positive: 1;\r\n          flex-grow: 1;\r\n  margin-left: 32px;\r\n}\r\n\r\nbutton[mat-fab] {\r\n    position: fixed;\r\n    bottom: 25x;\r\n    right: 25px;\r\n}\r\n\r\n.editicon,.deleteicon{\r\n font-size: 20px;\r\n  padding: 4px;\r\n}\r\n\r\n\r\n.deleteicon{\r\n  color:rgb(182, 54, 54);\r\n}", ""]);
+exports.push([module.i, "/* Structure */\r\n.example-container {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n  min-width: 300px;\r\n}\r\n\r\n.example-header {\r\n  min-height: 64px;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  padding-left: 24px;\r\n  font-size: 20px;\r\n}\r\n\r\n.mat-table {\r\n  overflow: auto;\r\n  height: 100%;\r\n}\r\n\r\n.mat-header-cell .mat-sort-header-sorted {\r\n  color: black;\r\n}\r\n.example-header {\r\n  min-height: 64px;\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  padding-left: 24px;\r\n  font-size: 20px;\r\n}\r\n.mat-form-field {\r\n  font-size: 14px;\r\n  -webkit-box-flex: 1;\r\n      -ms-flex-positive: 1;\r\n          flex-grow: 1;\r\n  margin-left: 32px;\r\n}\r\n\r\nbutton[mat-fab] {\r\n  \r\n     /* position: fixed;  */\r\n    /* bottom: 25x;*/\r\n     left: 90%; \r\n}\r\n\r\n.editicon,.deleteicon{\r\n font-size: 20px;\r\n  padding: 2px;\r\n}\r\n\r\n\r\n.deleteicon{\r\n  color:rgb(182, 54, 54);\r\n}\r\n\r\n.mat-column-price,\r\n.mat-column-quantity ,\r\n.mat-column-lastPrice ,\r\n.mat-column-current ,\r\n.mat-column-profit {\r\n\r\n}\r\n\r\n.mat-column-key{\r\n  text-align: right;\r\n    min-width: 180px;\r\n} \r\n\r\n.mat-column-profit_percentage, .mat-column-dayChangePercentage {\r\n  \r\ntext-align: center;\r\n  \r\n}\r\n\r\n.positive {\r\n width:58px;\r\n  padding: 4px;\r\n\r\n    border-radius: 20%;\r\n    background: #73AD21;\r\n    color: white;\r\n}\r\n.negative {\r\n   width:58px;\r\n  padding: 4px;\r\n    border-radius: 20%;\r\n    background: #E94340;\r\n    color:white;\r\n}\r\n", ""]);
 
 // exports
 
@@ -1098,7 +1098,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/portfolio/portfolio.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"example-container mat-elevation-z8\">\n  <div class=\"example-header\">\n    <mat-form-field floatPlaceholder=\"never\">\n      <input matInput #filter placeholder=\"Filter\">\n    </mat-form-field>\n\n  </div>\n  <mat-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\">\n\n  </mat-paginator>\n\n  <mat-table #table [dataSource]=\"dataSource\" matSort>\n\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n\n    <!-- ID Column -->\n    <ng-container matColumnDef=\"stock\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Stock </mat-header-cell>\n\n      <mat-cell *matCellDef=\"let row;let i = index; \">\n        {{row.stock}}\n\n      </mat-cell>\n    </ng-container>\n\n    <!-- Progress Column -->\n    <ng-container matColumnDef=\"price\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Price </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.price| number:'.1-2'}} </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"quantity\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Quantity </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.quantity}} </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"lastPrice\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Last Price </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.lastPrice | number:'.1-2'}} </mat-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"pq\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Spend </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.price*row.quantity | number:'.1-2'}} </mat-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"current\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> current </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.lastPrice*row.quantity | number:'.1-2'}} </mat-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"profit\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> profit </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{(row.lastPrice-row.price)*row.quantity | number:'.1-2'}} </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"key\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">\n        <button mat-button (click)=\"openDialog(row)\">\n          <mat-icon class=\"editicon\" color=\"primary\">edit</mat-icon>\n        </button>\n        <button mat-button (click)=\"favStockService.remPortfolio(uid, row.key)\">\n          <mat-icon class=\"deleteicon\">delete</mat-icon>\n        </button>\n      </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n  </mat-table>\n\n</div>\n<button (click)=\"openAddDialog()\" mat-fab>\n  <mat-icon>add</mat-icon>\n</button>\n<br>\n<div>\n  Total Profit or Loss: {{profit| number:'.1-2'}}\n</div>"
+module.exports = "<div class=\"example-container mat-elevation-z8\">\n  <div class=\"example-header\">\n    <mat-form-field floatPlaceholder=\"never\">\n      <input matInput #filter placeholder=\"Filter\">\n    </mat-form-field>\n\n  </div>\n  <mat-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\">\n\n  </mat-paginator>\n\n  <mat-table #table [dataSource]=\"dataSource\" matSort>\n\n    <!--- Note that these columns can be defined in any order.\n          The actual rendered columns are set as a property on the row definition\" -->\n\n    <!-- ID Column -->\n    <ng-container matColumnDef=\"stock\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Stock </mat-header-cell>\n\n      <mat-cell *matCellDef=\"let row;let i = index; \">\n        {{row.stock}}\n\n      </mat-cell>\n    </ng-container>\n\n    <!-- Progress Column -->\n    <ng-container matColumnDef=\"price\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Price Paid</mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">\n        <div *ngIf=\"row.stock != 'Total'\">{{row.price| number:'.1-2'}} </div>\n      </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"quantity\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Quantity </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.quantity}} </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"lastPrice\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Current Price </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">\n        <div *ngIf=\"row.stock != 'Total'\">{{row.lastPrice| number:'.1-2'}} </div>\n      </mat-cell>\n    </ng-container>\n    <ng-container matColumnDef=\"dayChangePercentage\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Day Change% </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">\n        <div [ngClass]=\"{'positive': row.dayChangePercentage>=0, 'negative': row.dayChangePercentage<0} \">{{row.dayChangePercentage | number:'.1-2'}} % </div>\n      </mat-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"pq\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Spend </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.price*row.quantity | number:'.1-2'}} </mat-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"current\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Value </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.current | number:'.1-2'}} </mat-cell>\n    </ng-container>\n    <ng-container matColumnDef=\"profit\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Profit / Loss </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">\n        {{row.profit | number:'.1-2'}}\n      </mat-cell>\n    </ng-container>\n    <ng-container matColumnDef=\"profit_percentage\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Profit / Loss(%) </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">\n        <div [ngClass]=\"{'positive': row.profit_percentage>=0, 'negative': row.profit_percentage<0} \">{{row.profit_percentage | number:'.1-2'}} %</div>\n      </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"key\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">\n        <div *ngIf=\"row.stock != 'Total'\">\n          <button mat-button (click)=\"openDialog(row)\">\n            <mat-icon class=\"editicon\" color=\"primary\">edit</mat-icon>\n          </button>\n          <button mat-button (click)=\"favStockService.remPortfolio(uid, row.key)\">\n            <mat-icon class=\"deleteicon\">delete</mat-icon>\n          </button>\n        </div>\n      </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n  </mat-table>\n\n</div>\n<br>\n<button (click)=\"openAddDialog()\" mat-fab>\n  <mat-icon>add</mat-icon>\n</button>\n<br>"
 
 /***/ }),
 
@@ -1180,7 +1180,8 @@ var PortfolioComponent = (function () {
         this.authService = authService;
         this.route = route;
         this.dialog = dialog;
-        this.displayedColumns = ['stock', 'price', 'quantity', 'lastPrice', 'pq', 'current', 'profit', 'key'];
+        this.tot = { stock: "Total", price: 0, quantity: 0, lastPrice: 0, key: "", dayChangePercentage: 0, current: 0, profit: 0, profit_percentage: 0 };
+        this.displayedColumns = ['stock', 'quantity', 'price', 'lastPrice', 'dayChangePercentage', 'current', 'profit', 'profit_percentage', 'key'];
         this.exampleDatabase = new ExampleDatabase();
     }
     PortfolioComponent.prototype.ngOnInit = function () {
@@ -1201,6 +1202,8 @@ var PortfolioComponent = (function () {
                 var portfolio$ = _this.favStockService.getPortfolio(_this.uid);
                 portfolio$.subscribe(function (eArray) {
                     if (eArray) {
+                        var v = { stock: "Total", price: 0, quantity: 0, lastPrice: 0, key: "", dayChangePercentage: 0, current: 0, profit: 0, profit_percentage: 0 };
+                        eArray.push(v);
                         _this.exampleDatabase.dataChange.next(eArray);
                         _this.refreshval(false);
                     }
@@ -1212,15 +1215,39 @@ var PortfolioComponent = (function () {
     PortfolioComponent.prototype.refreshval = function (refresh) {
         var _this = this;
         this.profit = 0;
+        this.profitPercentage = 0;
+        if (this.exampleDatabase.data.length > 0)
+            this.tot = this.exampleDatabase.data[this.exampleDatabase.data.length - 1];
+        this.tot.price = 0;
+        this.tot.quantity = 0;
+        this.tot.lastPrice = 0;
+        this.tot.dayChangePercentage = 0;
+        this.tot.current = 0;
+        this.tot.profit = 0;
+        this.tot.profit_percentage = 0;
+        var len = this.exampleDatabase.data.length - 1;
         //console.log("refresh called");
         if (refresh)
             setTimeout(function () { return _this.refreshval(true); }, 30000);
         this.exampleDatabase.data.forEach(function (element) {
-            _this.quoteService.getQuotes(element.stock).subscribe(function (p) {
-                element.lastPrice = p.latestPrice;
-                _this.profit += (element.lastPrice - element.price) * element.quantity;
-                //this.updateOrPush(p);
-            });
+            if (element.stock != "Total")
+                _this.quoteService.getQuotes(element.stock).subscribe(function (p) {
+                    element.lastPrice = p.latestPrice;
+                    element.dayChangePercentage = p.changePercent * 100;
+                    _this.profit += (element.lastPrice - element.price) * element.quantity;
+                    element.current = element.quantity * element.lastPrice;
+                    element.profit = (element.lastPrice - element.price) * element.quantity;
+                    element.profit_percentage = element.lastPrice / element.price * 100 - 100;
+                    _this.tot.price += element.price / len;
+                    _this.tot.quantity += element.quantity;
+                    _this.tot.lastPrice += element.lastPrice / len;
+                    _this.tot.dayChangePercentage += element.dayChangePercentage / len;
+                    _this.tot.current += element.current;
+                    _this.tot.profit += element.profit;
+                    _this.tot.profit_percentage += element.profit_percentage / len;
+                    //console.log(p);
+                    //this.updateOrPush(p);
+                });
         });
     };
     PortfolioComponent.prototype.addorUpdateRecord = function (temp) {
@@ -1240,7 +1267,7 @@ var PortfolioComponent = (function () {
         });
     };
     PortfolioComponent.prototype.openAddDialog = function () {
-        var v = { stock: "", price: 0, quantity: 0, lastPrice: 0, key: "" };
+        var v = { stock: "", price: 0, quantity: 0, lastPrice: 0, key: "", dayChangePercentage: 0, current: 0, profit: 0, profit_percentage: 0 };
         this.openDialog(v);
     };
     return PortfolioComponent;
