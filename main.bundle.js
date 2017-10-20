@@ -86,6 +86,7 @@ module.exports = "<!--\r\n<div id=\"bodycontent\">\r\n    <header class=\"page-h
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__("../../../../angularfire2/database/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_auth_service__ = __webpack_require__("../../../../../src/app/service/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -99,10 +100,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AppComponent = (function () {
-    function AppComponent(db, authService) {
+    function AppComponent(db, authService, router) {
         this.db = db;
         this.authService = authService;
+        this.router = router;
         this.title = 'app';
         //  db.object('connected').(console.log);
     }
@@ -110,6 +113,17 @@ var AppComponent = (function () {
         this.selectedStock = stock.toLocaleUpperCase();
     };
     AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.authService.user$.subscribe(function (user) {
+            if (user) {
+                // console.log('inside port');
+                _this.router.navigate(['/Portfolio']);
+            }
+            else {
+                _this.router.navigate(['/main']);
+                // console.log('inside main');
+            }
+        });
     };
     return AppComponent;
 }());
@@ -119,10 +133,10 @@ AppComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_auth_service__["a" /* AuthService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["b" /* AngularFireDatabase */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_auth_service__["a" /* AuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["Router"]) === "function" && _c || Object])
 ], AppComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
@@ -345,6 +359,7 @@ var AuthGuard = (function () {
         return this.authService.user$
             .map(function (user) {
             if (user && user.uid) {
+                _this.router.navigate(["/portfolio"]);
                 //console.log(user.uid);
                 return true;
             }
@@ -1174,7 +1189,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 var PortfolioComponent = (function () {
-    function PortfolioComponent(quoteService, favStockService, authService, route, dialog) {
+    function PortfolioComponent(router, quoteService, favStockService, authService, route, dialog) {
+        this.router = router;
         this.quoteService = quoteService;
         this.favStockService = favStockService;
         this.authService = authService;
@@ -1303,7 +1319,7 @@ PortfolioComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/portfolio/portfolio.component.html"),
         styles: [__webpack_require__("../../../../../src/app/portfolio/portfolio.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_15__service_quote_service__["a" /* QuoteService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_15__service_quote_service__["a" /* QuoteService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_12__service_fav_stocks_service__["a" /* FavStocksService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_12__service_fav_stocks_service__["a" /* FavStocksService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_13__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_13__service_auth_service__["a" /* AuthService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_14__angular_router__["ActivatedRoute"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_14__angular_router__["ActivatedRoute"]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["F" /* MatDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["F" /* MatDialog */]) === "function" && _h || Object])
+    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_14__angular_router__["Router"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_14__angular_router__["Router"]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_15__service_quote_service__["a" /* QuoteService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_15__service_quote_service__["a" /* QuoteService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_12__service_fav_stocks_service__["a" /* FavStocksService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_12__service_fav_stocks_service__["a" /* FavStocksService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_13__service_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_13__service_auth_service__["a" /* AuthService */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_14__angular_router__["ActivatedRoute"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_14__angular_router__["ActivatedRoute"]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["F" /* MatDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["F" /* MatDialog */]) === "function" && _j || Object])
 ], PortfolioComponent);
 
 /** An example database that the data source uses to retrieve data for the table. */
@@ -1371,14 +1387,35 @@ var ExampleDataSource = (function (_super) {
             var propertyA = '';
             var propertyB = '';
             switch (_this._sort.active) {
-                case 'userId':
+                case 'stock':
                     _a = [a.stock, b.stock], propertyA = _a[0], propertyB = _a[1];
+                    break;
+                case 'quantity':
+                    _b = [a.quantity, b.quantity], propertyA = _b[0], propertyB = _b[1];
+                    break;
+                case 'price':
+                    _c = [a.price, b.price], propertyA = _c[0], propertyB = _c[1];
+                    break;
+                case 'lastPrice':
+                    _d = [a.lastPrice, b.lastPrice], propertyA = _d[0], propertyB = _d[1];
+                    break;
+                case 'dayChangePercentage':
+                    _e = [a.dayChangePercentage, b.dayChangePercentage], propertyA = _e[0], propertyB = _e[1];
+                    break;
+                case 'current':
+                    _f = [a.current, b.current], propertyA = _f[0], propertyB = _f[1];
+                    break;
+                case 'profit':
+                    _g = [a.profit, b.profit], propertyA = _g[0], propertyB = _g[1];
+                    break;
+                case 'profit_percentage':
+                    _h = [a.profit_percentage, b.profit_percentage], propertyA = _h[0], propertyB = _h[1];
                     break;
             }
             var valueA = isNaN(+propertyA) ? propertyA : +propertyA;
             var valueB = isNaN(+propertyB) ? propertyB : +propertyB;
             return (valueA < valueB ? -1 : 1) * (_this._sort.direction == 'asc' ? 1 : -1);
-            var _a;
+            var _a, _b, _c, _d, _e, _f, _g, _h;
         });
     };
     return ExampleDataSource;
@@ -1423,10 +1460,10 @@ DialogChangeValue = __decorate([
         template: __webpack_require__("../../../../../src/app/portfolio/dialog-component.html"),
     }),
     __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_4__angular_material__["G" /* MAT_DIALOG_DATA */])),
-    __metadata("design:paramtypes", [typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["H" /* MatDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["H" /* MatDialogRef */]) === "function" && _j || Object, Object])
+    __metadata("design:paramtypes", [typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["H" /* MatDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["H" /* MatDialogRef */]) === "function" && _k || Object, Object])
 ], DialogChangeValue);
 
-var _a, _b, _c, _d, _e, _f, _g, _h, _j;
+var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
 //# sourceMappingURL=portfolio.component.js.map
 
 /***/ }),
