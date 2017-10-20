@@ -1383,7 +1383,8 @@ var ExampleDataSource = (function (_super) {
         if (!this._sort.active || this._sort.direction == '') {
             return data;
         }
-        return data.sort(function (a, b) {
+        var tot = data.pop();
+        var retData = data.sort(function (a, b) {
             var propertyA = '';
             var propertyB = '';
             switch (_this._sort.active) {
@@ -1417,6 +1418,8 @@ var ExampleDataSource = (function (_super) {
             return (valueA < valueB ? -1 : 1) * (_this._sort.direction == 'asc' ? 1 : -1);
             var _a, _b, _c, _d, _e, _f, _g, _h;
         });
+        retData.push(tot);
+        return retData;
     };
     return ExampleDataSource;
 }(__WEBPACK_IMPORTED_MODULE_1__angular_cdk_collections__["a" /* DataSource */]));
