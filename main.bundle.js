@@ -2080,7 +2080,7 @@ var SymbolService = (function () {
     function SymbolService(http) {
         this.http = http;
         this._symbolUrl = 'http://data.okfn.org/data/core/nyse-other-listings/r/nyse-listed.json';
-        this.stocks = ['SPY', 'VTI', 'VOO', 'QQQ', 'MMM', 'AIEQ', 'GBTC',
+        this.stocks = ['SPY', 'VTI', 'VOO', 'QQQ', 'MMM', 'AIEQ', 'GBTC', 'DIA',
             'ABT',
             'ABBV',
             'ACN',
